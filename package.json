@@ -1,0 +1,13 @@
+{
+  "name": "konstruct",
+  "version": "1.0.0",
+  "description": "Set of ui elements to use with react",
+  "main": "index.js",
+  "repository": "git@github.com:traaidmark/konstruct.git",
+  "author": "Adrian Kirsten",
+  "license": "Apache 2",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
