@@ -7,13 +7,18 @@
   "author": "Adrian Kirsten",
   "license": "Apache 2",
   "private": true,
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/" 
+  },
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "start-storybook -p 5555",
-    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js"
+    "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "coverage": "jest --coverage",
+    "unit": "jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
@@ -22,11 +27,17 @@
     "@babel/preset-react": "^7.10.4",
     "@storybook/react": "^6.0.21",
     "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "jest": "^26.4.2",
+    "jest-haste-map": "^26.3.0",
+    "jest-resolve": "^26.4.0",
+    "jest-styled-components": "^7.0.3",
     "lerna": "^3.22.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "styled-components": "^5.2.0",
     "webpack": "^4.44.1"
   }
