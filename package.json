@@ -7,8 +7,8 @@
   "author": "Adrian Kirsten",
   "license": "Apache 2",
   "private": true,
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "workspaces": [
     "packages/*"
@@ -19,7 +19,8 @@
     "dev": "start-storybook -p 5555",
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "coverage": "jest --coverage",
-    "unit": "jest"
+    "unit": "jest",
+    "lint": "eslint packages/*"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
@@ -31,6 +32,8 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "eslint": "^7.8.1",
+    "eslint-plugin-react": "^7.20.6",
     "jest": "^26.4.2",
     "jest-haste-map": "^26.3.0",
     "jest-resolve": "^26.4.0",
