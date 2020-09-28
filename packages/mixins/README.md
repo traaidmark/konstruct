@@ -9,6 +9,7 @@ A library of useful mixins and functions to help style awesome things for the we
 ### Makers
 
 * `_makeList('row|column')`
+* `_makeSection('row|column')` - Mixin to create a common content section with various gutter options.
 
 ### Adders
 
