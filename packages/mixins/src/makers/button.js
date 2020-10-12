@@ -23,12 +23,12 @@ const makeSize = (SIZE) => {
     case 'small':
       return `
         padding: 5px var(--gutter-small);
-        ${ _mixin_font_size('small') }
+        ${ _setFontSize('small') }
       `;
     case 'large':
       return `
         padding: var(--gutter-small) var(--gutter);
-        ${ _mixin_font_size('medium') }
+        ${ _setFontSize('medium') }
       `;
     default:
       return `
