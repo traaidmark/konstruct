@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/foundation"
+    "directory": "packages/mixins"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
