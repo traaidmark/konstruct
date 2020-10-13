@@ -121,6 +121,125 @@ const Variables = createGlobalStyle`
     --transition: 0.5s;
     --transition-slow: 1s;
     --transition-fast: 0.3s;
+    
+    --btn-primary--color:   var(--color-secondary);
+    --btn-primary--colorH:  var(--color-accent);
+    --btn-primary--bg:      var(--color-accent);
+    --btn-primary--bgH:     var(--color-secondary);
+    --btn-primary--border:  var(--color-accent);
+    --btn-primary--borderH: var(--color-secondary);
+    
+    --btn-secondary--color:   var(--color-secondary);
+    --btn-secondary--colorH:  var(--color-secondary);
+    --btn-secondary--bg:      'transparent';
+    --btn-secondary--bgH:     'transparent';
+    --btn-secondary--border:  var(--color-accent);
+    --btn-secondary--borderH: var(--color-secondary);
+    
+    --btn-canvas--color:   var(--color-secondary);
+    --btn-canvas--colorH:  var(--color-secondary);
+    --btn-canvas--bg:      var(--color-accent);
+    --btn-canvas--bgH:     var(--color-white);
+    --btn-canvas--border:  var(--color-accent);
+    --btn-canvas--borderH: var(--color-white);
+    
+    --btn-danger--color:   var(--color-white);
+    --btn-danger--colorH:  var(--color-red);
+    --btn-danger--bg:      var(--color-red);
+    --btn-danger--bgH:     var(--color-white);
+    --btn-danger--border:  var(--color-red);
+    --btn-danger--borderH: var(--color-red);
+
+    --btn-danger-secondary--color:   var(--color-red);
+    --btn-danger-secondary--colorH:  var(--color-white);
+    --btn-danger-secondary--bg:      transparent;
+    --btn-danger-secondary--bgH:     var(--color-red);
+    --btn-danger-secondary--border:  var(--color-red);
+    --btn-danger-secondary--borderH: var(--color-white);
+    
+    --btn-success--color:   var(--color-white);
+    --btn-success--colorH:  var(--color-green);
+    --btn-success--bg:      var(--color-green);
+    --btn-success--bgH:     var(--color-white);
+    --btn-success--border:  var(--color-green);
+    --btn-success--borderH: var(--color-green);
+
+    --btn-success-secondary--color:   var(--color-green);
+    --btn-success-secondary--colorH:  var(--color-white);
+    --btn-success-secondary--bg:      transparent;
+    --btn-success-secondary--bgH:     var(--color-green);
+    --btn-success-secondary--border:  var(--color-green);
+    --btn-success-secondary--borderH: var(--color-white);
+    
+    --btn-warning--color:   var(--color-white);
+    --btn-warning--colorH:  var(--color-orange);
+    --btn-warning--bg:      var(--color-orange);
+    --btn-warning--bgH:     var(--color-white);
+    --btn-warning--border:  var(--color-orange);
+    --btn-warning--borderH: var(--color-orange);
+
+    --btn-warning-secondary--color:   var(--color-orange);
+    --btn-warning-secondary--colorH:  var(--color-white);
+    --btn-warning-secondary--bg:      transparent;
+    --btn-warning-secondary--bgH:     var(--color-orange);
+    --btn-warning-secondary--border:  var(--color-orange);
+    --btn-warning-secondary--borderH: var(--color-white);
+    
+    --btn-icon-default--color:   var(--color-secondary);
+    --btn-icon-default--colorH:  var(--color-accent);
+    --btn-icon-default--bg:      var(--color-accent);
+    --btn-icon-default--bgH:     var(--color-secondary);
+    --btn-icon-default--border:  var(--color-accent);
+    --btn-icon-default--borderH: var(--color-secondary);
+    
+    --btn-icon-secondary--color:   var(--color-secondary);
+    --btn-icon-secondary--colorH:  var(--color-secondary);
+    --btn-icon-secondary--bg:      var(--color-white);
+    --btn-icon-secondary--bgH:     var(--color-accent);
+    --btn-icon-secondary--border:  var(--color-accent);
+    --btn-icon-secondary--borderH: var(--color-secondary);
+    
+    --btn-icon-danger--color:   var(--color-white);
+    --btn-icon-danger--colorH:  var(--color-red);
+    --btn-icon-danger--bg:      var(--color-red);
+    --btn-icon-danger--bgH:     var(--color-white);
+    --btn-icon-danger--border:  var(--color-red);
+    --btn-icon-danger--borderH: var(--color-white);
+
+    --btn-icon-danger-secondary--color:   var(--color-red);
+    --btn-icon-danger-secondary--colorH:  var(--color-white);
+    --btn-icon-danger-secondary--bg:      var(--color-white);
+    --btn-icon-danger-secondary--bgH:     var(--color-red);
+    --btn-icon-danger-secondary--border:  var(--color-red);
+    --btn-icon-danger-secondary--borderH: var(--color-red);
+
+    --btn-icon-success--color:   var(--color-white);
+    --btn-icon-success--colorH:  var(--color-green);
+    --btn-icon-success--bg:      var(--color-green);
+    --btn-icon-success--bgH:     var(--color-white);
+    --btn-icon-success--border:  var(--color-green);
+    --btn-icon-success--borderH: var(--color-white);
+
+    --btn-icon-success-secondary--color:   var(--color-green);
+    --btn-icon-success-secondary--colorH:  var(--color-white);
+    --btn-icon-success-secondary--bg:      var(--color-white);
+    --btn-icon-success-secondary--bgH:     var(--color-green);
+    --btn-icon-success-secondary--border:  var(--color-green);
+    --btn-icon-success-secondary--borderH: var(--color-green);
+
+    --btn-icon-warning--color:   var(--color-white);
+    --btn-icon-warning--colorH:  var(--color-orange);
+    --btn-icon-warning--bg:      var(--color-orange);
+    --btn-icon-warning--bgH:     var(--color-white);
+    --btn-icon-warning--border:  var(--color-orange);
+    --btn-icon-warning--borderH: var(--color-white);
+
+    --btn-icon-warning-secondary--color:   var(--color-orange);
+    --btn-icon-warning-secondary--colorH:  var(--color-white);
+    --btn-icon-warning-secondary--bg:      var(--color-white);
+    --btn-icon-warning-secondary--bgH:     var(--color-orange);
+    --btn-icon-warning-secondary--border:  var(--color-orange);
+    --btn-icon-warning-secondary--borderH: var(--color-orange);
 
   }
 `;
