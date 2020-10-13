@@ -37,7 +37,6 @@ const makeSize = (SIZE) => {
   }
 }
 
-
 export default (theme, size) => `
 
   display: flex;
@@ -68,6 +67,8 @@ export default (theme, size) => `
 
     box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
     transform: translateY(-2px) scale(1.02);
+    cursor: pointer;
+
   }
 
   &:disabled {
