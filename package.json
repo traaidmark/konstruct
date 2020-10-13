@@ -16,7 +16,7 @@
   "scripts": {
     "auth": "npm login --registry=https://npm.pkg.github.com --scope=@traaidmark",
     "bootstrap": "lerna bootstrap",
-    "dev": "start-storybook -p 5555",
+    "start": "start-storybook -p 5555",
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "coverage": "jest --coverage",
     "unit": "jest",
@@ -27,6 +27,8 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-docs": "^6.0.26",
     "@storybook/react": "^6.0.21",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.3.0",
@@ -41,8 +43,10 @@
     "lerna": "^3.22.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-is": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "styled-components": "^5.2.0",
+    "ts-dedent": "^2.0.0",
     "webpack": "^4.44.1"
   }
 }
