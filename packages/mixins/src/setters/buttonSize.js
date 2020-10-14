@@ -2,11 +2,11 @@
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 1.1. EXTERNAL DEPENDENCIES ..................................................
-// 1.1. END ....................................................................
+// 1.1. INTERNAL DEPENDENCIES ..................................................
 
-// 1.2. DEFAULTS ...............................................................
-// 1.2. END ....................................................................
+import _setFontSize from './fontSize';
+
+// 1.1. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -99,9 +99,14 @@ const setIconSize = (SIZE) => {
 // 2. MIXIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default (
-  isIcon = false, 
-  size = 'default',
-) => isIcon ? setIconSize(size) : setSize(size);
+  isIcon = undefined,
+  size = undefined,
+) => {
+  if (isIcon === undefined || size === undefined) {
+    throw new Error('_setButtonSize: Parameters are missing or incomplete.');
+  };
+  return isIcon ? setIconSize(size) : setSize(size);
+};
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
