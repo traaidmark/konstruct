@@ -20,5 +20,11 @@ export const Demo = (args) => (
 );
 
 Demo.args = {
-  headerText: 'This is my Heading!'
+  headerTitle: 'Why we are so great',
+  headerText: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex <strong>consequat ultrices.</strong></>,
+  footerTitle: 'Sign up today!',
+  footerActions: [
+    <a>Link 1</a>,
+    <a>Link 2</a>,
+  ]
 };
