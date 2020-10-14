@@ -1,18 +1,43 @@
-// MIXINS [ MAKE > BUTTON ] ####################################################
+// MIXINS [ SETTERS > BUTTON SIZE ] ############################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 1.1. EXTERNAL DEPENDENCIES ..................................................
 // 1.1. END ....................................................................
 
-// 1.2. INTERNAL DEPENDENCIES ..................................................
+// 1.2. DEFAULTS ...............................................................
 // 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 2. FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-const makeSize = (SIZE) => {
+// 2.1. MAKE SIZE ..............................................................
+
+const setSize = (SIZE) => {
+  switch(SIZE) {
+    case 'small':
+      return `
+        padding: 5px var(--gutter-small);
+        ${ _setFontSize('small') }
+      `;
+    case 'large':
+      return `
+        padding: var(--gutter-small) var(--gutter);
+        ${ _setFontSize('medium') }
+      `;
+    default:
+      return `
+        padding: var(--gutter-small) var(--gutter);
+      `;
+  }
+}
+
+// 2.1. END ....................................................................
+
+// 2.2. MAKE ICON SIZE .........................................................
+
+const setIconSize = (SIZE) => {
   switch(SIZE) {
     case 'small':
       return `
@@ -64,74 +89,19 @@ const makeSize = (SIZE) => {
         }
 
       `;
-  }
-}
+  };
+};
 
-export default (theme, size) => `
+// 2.2. END ....................................................................
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  ${ makeSize(size) }
+// 2. MIXIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  background-color: var(--btn-${ theme }--bg);
-
-  border: solid 2px var(--btn-${ theme }--border);
-  border-radius: 100%;
-
-  box-shadow: none;
-  transform: translateY(0) scale(1);
-
-  transition: var(--transition-fast);
-
-  svg > path {
-    fill: var(--btn-${ theme }--color);
-    transition: var(--transition-fast);
-  }
-
-  &.active {
-    background-color: var(--btn-${ theme }--bgA);
-    border-color: var(--btn-${ theme }--borderA);
-
-    svg > path {
-      fill: var(--btn-${ theme }--colorA);
-    }
-  }
-
-  &:hover {
-
-    cursor: pointer;
-
-    background-color: var(--btn-${ theme }--bgH);
-    border-color: var(--btn-${ theme }--borderH);
-
-    box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
-    transform: translateY(-2px) scale(1.02);
-
-    svg > path {
-      fill: var(--btn-${ theme }--colorH);
-    }
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    &:hover {
-      cursor: not-allowed!important;
-
-      background-color: var(--btn-${ theme }--bg)!important;
-      border-color: var(--btn-${ theme }--border)!important;
-
-      box-shadow: none;
-      transform: translateY(0px) scale(1);
-
-      svg > path {
-        fill: var(--btn-${ theme }--color)!important;
-      }
-    }
-  }
-
-`;
+export default (
+  isIcon = false, 
+  size = 'default',
+) => isIcon ? setIconSize(size) : setSize(size);
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

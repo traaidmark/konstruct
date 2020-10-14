@@ -15,70 +15,94 @@ import {
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 2. FUNCTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// 2.1. MAKE BUTTON ............................................................
 
-const makeSize = (SIZE) => {
-  switch(SIZE) {
-    case 'small':
-      return `
-        padding: 5px var(--gutter-small);
-        ${ _setFontSize('small') }
-      `;
-    case 'large':
-      return `
-        padding: var(--gutter-small) var(--gutter);
-        ${ _setFontSize('medium') }
-      `;
-    default:
-      return `
-        padding: var(--gutter-small) var(--gutter);
-      `;
-  }
-}
+const makeBtn = (v, s) => {
+  if (v.includes('icon')) {
+    return `
+    
+      border-radius: 100%;
+    
+      svg > path {
+        fill: var(--btn-${ variant }--color);
+        transition: var(--transition-fast);
+      }
+    
+      &.active {
+        background-color: var(--btn-${ variant }--bgA);
+        border-color: var(--btn-${ variant }--borderA);
+    
+        svg > path {
+          fill: var(--btn-${ variant }--colorA);
+        }
+      }
+    
+      &:hover {
+        svg > path {
+          fill: var(--btn-${ variant }--colorH);
+        }
+      }
+    `;
+  };
+  return `
+    display: flex;
 
-export default (theme, size) => `
+    width: fit-content;
+
+    color: var(--btn-${ variant }--color)!important;
+
+    font-weight: var(--weight-bold);
+    font-family: var(--family-secondary);
+    
+    border-radius: var(--radius-small);
+
+    &:hover {
+      color: var(--btn-${ variant }--colorH)!important;
+    }
+  `;
+};
+
+// 2.1. END ....................................................................
+
+// 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// 2. STYLESHEET +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+export default (
+  variant = 'primary',
+) => `
+
+  ${ makeBtn(variant) }
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
-  width: fit-content;
-
-  ${ makeSize(size) }
-
-  background-color: var(--btn-${ theme }--bg);
-  color: var(--btn-${ theme }--color)!important;
-
-  font-weight: var(--weight-bold);
-  font-family: var(--family-secondary);
-
-  border: solid 2px var(--btn-${ theme }--border);
-  border-radius: var(--radius-small);
+  background-color: var(--btn-${ variant }--bg);
+  border: solid 2px var(--btn-${ variant }--border);
 
   box-shadow: none;
   transform: translateY(0) scale(1);
-
   transition: var(--transition-fast);
 
   &:hover {
+    
+    cursor: pointer;
 
-    color: var(--btn-${ theme }--colorH)!important;
-    background-color: var(--btn-${ theme }--bgH);
-    border-color: var(--btn-${ theme }--borderH);
+    background-color: var(--btn-${ variant }--bgH);
+    border-color: var(--btn-${ variant }--borderH);
 
     box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
     transform: translateY(-2px) scale(1.02);
-    cursor: pointer;
 
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.8;
     &:hover {
       cursor: not-allowed;
-      color: var(--btn-${ theme }--colorH)!important;
-      background-color: var(--btn-${ theme }--bg)!important;
-      border-color: var(--btn-${ theme }--border)!important;
-
       box-shadow: none;
       transform: translateY(0px) scale(1);
     }

@@ -4,6 +4,7 @@
 
 export { default as _setDevice } from './setters/media';
 export { default as _setFontSize } from './setters/fontSize';
+export { default as _setButtonSize } from './setters/buttonSize';
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -11,7 +12,6 @@ export { default as _setFontSize } from './setters/fontSize';
 
 export { default as _makeList } from './makers/list';
 export { default as _makeButton } from './makers/button';
-export { default as _makeIconButton } from './makers/iconButton';
 // export { default as _mixin_make_box } from './mixins/makeBox';
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
