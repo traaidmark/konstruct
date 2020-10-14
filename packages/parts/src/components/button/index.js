@@ -9,7 +9,7 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   _makeButton,
-  _makeIconButton,
+  _setButtonSize,
 } from '@traaidmark/konstruct-mixins';
 
 // 1.1. END ....................................................................
@@ -18,15 +18,11 @@ import {
 
 // 2. STYLESHEETS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-const paintButton = (variant, size) => {
-  if (variant.includes('icon')) {
-    return _makeIconButton(variant, size);
-  };
-  return _makeButton(variant, size);
-};
-
 export const ButtonContainer = styled.button`
-  ${ ({ variant, size }) => variant && size && paintButton(variant, size) };
+  ${ ({ variant }) => variant && _makeButton(variant) };
+`;
+export const AContainer = styled.a`
+  ${ ({ variant }) => variant && _makeButton(variant) };
 `;
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -34,11 +30,14 @@ export const ButtonContainer = styled.button`
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const Button  = ({
-  onClick,
   children,
+  onClick,
+  to,
   size = 'default',
   variant = '',
   disabled = false,
+  type = 'button',
+  target,
   ...rest
 }) => {
 
@@ -59,22 +58,55 @@ const Button  = ({
 
   // 2.1.1. END
 
+  // 2.1.2. LINK CONTEXT
+
+  const setTarget = useCallback((e) => {
+
+    if (target) {
+      return target;
+    }
+
+    if (to && to.includes('http')) {
+      return '_blank';
+    };
+
+    return '_self';
+
+  }, [to, target]);
+
+  // 2.1.2. END
+
   // 2.1. END ..................................................................
 
   // 2.2. RENDER COMPONENT .....................................................
 
+  if (onClick && !to) {
+    return (
+      <ButtonContainer
+        onClick={ e => handleClick(e) }
+        variant={ variant }
+        size={ size }
+        disabled={ disabled }
+        type={ type }
+        { ...rest }
+      >
+        { children }
+      </ButtonContainer>
+    );
+  };
+
   return (
-    <ButtonContainer
-      onClick={ e => handleClick(e) }
+    <AContainer
+      href={ to }
       variant={ variant }
       size={ size }
-      disabled={ disabled }
-      { ...rest }
+      rel="noopener noreferer"
+      target={ setTarget() }
     >
       { children }
-    </ButtonContainer>
+    </AContainer>
   );
-
+  
   // 2.2. END ..................................................................
 
 };
@@ -84,7 +116,9 @@ const Button  = ({
 // 3. PROP-TYPES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Button.propTypes = {
-  /**  Click event for this component. */
+  /**  Destination url if you want to use this as a link. */
+  to: propTypes.string,
+  /**  Click event if using as a button. */
   onClick: propTypes.func,
   /**  Content of component. */
   children: propTypes.node,
@@ -94,6 +128,10 @@ Button.propTypes = {
   size: propTypes.oneOf(['small', 'default', 'large']),
   /**  Determines if button is disabled. */
   disabled: propTypes.bool,
+  /**  The role type if using as a button. */
+  type: propTypes.oneOf(['button', 'reset', 'submit']),
+  /**  The link context if using as a link. */
+  target: propTypes.oneOf(['_self', '_blank', '_parent', '_top']),
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
