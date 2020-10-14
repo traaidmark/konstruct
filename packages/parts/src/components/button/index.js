@@ -8,8 +8,8 @@ import React, { useCallback } from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import {
-  _mixinMakeButton,
-  _mixinMakeIconButton,
+  _makeButton,
+  _makeIconButton,
 } from '@traaidmark/konstruct-mixins';
 
 // 1.1. END ....................................................................
@@ -20,13 +20,13 @@ import {
 
 const paintButton = (variant, size) => {
   if (variant.includes('icon')) {
-    return _mixinMakeIconButton(variant, size);
-  }
-  return _mixinMakeButton(variant, size);
+    return _makeIconButton(variant, size);
+  };
+  return _makeButton(variant, size);
 };
 
 export const ButtonContainer = styled.button`
-  background:red;
+  ${ ({ variant, size }) => variant && size && paintButton(variant, size) };
 `;
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,8 +50,10 @@ const Button  = ({
 
     if (onClick && !disabled) {
       e.preventDefault();
-      onClick(e);
-    }
+      return onClick(e);
+    };
+
+    return null;
 
   }, [onClick, disabled]);
 
@@ -84,12 +86,14 @@ const Button  = ({
 Button.propTypes = {
   /**  Click event for this component. */
   onClick: propTypes.func,
-  /**  Contents within this component. */
+  /**  Content of component. */
   children: propTypes.node,
   /**  The variant name that matches a css variable set. */
   variant: propTypes.string,
   /**  The size the link should display as. */
   size: propTypes.oneOf(['small', 'default', 'large']),
+  /**  Determines if button is disabled. */
+  disabled: propTypes.bool,
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
