@@ -80,33 +80,33 @@ const Button  = ({
 
   // 2.2. RENDER COMPONENT .....................................................
 
-  if (onClick && !to) {
+  if(to) {
     return (
-      <ButtonContainer
-        onClick={ e => handleClick(e) }
+      <AContainer
+        href={ to }
         variant={ variant }
         size={ size }
-        disabled={ disabled }
-        type={ type }
-        { ...rest }
+        rel="noopener noreferer"
+        target={ setTarget() }
       >
         { children }
-      </ButtonContainer>
+      </AContainer>
     );
   };
 
   return (
-    <AContainer
-      href={ to }
+    <ButtonContainer
+      onClick={ e => handleClick(e) }
       variant={ variant }
       size={ size }
-      rel="noopener noreferer"
-      target={ setTarget() }
+      disabled={ disabled }
+      type={ type }
+      { ...rest }
     >
       { children }
-    </AContainer>
+    </ButtonContainer>
   );
-  
+
   // 2.2. END ..................................................................
 
 };
