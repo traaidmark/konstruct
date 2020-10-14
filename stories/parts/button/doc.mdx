@@ -1,0 +1,90 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import Foundation from '../../../packages/foundation/src';
+import { Button } from '../../../packages/buckets/src';
+
+# Button
+
+The `<Button />` component is a largely standard HTML `<button />`, but with props to determine the size and style. The component is fully themable with css variables.
+
+- [Demo](#demo)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Theming](#theming)
+- [Props](#props)
+
+## Demo
+
+<Canvas>
+  <Foundation>
+    <Story id="parts-button--demo" />
+  </Foundation>
+</Canvas>
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-parts;
+  `}
+/>
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import { Button } from '@traaidmark/konstruct-parts';
+    
+    const DemoComponent = () => {
+      const btnAction = () => console.log('Click Happened!');
+      return (
+        <Button
+          variant="primary"
+          size="default"
+          onClick={ () => btnAction() }
+        >
+          Button Label
+        </Button>
+      );
+    };
+    export default DemoComponent;
+  `}
+/>
+
+## Theming
+
+Variants are created by creating a set of css variables, according to a set structure like the below example:
+
+<Source
+  language='css'
+  code={dedent`
+    :root {
+      --btn-[NAME]--color:   var(--color-secondary);
+      --btn-[NAME]--colorH:  var(--color-accent);
+      --btn-[NAME]--bg:      var(--color-accent);
+      --btn-[NAME]--bgH:     var(--color-secondary);
+      --btn-[NAME]--border:  var(--color-accent);
+      --btn-[NAME]--borderH: var(--color-secondary);
+    }
+  `}
+/>
+
+The variant name is taken from the css variable name itself: `--btn-[NAME]--color`.
+
+If you prepend `[NAME]` with `icon-` (ie: `--btn-icon-[NAME]--color`), the button will become an icon button.
+
+You can then use your new variant by entering `[NAME]` as your variant in the component:
+
+<Source
+  language='html'
+  code={dedent`
+    <Button variant="[NAME]">Sign Up</Button>
+  `}
+/>
+
+## Props
+
+<ArgsTable />
+
+
