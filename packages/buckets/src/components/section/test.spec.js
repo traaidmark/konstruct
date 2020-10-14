@@ -18,9 +18,31 @@ import Section from '.';
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 2. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 2.1. RENDER WITHOUT PROPS ...................................................
+const props = {
+  headerTitle: 'Why we are so great',
+  headerText: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex <strong>consequat ultrices.</strong></>,
+  footerTitle: 'Sign up today!',
+  footerActions: [
+    <a>Link 1</a>,
+    <a>Link 2</a>,
+  ],
+  noTop: true,
+  noRight: true,
+  noBottom: true,
+  noLeft: true,
+  scrollX: true,
+  scrollY: true,
+  variantX: 'wide',
+  variantY: 'shallow',
+}
+
+// 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// 3.1. RENDER WITHOUT PROPS ...................................................
 
 describe('Bucket > Section', () => {
   test('renders correctly without any props', () => {
@@ -31,29 +53,26 @@ describe('Bucket > Section', () => {
   });
 });
 
-// 2.1. END ....................................................................
+// 3.1. END ....................................................................
 
-// 2.2. RENDER WITH ALL PROPS ..................................................
+// 3.2. RENDER WITH ALL PROPS ..................................................
 
 describe('Bucket > Section', () => {
   test('renders correctly with all props', () => {
     const tree = renderer.create(
       <Section
-        headerTitle="I am a title"
-        headerText="I am some text in the header"
-        footerTitle="I am the title in the footer"
-        footerActions={ [
-          <a>Sign In</a>,
-          <a>Sign Up</a>
-        ] }
-        noTop
-        noRight
-        noBottom
-        noLeft
-        scrollX
-        scrollY
-        variantX="wide"
-        variantY="shallow"
+        headerTitle={ props.headerTitle }
+        headerText={ props.headerText }
+        footerTitle={ props.footerTitle }
+        footerActions={ props.footerActions }
+        noTop={ props.noTop }
+        noRight={ props.noRight }
+        noBottom={ props.noBottom }
+        noLeft={ props.noLeft }
+        scrollX={ props.scrollX }
+        scrollY={ props.scrollY }
+        variantX={ props.variantX }
+        variantY={ props.variantY }
       >
         { 'Test' }
       </Section>
@@ -62,8 +81,8 @@ describe('Bucket > Section', () => {
   });
 });
 
-// 2.2. END ....................................................................
+// 3.2. END ....................................................................
 
-// 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // END OF FILE #################################################################
