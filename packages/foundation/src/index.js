@@ -309,6 +309,7 @@ const Stylesheet = createGlobalStyle`
   table, caption,
   tbody, tfoot, thead,
   tr, th, td {
+      font-size: inherit;
       margin: 0;
       padding: 0;
       border: 0;
