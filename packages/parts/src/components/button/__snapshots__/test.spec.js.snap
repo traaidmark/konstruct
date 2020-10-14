@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parts > Button renders correctly with all props 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: var(--gutter-small) var(--gutter);
+  background-color: var(--btn-primary--bg);
+  color: var(--btn-primary--color)!important;
+  font-weight: var(--weight-bold);
+  font-family: var(--family-secondary);
+  border: solid 2px var(--btn-primary--border);
+  border-radius: var(--radius-small);
+  box-shadow: none;
+  -webkit-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  -webkit-transition: var(--transition-fast);
+  transition: var(--transition-fast);
+}
+
+.c0:hover {
+  color: var(--btn-primary--colorH)!important;
+  background-color: var(--btn-primary--bgH);
+  border-color: var(--btn-primary--borderH);
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+  -webkit-transform: translateY(-2px) scale(1.02);
+  -ms-transform: translateY(-2px) scale(1.02);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.c0:disabled {
+  opacity: 0.5;
+}
+
+.c0:disabled:hover {
+  cursor: not-allowed;
+  color: var(--btn-primary--colorH)!important;
+  background-color: var(--btn-primary--bg)!important;
+  border-color: var(--btn-primary--border)!important;
+  box-shadow: none;
+  -webkit-transform: translateY(0px) scale(1);
+  -ms-transform: translateY(0px) scale(1);
+  transform: translateY(0px) scale(1);
+}
+
+<button
+  className="c0"
+  disabled={false}
+  onClick={[Function]}
+  size="large"
+  type="button"
+>
+  Button Label
+</button>
+`;
+
+exports[`Parts > Button renders correctly without any props 1`] = `
+<button
+  className=""
+  disabled={false}
+  onClick={[Function]}
+  size="default"
+  type="button"
+>
+  Button Label
+</button>
+`;
