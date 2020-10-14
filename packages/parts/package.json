@@ -1,18 +1,18 @@
 {
-  "name": "@traaidmark/konstruct-button",
+  "name": "@traaidmark/konstruct-parts",
   "version": "1.0.0-alpha.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/button"
+    "directory": "packages/parts"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@traaidmark/konstruct-mixins": "^0.0.0",
+    "@traaidmark/konstruct-mixins": "*",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.2.0"
