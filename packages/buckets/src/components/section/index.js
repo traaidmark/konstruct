@@ -54,6 +54,26 @@ const Section  = ({
 
   // 2.2.1. END
 
+  // 2.2.2. RENDER FOOTER ACTIONS
+
+  const FooterActions = useCallback(() => {
+    if (footerActions && footerActions.length > 0) {
+      return(
+        <ul>
+          {
+            footerActions.map((i,k) => {
+              return <li key={ `section-footer-action-${ k }` }>{ i }</li>
+            })
+          }
+        </ul>
+      );
+    };
+    return null;
+  }, [footerActions]);
+
+
+  // 2.2.2. END
+
   // 2.2.2. RENDER FOOTER
 
   const Footer = useCallback(() => {
@@ -61,7 +81,7 @@ const Section  = ({
       return(
         <Styled.footer>
           { footerTitle && <h3>{ footerTitle }</h3> }
-          { footerActions && footerActions }
+          <FooterActions />
         </Styled.footer>
       );
     };
