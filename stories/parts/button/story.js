@@ -17,7 +17,7 @@ import mdx from './doc.mdx';
 import List from '../../../storybook-components/List';
 
 import Foundation from '../../../packages/foundation/src';
-import Button from '../../../packages/parts-button/src';
+import Button from '../../../packages/parts/button/src';
 
 // 1.2. END ....................................................................
 
@@ -45,7 +45,6 @@ export const Links = (args) => (
   <Foundation>
     <h3>Text Link</h3>
     <List>
-      <li><Button to="https://google.com"></Button></li>
       <li><Button to="https://google.com">Link without variant</Button></li>
       <li><Button variant="primary" to="https://google.com">Link with variant</Button></li>
     </List>

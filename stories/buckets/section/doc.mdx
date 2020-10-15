@@ -1,7 +1,5 @@
 import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
-import Foundation from '../../../packages/foundation/src';
-import { Section } from '../../../packages/buckets/src';
 
 # Section
 
@@ -24,7 +22,7 @@ This is the bread & butter component when it comes to putting content on a page.
 
 <Source
   code={dedent`
-    yarn add @traaidmark/konstruct-buckets
+    yarn add @traaidmark/konstruct-bucket-section
   `}
 />
 
@@ -33,7 +31,7 @@ This is the bread & butter component when it comes to putting content on a page.
 <Source
   code={dedent`
     import React from 'react';
-    import { Section } from '@traaidmark/konstruct-buckets';
+    import Section from '@traaidmark/konstruct-bucket-section';
     
     const DemoComponent = () => (
       <Section

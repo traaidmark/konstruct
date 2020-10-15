@@ -1,12 +1,12 @@
 {
-  "name": "@traaidmark/konstruct-buckets",
-  "version": "1.0.0-alpha.0",
+  "name": "@traaidmark/konstruct-bucket-section",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/buckets"
+    "directory": "packages/buckets/section"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
