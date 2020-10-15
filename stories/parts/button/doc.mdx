@@ -10,6 +10,7 @@ The `<Button />` component is a smart component that can render out a standard b
 The component comes with default styling and a primary / secondary variant that is updated based on color settings, but you can easily create your own variants with simple css variables.
 
 - [Installation](#installation)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [Theming](#theming)
 - [Props](#props)
@@ -18,7 +19,17 @@ The component comes with default styling and a primary / secondary variant that 
 
 <Source
   code={dedent`
-    yarn add @traaidmark/konstruct-parts;
+    yarn add @traaidmark/konstruct-parts-button;
+  `}
+/>
+
+## Dependencies
+
+This component needs `@traaidmark/konstruct-foundation` to work.
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-parts-button;
   `}
 />
 
@@ -27,7 +38,7 @@ The component comes with default styling and a primary / secondary variant that 
 <Source
   code={dedent`
     import React from 'react';
-    import { Button } from '@traaidmark/konstruct-parts';
+    import Button from '@traaidmark/konstruct-parts-button';
     
     const DemoComponent = () => {
       const btnAction = () => console.log('Click Happened!');
