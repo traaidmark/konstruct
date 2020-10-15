@@ -106,6 +106,7 @@ const Section  = ({
       variantY={ variantY }
       scrollX={ scrollX }
       scrollY={ scrollY }
+      { ...rest }
     >
       <Header />
       { children }

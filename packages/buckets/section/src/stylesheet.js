@@ -99,8 +99,6 @@ export default {
 
   container: styled.section`
 
-  ${ ({ angle }) => angle && _mixin_add_angle(angle) };
-
   ${ ({ scrollX }) => scrollX && `overflow-x: scroll` };
   ${ ({ scrollY }) => scrollY && `overflow-y: scroll` };
 
@@ -111,8 +109,6 @@ export default {
   ${ ({ noBottom }) => noBottom && `padding-bottom: 0!important` };
   ${ ({ noLeft }) => noLeft && `padding-left: 0!important` };
   ${ ({ noRight }) => noRight && `padding-right: 0!important` };
-
-  ${ ({ background }) => background && _mixin_add_paint(background) };
 
   @media ${ _setDevice.s } {
     padding: var(--gutter);
