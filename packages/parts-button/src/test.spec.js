@@ -30,22 +30,21 @@ const props = {
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 3.1. RENDER WITHOUT PROPS ...................................................
-
 describe('Parts > Button', () => {
+
+  // 3.1. RENDER WITHOUT PROPS .................................................
+
   test('renders correctly without any props', () => {
     const tree = renderer.create(
       <Button>{ props.children }</Button>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
-});
 
-// 3.1. END ....................................................................
+  // 3.1. END ..................................................................
 
-// 3.2. RENDER WITH ALL PROPS ..................................................
+  // 3.2. RENDER WITH ALL PROPS ................................................
 
-describe('Parts > Button', () => {
   test('renders correctly with all props', () => {
     const tree = renderer.create(
       <Button
@@ -57,9 +56,10 @@ describe('Parts > Button', () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
-});
 
-// 3.2. END ....................................................................
+  // 3.1. END ..................................................................
+
+});
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
