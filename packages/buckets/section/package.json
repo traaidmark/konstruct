@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-bucket-section",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
@@ -12,7 +12,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@traaidmark/konstruct-mixins": "*",
+    "@traaidmark/konstruct-mixins": "^1.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.2.0"
