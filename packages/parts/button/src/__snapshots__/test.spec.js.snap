@@ -10,9 +10,9 @@ exports[`Parts > Button renders correctly with all props 1`] = `
   width: -moz-fit-content;
   width: fit-content;
   color: var(--btn-primary--color)!important;
-  font-weight: var(--weight-bold);
-  font-family: var(--family-secondary);
-  border-radius: var(--radius-small);
+  font-weight: var(--btn-font-weight);
+  font-family: var(--btn-font);
+  border-radius: var(--btn-radius);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
