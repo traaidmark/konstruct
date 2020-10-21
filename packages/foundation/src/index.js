@@ -17,110 +17,114 @@ import { createGlobalStyle } from 'styled-components';
 const Variables = createGlobalStyle`
   :root {
 
-    --color-white-rgb:      255, 255, 255;
-    --color-light-rgb:      230, 231, 232;
-    --color-rgb:            133, 136, 143;
-    --color-dark-rgb:       34,40,53;
-    --color-darker-rgb:     10,16,30;
-    --color-black-rgb:      0,0,0;
+    --color-white-rgb:          255, 255, 255;
+    --color-light-rgb:          230, 231, 232;
+    --color-rgb:                133, 136, 143;
+    --color-dark-rgb:           34,40,53;
+    --color-darker-rgb:         10,16,30;
+    --color-black-rgb:          0,0,0;
     
-    --color-white:          rgba(var(--color-white-rgb), 1);
-    --color-light:          rgba(var(--color-light-rgb), 1);
-    --color:                rgba(var(--color-rgb), 1);
-    --color-dark:           rgba(var(--color-dark-rgb), 1);
-    --color-darker:         rgba(var(--color-darker-rgb), 1);
-    --color-black:          rgba(var(--color-black-rgb), 1);
+    --color-white:              rgba(var(--color-white-rgb), 1);
+    --color-light:              rgba(var(--color-light-rgb), 1);
+    --color:                    rgba(var(--color-rgb), 1);
+    --color-dark:               rgba(var(--color-dark-rgb), 1);
+    --color-darker:             rgba(var(--color-darker-rgb), 1);
+    --color-black:              rgba(var(--color-black-rgb), 1);
 
-    --color-red-rgb:        237,108,99;
-    --color-orange-rgb:     246,139,57;
-    --color-green-rgb:      93,226,165;
-    --color-blue-rgb:       66,175,227;
+    --color-red-rgb:            237,108,99;
+    --color-orange-rgb:         246,139,57;
+    --color-green-rgb:          93,226,165;
+    --color-blue-rgb:           66,175,227;
     
-    --color-red:            rgba(var(--color-red-rgb), 1);
-    --color-orange:         rgba(var(--color-orange-rgb), 1);
-    --color-green:          rgba(var(--color-green-rgb), 1);
-    --color-blue:           rgba(var(--color-blue-rgb), 1);
+    --color-red:                rgba(var(--color-red-rgb), 1);
+    --color-orange:             rgba(var(--color-orange-rgb), 1);
+    --color-green:              rgba(var(--color-green-rgb), 1);
+    --color-blue:               rgba(var(--color-blue-rgb), 1);
 
-    --color-wm-blue-rgb:    3,221,246;
-    --color-wm-purple-rgb:  183,105,247;
-    --color-wm-red-rgb:     255,102,113;
-    --color-wm-yellow-rgb:  255,199,131;
+    --color-wm-blue-rgb:        3,221,246;
+    --color-wm-purple-rgb:      183,105,247;
+    --color-wm-red-rgb:         255,102,113;
+    --color-wm-yellow-rgb:      255,199,131;
     
-    --color-wm-blue:        rgba(var(--color-wm-blue-rgb), 1);
-    --color-wm-purple:      rgba(var(--color-wm-purple-rgb), 1);
-    --color-wm-red:         rgba(var(--color-wm-red-rgb), 1);
-    --color-wm-yellow:      rgba(var(--color-wm-yellow-rgb), 1);
+    --color-wm-blue:            rgba(var(--color-wm-blue-rgb), 1);
+    --color-wm-purple:          rgba(var(--color-wm-purple-rgb), 1);
+    --color-wm-red:             rgba(var(--color-wm-red-rgb), 1);
+    --color-wm-yellow:          rgba(var(--color-wm-yellow-rgb), 1);
 
-    --color-primary-rgb:    61,68,136;
-    --color-secondary-rgb:  24,34,59;
+    --color-primary-rgb:        61,68,136;
+    --color-secondary-rgb:      24,34,59;
 
-    --color-primary:        rgba(var(--color-primary-rgb), 1);
-    --color-secondary:      rgba(var(--color-secondary-rgb), 1);
-    --color-accent:         var(--color-wm-red);
+    --color-primary:            rgba(var(--color-primary-rgb), 1);
+    --color-secondary:          rgba(var(--color-secondary-rgb), 1);
+    --color-accent:             var(--color-wm-red);
 
-    --color-facebook:       #3b5998;
-    --color-linkedin:       #0077B5;
-    --color-google:         #dd4b39;
+    --color-facebook:           #3b5998;
+    --color-linkedin:           #0077B5;
+    --color-google:             #dd4b39;
 
-    --color-headings:       var(--color-darker);
-    --color-sub-headings:   var(--color-dark);
-    --color-copy:           var(--color-dark);
-    --color-sub-copy:       var(--color);
+    --color-headings:           var(--color-darker);
+    --color-sub-headings:       var(--color-dark);
+    --color-copy:               var(--color-dark);
+    --color-sub-copy:           var(--color);
 
-    --color-link:           var(--color-wm-blue);
+    --color-link:               var(--color-wm-blue);
 
-    --family-primary:       "Roboto", Helvetica, Arial;
-    --family-secondary:     "Gilroy", Helvetica, Arial;
+    --family-primary:           "Roboto", Helvetica, Arial;
+    --family-secondary:         "Gilroy", Helvetica, Arial;
 
-    --font-xxlarge-size: 3.157rem;
-    --font-xxlarge-lineHeight: 3.5rem;
-    --font-xlarge-size: 2.369rem;
-    --font-xlarge-lineHeight: 2.7rem;
-    --font-large-size: 1.777rem;
-    --font-large-lineHeight: 2rem;
-    --font-medium-size: 1.333rem;
-    --font-medium-lineHeight: 1.7rem;
-    --font-normal-size: 1rem;
-    --font-normal-lineHeight: 1.4rem;
-    --font-small-size: 0.75rem;
-    --font-small-lineHeight: 0.9rem;
+    --font-xxlarge-size:        3.157rem;
+    --font-xxlarge-lineHeight:  3.5rem;
+    --font-xlarge-size:         2.369rem;
+    --font-xlarge-lineHeight:   2.7rem;
+    --font-large-size:          1.777rem;
+    --font-large-lineHeight:    2rem;
+    --font-medium-size:         1.333rem;
+    --font-medium-lineHeight:   1.7rem;
+    --font-normal-size:         1rem;
+    --font-normal-lineHeight:   1.4rem;
+    --font-small-size:          0.75rem;
+    --font-small-lineHeight:    0.9rem;
 
-    --weight-thin: 100;
-    --weight-light: 300;
-    --weight-regular: 400;
-    --weight-medium: 500;
-    --weight-semiBold: 600;
-    --weight-bold: 700;
-    --weight-heavy: 900;
+    --weight-thin:              100;
+    --weight-light:             300;
+    --weight-regular:           400;
+    --weight-medium:            500;
+    --weight-semiBold:          600;
+    --weight-bold:              700;
+    --weight-heavy:             900;
 
-    --layer-1: 10;
-    --layer-2: 20;
-    --layer-3: 30;
-    --layer-4: 40;
-    --layer-5: 50;
-    --layer-6: 60;
-    --layer-7: 70;
-    --layer-8: 80;
-    --layer-9: 90;
-    --layer-10: 100;
+    --layer-1:                  10;
+    --layer-2:                  20;
+    --layer-3:                  30;
+    --layer-4:                  40;
+    --layer-5:                  50;
+    --layer-6:                  60;
+    --layer-7:                  70;
+    --layer-8:                  80;
+    --layer-9:                  90;
+    --layer-10:                 100;
 
-    --gutter: 20px;
-    --gutter-small: 10px;
-    --gutter-medium: 40px;
-    --gutter-large: 80px;
-    --gutter-jumbo: 120px;
+    --gutter:                   20px;
+    --gutter-small:             10px;
+    --gutter-medium:            40px;
+    --gutter-large:             80px;
+    --gutter-jumbo:             120px;
 
-    --radius-small: 5px;
-    --radius-medium: 10px;
-    --radius-large: 20px;
+    --radius-small:             5px;
+    --radius-medium:            10px;
+    --radius-large:             20px;
     
-    --shadow: 1px 1px 10px rgba(0,0,0, 0.25);
-    --shadow-text: 0px 0px 10px rgba(0,0,0, 0.85);
-    --shadow-text-light: 0px 0px 5px rgba(0,0,0, 0.25);
+    --shadow:                   1px 1px 10px rgba(0,0,0, 0.25);
+    --shadow-text:              0px 0px 10px rgba(0,0,0, 0.85);
+    --shadow-text-light:        0px 0px 5px rgba(0,0,0, 0.25);
     
-    --transition: 0.5s;
-    --transition-slow: 1s;
-    --transition-fast: 0.3s;
+    --transition:               0.5s;
+    --transition-slow:          1s;
+    --transition-fast:          0.3s;
+
+    --btn-font:                 var(--family-secondary);
+    --btn-font-weight:          var(--weight-bold);
+    --btn-radius:               var(--radius-small);
     
     --btn-primary--color:   var(--color-secondary);
     --btn-primary--colorH:  var(--color-accent);

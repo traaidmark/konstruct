@@ -47,10 +47,10 @@ const makeBtn = (v) => {
 
     color: var(--btn-${ v }--color)!important;
 
-    font-weight: var(--weight-bold);
-    font-family: var(--family-secondary);
+    font-weight: var(--btn-font-weight);
+    font-family: var(--btn-font);
     
-    border-radius: var(--radius-small);
+    border-radius: var(--btn-radius);
 
     &:hover {
       color: var(--btn-${ v }--colorH)!important;
