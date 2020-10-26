@@ -20,7 +20,6 @@ import {
 const GridContainer = styled.div`
 
   display: grid;
-
   @media ${ _setDevice.s } {
     grid-template-columns: ${ ({ smallCols }) => smallCols && smallCols };
     grid-gap: ${ ({ smallGutter }) => smallGutter && smallGutter };
