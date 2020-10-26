@@ -103,7 +103,7 @@ Data.propTypes = {
   /** Display a prefix to your value with a slightly different style. */
   prefix: propTypes.string,
   /** Display your value. */
-  value: propTypes.string.isRequired,
+  value: propTypes.string,
   /** Modify the size of your data. */
   size: propTypes.oneOf([ 'small', 'default', 'large', 'xlarge']),
 };
