@@ -46,6 +46,41 @@ exports[`Bucket > Section renders correctly with all props 1`] = `
   margin-top: var(--gutter-medium)!important;
 }
 
+.c2 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 ul li {
+  padding-left: 0;
+}
+
+.c2 ul li:before {
+  display: none;
+}
+
+.c2 ul li:marker {
+  display: none;
+}
+
+.c2 ul li:not(:last-child) {
+  margin-right: var(--gutter-small);
+}
+
 @media (max-width:480px) {
   .c0 {
     padding: var(--gutter);
@@ -70,6 +105,39 @@ exports[`Bucket > Section renders correctly with all props 1`] = `
   .c1 {
     margin-bottom: var(--gutter);
     width: 60%;
+  }
+}
+
+@media (max-width:480px) {
+  .c2 ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    -webkit-flex-direction: column!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+  }
+
+  .c2 ul li {
+    padding-left: 0;
+  }
+
+  .c2 ul li:before {
+    display: none;
+  }
+
+  .c2 ul li:marker {
+    display: none;
+  }
+
+  .c2 ul li:not(:last-child) {
+    margin-bottom: var(--gutter-small);
   }
 }
 
