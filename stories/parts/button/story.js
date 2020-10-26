@@ -26,7 +26,7 @@ import Button from '../../../packages/parts/button/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Parts/Button',
+  title: 'Part: Button',
   parameters: {
     docs: {
       page: mdx,

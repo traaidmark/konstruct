@@ -3,7 +3,7 @@ import Foundation from '../../../packages/foundation/src';
 import Section from '../../../packages/buckets/section/src';
 import mdx from './doc.mdx';
 export default {
-  title: 'Buckets/Section',
+  title: 'Bucket: Section',
   parameters: {
     docs: {
       page: mdx,
