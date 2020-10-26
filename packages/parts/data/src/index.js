@@ -18,10 +18,14 @@ import {
 // 2.1. DATA CONTAINER
 
 const DataContainer = styled.div`
+
+  --data-prefix-color:        var(--color);
+  --data-value-color:         var(--color-dark);
+
   display: inline-flex;
   align-items: center;
   font-weight: var(--weight-bold);
-  color: var(--color-darker);
+  color: var(--data-value-color);
 
   strong {
     ${
@@ -42,7 +46,7 @@ const DataContainer = styled.div`
 
   i {
     font-weight: var(--weight-light);
-    color: var(--color-dark);
+    color: var(--data-prefix-color);
     font-style: normal;
     text-transform: uppercase;
     margin-right: 5px;
@@ -55,7 +59,7 @@ const DataContainer = styled.div`
         case 'xlarge':
           return _setFontSize('xlarge');
         default:
-          return _setFontSize('normal');
+          return _setFontSize('medium');
         }
     } }
   }
