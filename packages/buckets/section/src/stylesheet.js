@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import {
   _setDevice,
   _setFontSize,
+  _makeList,
 } from '@traaidmark/konstruct-mixins';
 
 // 1.1. END ....................................................................
@@ -166,6 +167,16 @@ export default {
   align-items: center;
 
   margin-top: var(--gutter-medium)!important;
+
+  ul {
+    ${ _makeList('row') }
+  }
+
+  @media ${ _setDevice.s } {
+    ul {
+      ${ _makeList('column') }
+    }
+  };
 
   `,
 
