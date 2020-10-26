@@ -53,17 +53,17 @@ describe('Bucket: Grid', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Section
-        smallCols={ smallCols }
-        smallGutter={ smallGutter }
-        mediumCols={ mediumCols }
-        mediumGutter={ mediumGutter }
-        largeCols={ largeCols }
-        largeGutter={ largeGutter }
+      <Grid
+        smallCols={ props.smallCols }
+        smallGutter={ props.smallGutter }
+        mediumCols={ props.mediumCols }
+        mediumGutter={ props.mediumGutter }
+        largeCols={ props.largeCols }
+        largeGutter={ props.largeGutter }
       >
         <div>col 1</div>  
         <div>col 2</div>  
-      </Section>
+      </Grid>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
