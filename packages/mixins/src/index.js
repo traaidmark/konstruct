@@ -18,7 +18,7 @@ export { default as _makeButton } from './makers/button';
 
 // 3. ADDERS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// export { default as _mixin_arrow } from './mixins/arrow';
+export { default as _addArrow } from './adders/arrow';
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
