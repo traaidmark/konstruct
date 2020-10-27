@@ -21,8 +21,8 @@
   "peerDependencies": {
     "@traaidmark/konstruct-mixins": "^1.0.2",
     "@traaidmark/konstruct-part-data": "^1.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "styled-components": "5.2.0"
   }
 }
