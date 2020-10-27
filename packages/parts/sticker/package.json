@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-part-sticker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
@@ -12,8 +12,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@traaidmark/konstruct-mixins": "^1.0.3",
-    "@traaidmark/konstruct-part-data": "^1.0.2",
+    "@traaidmark/konstruct-mixins": "^1.0.4",
+    "@traaidmark/konstruct-part-data": "^1.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "5.2.0"
