@@ -1,12 +1,12 @@
 {
-  "name": "@traaidmark/konstruct-part-data",
+  "name": "@traaidmark/konstruct-part-flag",
   "version": "1.0.4",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/parts/data"
+    "directory": "packages/parts/flag"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
