@@ -25,7 +25,7 @@ const DataContainer = styled.div`
   display: inline-flex;
   align-items: center;
   font-weight: var(--weight-bold);
-  color: var(--data-value-color);
+  color: var(--data-value-color)!important;
 
   strong {
     ${
@@ -46,7 +46,7 @@ const DataContainer = styled.div`
 
   i {
     font-weight: var(--weight-light);
-    color: var(--data-prefix-color);
+    color: var(--data-prefix-color)!important;
     font-style: normal;
     text-transform: uppercase;
     margin-right: 5px;

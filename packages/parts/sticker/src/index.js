@@ -28,7 +28,7 @@ const StickerContainer = styled.div`
   small {
     display: block;
     font-weight: var(--weight-regular);
-    color: var(--sticker-label-color);
+    color: var(--sticker-label-color)!important;
   }
 
 `;
