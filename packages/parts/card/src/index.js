@@ -51,12 +51,14 @@ const makeInteractiveContainer = () => `
 // 2.2. STYLESHEETS ............................................................
 
 const Styled = {
-  container: styled.article`
+  card: styled.article`
 
+    --card-text-align:          left;
+    --card-border-radius:       var(--radius-small);
     --card-title-font:          var(--family-secondary);
     --card-title-weight:        var(--weight-bold);
     --card-title-color:         var(--color-dark);
-    --card-content-color:       var(--color);
+    --card-content-color:       var(--color-dark);
     --card-meta-color:          var(--color);
     --card-meta-border-color:   var(--color-light);
     --card-border-color:        var(--color);
@@ -64,6 +66,7 @@ const Styled = {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
     height: 100%;
 
@@ -72,11 +75,10 @@ const Styled = {
   `,
   image: styled.figure`
   
-    margin: 0;
+    margin: 0 0 15px 0;
     flex: none;
     overflow: hidden;
     border-radius: var(--radius-small);
-    position: relative;
 
     iframe {
       width: 100%!important;
@@ -97,34 +99,44 @@ const Styled = {
     }
 
   `,
-  content: styled.div`
+  container: styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   
     flex: 1;
     padding: var(--gutter);
-    margin-top: 15px;
 
     background: var(--color-white);
-    border-radius: var(--radius-small);
-
-    position: relative;
+    border-radius: var(--card-border-radius);
 
     transition: var(--transition-fast);
 
-    text-align: ${ ({ align }) => align && align };
+    
 
-    ${ _addArrow('top-left', 'var(--color-white)') }
+    ${ 
+      ({ hasImage }) => hasImage && _addArrow('top-left', 'var(--color-white)')
+    }
 
     &:after {
       transform: translateY(10px);
     }
 
+    
+
+  `,
+  content: styled.div`
+    flex: 1;
+    margin-bottom: var(--gutter);
+    text-align: var(--card-text-align);
     h3 {
       font-family: var(--card-title-font);
       font-weight: var(--card-title-weight);
       ${ _setFontSize('medium') }
 
       color: var(--card-title-color);
-      margin: 0 0 var(--gutter-small) 0;
+      margin: 0 0 var(--gutter-small) 0!important;
       transition: 0.3s;
       font-weight: var(--weight-light);
 
@@ -134,15 +146,17 @@ const Styled = {
       ${ _setFontSize('small') }
       color: var(--card-content-color)!important;
     }
-
   `,
   meta: styled.ul`
+
+    flex: none;
+
     ${ _makeList('row') }
     
     margin-bottom: var(--gutter-small)!important;
-    padding-bottom: 5px;
+    padding-top: var(--gutter-small);
 
-    border-bottom: solid 1px var(--card-meta-border-color);
+    border-top: solid 1px var(--card-meta-border-color);
     
     li {
       ${ _setFontSize('small') }
@@ -152,6 +166,11 @@ const Styled = {
         padding-left: 5px;
       }
     }
+  `,
+  footer: styled.ul`
+    flex: none;
+    ${ _makeList('row') }
+    justify-content: center;
   `,
 };
 
@@ -167,14 +186,11 @@ const Card  = ({
   imageSrc = undefined,
   imageAlt = undefined,
   videoSrc = undefined,
-  cta = '',
+  actions = [],
   isInteractive = false,
+  meta = [],
   style,
   className,
-  tags = [],
-  align = 'left',
-  meta = [],
-  isBordered,
 }) => {
 
 
@@ -199,18 +215,6 @@ const Card  = ({
   }, [imageSrc, videoSrc]);
 
   // 3.2.1. END
-
-  // 3.2.2. TAGS
-
-  const TagContent = useCallback(() => {
-    return tags.length > 0 && (
-      <Styled.meta>
-        { tags.map((i, k) => <li key={ `card-tags-${ k }` }>{ i }</li>) }
-      </Styled.meta>
-    );
-  }, [tags]);
-
-  // 3.2.2. END
   
   // 3.2.2. META CONTENT
 
@@ -224,17 +228,21 @@ const Card  = ({
 
   // 3.2.2. END
  
-  // 3.2.2. RENDER CTA
+  // 3.2.3. RENDER ACTIONS
 
-  const CTA = useCallback(() => {
-    return cta && (
-      <footer>
-        { cta }
-      </footer>
+  const Actions = useCallback(() => {
+    return actions.length > 0 && (
+      <Styled.footer>
+        { 
+          actions.map((i,k) => (
+            <li key={ `card-actions-${ k }` }>{ i }</li>
+          ))
+        }
+      </Styled.footer>
     );
-  }, [cta]);
+  }, [actions]);
 
-  // 3.2.2. END
+  // 3.2.3. END
 
   // 3.1. END ..................................................................
 
@@ -242,22 +250,22 @@ const Card  = ({
 
   return (
 
-    <Styled.container
+    <Styled.card
       style={ style }
       className={ className }
       isInteractive={ isInteractive }
     >
       <Media />
-      <Styled.content
-        align={ align }
-        isBordered={ isBordered }
-      >
-        { title && <h3>{ title }</h3> }
+      <Styled.container hasImage={ imageSrc ? true : false }>
+        <Styled.content>
+          { title && <h3>{ title }</h3> }
+          { children }
+        </Styled.content>
         <MetaContent />
-        { children }
-      </Styled.content>
-
-    </Styled.container>
+        <Actions />
+      </Styled.container>
+      
+    </Styled.card>
 
   );
 
@@ -272,22 +280,28 @@ const Card  = ({
 // 4. PROP-TYPES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Card.propTypes = {
-  children: propTypes.node.isRequired,
-  image: propTypes.oneOfType([
+  /** Title of the card */
+  title: propTypes.string,
+  /** Content of the card */
+  children: propTypes.node,
+  /** Url or html to display an image */
+  imageSrc: propTypes.oneOfType([
     propTypes.string,
     propTypes.node,
   ]),
-  media: propTypes.node,
-  image_alt: propTypes.string,
-  cta: propTypes.string,
-  tags: propTypes.array,
-  media: propTypes.node,
-  style: propTypes.object,
-  align: propTypes.string,
-  children: propTypes.node.isRequired,
-  className: propTypes.string,
-  image_alt: propTypes.string,
+  /** Alt text to display with image */
+  imageAlt: propTypes.string,
+  /** Url or html to display a video */
+  videoSrc: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.node,
+  ]),
+  /** An array of links to display below the content */
+  actions: propTypes.array,
+  /** Whether or not to have hover effects */
   isInteractive: propTypes.bool,
+  /** An array of items to display as meta content */
+  meta: propTypes.array,
 
 }
 

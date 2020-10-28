@@ -45,23 +45,44 @@ export const Demo = (args) => (
   <Foundation>
     <Section style={ { backgroundColor: 'var(--color-light)' } } variantX="wide">
       <Grid largeCols="1fr 1fr 1fr" >
-        <Card { ...args } isInteractive />
-        <Card { ...args } />
-        <Card { ...args } />
+        <Card 
+          { ...args }
+          imageSrc='https://source.unsplash.com/500x250/?workbench'
+          imageAlt='This is a neat title for a card.'
+          isInteractive
+        />
+        <Card
+          title="This is a card without image"
+          meta={
+            [
+              '30 Minutes ago...',
+              'Uncategorised',
+              'Adrian Kirsten'
+            ]
+          }
+          actions={
+            [
+              <a>Click here!</a>
+            ]
+          }
+        >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lorem mi. Nullam ornare purus quis mauris venenatis, vitae consequat mauris interdum.</p>
+        </Card>
       </Grid>
     </Section>
     
     <h3>Code</h3>
     <Source
       code={dedent`
-      <Sticker
-        label="Amount"
-        prefix="usd"
-        value="23.00"
-        size="default"
-        align: "left"
-        placement: "top"
-      />
+      <Card
+        imageSrc=""
+        imageAlt=""
+        title=""
+        meta={ [] }
+        actions={ [] }
+      >
+        ...
+      </Card>
       `}
     />
   </Foundation>

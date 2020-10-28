@@ -1,27 +1,29 @@
-# Konstruct Sticker
+# Konstruct Card
 
-The `<Sticker />` component is a very small display component to display typically numerical data with associated label.
+The `<Card />` component is a typical card component with some cool options.
+
 ## Installation
 
-`yarn add @traaidmark/konstruct-parts-Sticker;`
+`yarn add @traaidmark/konstruct-part-card;`
 
 ## Usage
 
 ````
 import React from 'react';
-import Sticker from '@traaidmark/konstruct-parts-Sticker';
+import Sticker from '@traaidmark/konstruct-part-card';
 
 const DemoComponent = () => {
   
   return (
-    <Sticker
-      label="Amount"
-      prefix="usd"
-      value="23.00"
-      size="default"
-      align: "left"
-      placement: "top"
-    />
+    <Card
+      imageSrc=""
+      imageAlt=""
+      title=""
+      meta={ [] }
+      actions={ [] }
+    >
+      ...
+    </Card>
   );
 };
 export default DemoComponent;

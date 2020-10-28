@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Sticker from '.';
+import Card from '.';
 
 // 1.2. END ....................................................................
 
@@ -21,25 +21,39 @@ import Sticker from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  prefix: 'usd',
-  value: '2300.00',
-  label: 'Amount',
-  placement: 'top',
-  align: 'left',
-  size: 'large'
+  imageSrc: 'https://source.unsplash.com/500x250/?workbench',
+  imageAlt: 'This is a neat title for a card.',
+  title: 'This is a neat title for a card.',
+  actions: [
+    <a>Click here!</a>
+  ],
+  meta: [
+    '30 Minutes ago...',
+    'Uncategorised',
+    'Adrian Kirsten'
+  ],
+  tags: [
+    <small>almost sold!</small>,
+    <small>USA</small>
+  ],
+  children: (
+    <>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lorem mi. Nullam ornare purus quis mauris venenatis, vitae consequat mauris interdum.</p>
+    </>
+  )
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts: Sticker', () => {
+describe('Parts: Card', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Sticker />
+      <Card />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -50,14 +64,7 @@ describe('Parts: Sticker', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Sticker
-        prefix={ props.prefix }
-        value={ props.value }
-        size={ props.size }
-        align={ props.align }
-        placement={ props.placement }
-        label={ props.label }
-      />
+      <Card { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

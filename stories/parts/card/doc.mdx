@@ -1,9 +1,9 @@
 import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-# Data
+# Card
 
-The `<Sticker />` component is a small data display component.
+The `<Card />` component is a typical card component with some cool options.
 
 - [Installation](#installation)
 - [Dependencies](#dependencies)
@@ -14,7 +14,7 @@ The `<Sticker />` component is a small data display component.
 
 <Source
   code={dedent`
-    yarn add @traaidmark/konstruct-part-sticker;
+    yarn add @traaidmark/konstruct-part-card;
   `}
 />
 
@@ -27,19 +27,20 @@ This component needs `@traaidmark/konstruct-foundation` to work.
 <Source
   code={dedent`
     import React from 'react';
-    import Sticker from '@traaidmark/konstruct-parts-sticker';
+    import Sticker from '@traaidmark/konstruct-part-card';
     
     const DemoComponent = () => {
       
       return (
-        <Sticker
-          label="Amount"
-          prefix="usd"
-          value="23.00"
-          size="default"
-          align: "left"
-          placement: "top"
-        />
+        <Card
+          imageSrc=""
+          imageAlt=""
+          title=""
+          meta={ [] }
+          actions={ [] }
+        >
+          ...
+        </Card>
       );
     };
     export default DemoComponent;
