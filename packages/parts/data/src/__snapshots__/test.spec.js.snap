@@ -13,7 +13,7 @@ exports[`Parts: Data renders correctly with all props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: var(--weight-bold);
-  color: var(--data-value-color);
+  color: var(--data-value-color)!important;
 }
 
 .c0 strong {
@@ -23,7 +23,7 @@ exports[`Parts: Data renders correctly with all props 1`] = `
 
 .c0 i {
   font-weight: var(--weight-light);
-  color: var(--data-prefix-color);
+  color: var(--data-prefix-color)!important;
   font-style: normal;
   text-transform: uppercase;
   margin-right: 5px;
@@ -57,7 +57,7 @@ exports[`Parts: Data renders correctly without any props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: var(--weight-bold);
-  color: var(--data-value-color);
+  color: var(--data-value-color)!important;
 }
 
 .c0 strong {
@@ -67,7 +67,7 @@ exports[`Parts: Data renders correctly without any props 1`] = `
 
 .c0 i {
   font-weight: var(--weight-light);
-  color: var(--data-prefix-color);
+  color: var(--data-prefix-color)!important;
   font-style: normal;
   text-transform: uppercase;
   margin-right: 5px;

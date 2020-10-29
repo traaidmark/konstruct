@@ -7,7 +7,7 @@ exports[`Parts: Card renders correctly with all props 1`] = `
   --card-title-font: var(--family-secondary);
   --card-title-weight: var(--weight-bold);
   --card-title-color: var(--color-dark);
-  --card-content-color: var(--color-dark);
+  --card-content-color: var(--color);
   --card-meta-color: var(--color);
   --card-meta-border-color: var(--color-light);
   --card-border-color: var(--color);
@@ -118,12 +118,10 @@ exports[`Parts: Card renders correctly with all props 1`] = `
 }
 
 .c3 p,
-.c3 li,
-.c3 small,
-.c3 strong {
+.c3 li {
   font-size: var(--font-small-size);
   line-height: var(--font-small-lineHeight);
-  color: var(--card-content-color)!important;
+  color: var(--card-content-color);
 }
 
 .c4 {
@@ -171,6 +169,26 @@ exports[`Parts: Card renders correctly with all props 1`] = `
   font-size: var(--font-small-size);
   line-height: var(--font-small-lineHeight);
   color: var(--card-meta-color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 li img,
+.c4 li svg {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 5px;
 }
 
 .c4 li:not(:first-child) {
@@ -277,7 +295,7 @@ exports[`Parts: Card renders correctly without any props 1`] = `
   --card-title-font: var(--family-secondary);
   --card-title-weight: var(--weight-bold);
   --card-title-color: var(--color-dark);
-  --card-content-color: var(--color-dark);
+  --card-content-color: var(--color);
   --card-meta-color: var(--color);
   --card-meta-border-color: var(--color-light);
   --card-border-color: var(--color);
@@ -345,12 +363,10 @@ exports[`Parts: Card renders correctly without any props 1`] = `
 }
 
 .c2 p,
-.c2 li,
-.c2 small,
-.c2 strong {
+.c2 li {
   font-size: var(--font-small-size);
   line-height: var(--font-small-lineHeight);
-  color: var(--card-content-color)!important;
+  color: var(--card-content-color);
 }
 
 <article
