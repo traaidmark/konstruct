@@ -58,7 +58,7 @@ const Styled = {
     --card-title-font:          var(--family-secondary);
     --card-title-weight:        var(--weight-bold);
     --card-title-color:         var(--color-dark);
-    --card-content-color:       var(--color-dark);
+    --card-content-color:       var(--color);
     --card-meta-color:          var(--color);
     --card-meta-border-color:   var(--color-light);
     --card-border-color:        var(--color);
@@ -130,6 +130,7 @@ const Styled = {
     flex: 1;
     margin-bottom: var(--gutter);
     text-align: var(--card-text-align);
+
     h3 {
       font-family: var(--card-title-font);
       font-weight: var(--card-title-weight);
@@ -142,9 +143,9 @@ const Styled = {
 
     }
 
-    p, li, small, strong {
+    p, li {
       ${ _setFontSize('small') }
-      color: var(--card-content-color)!important;
+      color: var(--card-content-color);
     }
   `,
   meta: styled.ul`
@@ -161,6 +162,13 @@ const Styled = {
     li {
       ${ _setFontSize('small') }
       color: var(--card-meta-color);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img, svg {
+        flex: none;
+        margin-right: 5px;
+      }
       &:not(:first-child) {
         border-left: solid 1px var(--color-light);
         padding-left: 5px;
