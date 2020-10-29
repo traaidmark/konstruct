@@ -26,7 +26,6 @@ const Styled = {
   flag: styled.span`
 
     --flag-radius:                      var(--radius-small);
-
     --flag-info-background-color:       var(--color-blue);
     --flag-info-text-color:             var(--color-darker);
     --flag-new-background-color:        var(--color-green);
