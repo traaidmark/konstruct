@@ -8,9 +8,6 @@
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/parts/button"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "dependencies": {
     "@traaidmark/konstruct-mixins": "^1.0.5",
     "react": "17.0.1",

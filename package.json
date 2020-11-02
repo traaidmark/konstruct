@@ -7,9 +7,6 @@
   "author": "Adrian Kirsten",
   "license": "Apache 2",
   "private": true,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "workspaces": [
     "packages/**/*"
   ],
