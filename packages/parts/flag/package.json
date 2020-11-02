@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-part-flag",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
@@ -9,7 +9,7 @@
     "directory": "packages/parts/flag"
   },
   "dependencies": {
-    "@traaidmark/konstruct-mixins": "^1.0.5",
+    "@traaidmark/konstruct-mixins": "^1.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "5.2.0"
