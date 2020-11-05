@@ -15,10 +15,13 @@
     "bootstrap": "lerna bootstrap",
     "start": "start-storybook -p 5555",
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "build-storybook": "yarn build-storybook",
+    "publish-storybook": "./bin/publish-storybook.sh",
     "test": "jest",
     "test:update": "jest --updateSnapshot",
     "test:coverage": "jest --coverage",
-    "lint": "eslint packages/*"
+    "lint": "eslint packages/*",
+    "chromatic": "npx chromatic --project-token 6w62zlt93a9"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -33,6 +36,7 @@
     "babel-jest": "^26.6.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
+    "chromatic": "^5.3.0",
     "eslint": "^7.12.1",
     "eslint-plugin-react": "^7.21.5",
     "jest": "^26.6.1",
