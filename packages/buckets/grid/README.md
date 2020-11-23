@@ -18,4 +18,6 @@ Fairly straightforward grid component to build your own sets of basic grids quic
 </Section>
 ````
 
-Please visit our story book for detailed documentation!
+## Documentation
+
+You can find detailed documentation at [https://konstruct.traaidmark.com](https://konstruct.traaidmark.com/?path=/docs/bucket-grid--demo)

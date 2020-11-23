@@ -4,7 +4,7 @@ This is the bread & butter component when it comes to putting content on a page.
 
 ## Installation
 
-`yarn add @traaidmark/konstruct-parts-button;`
+`yarn add @traaidmark/konstruct-bucket-section;`
 
 ## Usage
 
@@ -18,4 +18,7 @@ This is the bread & butter component when it comes to putting content on a page.
 </Section>
 ````
 
-Please visit our story book for detailed documentation!
+
+## Documentation
+
+You can find detailed documentation at [https://konstruct.traaidmark.com](https://konstruct.traaidmark.com/?path=/docs/bucket-section--demo)
