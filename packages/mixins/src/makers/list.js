@@ -44,7 +44,16 @@ export default (direction) => `
   margin: 0;
   padding: 0;
 
+  list-style: none;
+
   li {
+
+    &::marker {
+      display: none;
+    }
+
+    list-style: none;
+
     &:before {
       display: none;
     }

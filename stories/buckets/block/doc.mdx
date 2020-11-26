@@ -1,0 +1,47 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Block
+
+A block component perfect for sidebars, and displaying various small content pieces.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-bucket-block
+  `}
+/>
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import Section from '@traaidmark/konstruct-bucket-block';
+    
+    const DemoComponent = () => (
+      <Block
+        title="Why we are so great"
+        actions=[
+          <a>Sign Up</a>
+        ],
+        isScrollable
+        hasBorder
+      >
+        ...content here
+      </Block>
+    );
+    export default DemoComponent;
+  `}
+/>
+
+## Props
+
+<ArgsTable />
+
+

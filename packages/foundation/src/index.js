@@ -324,49 +324,45 @@ const Stylesheet = createGlobalStyle`
   nav,
   section,
   main {
-      display: block;
+    display: block;
   }
   * {
-      box-sizing: border-box;
+    box-sizing: border-box;
   }
   *:before,
   *:after {
-      box-sizing: inherit;
+    box-sizing: inherit;
   }
   table {
-      border-collapse: collapse;
-      border-spacing: 0;
-  }
-  ol,
-  ul {
-      list-style: none;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
   img,
   video {
-      max-width: 100%;
+    max-width: 100%;
   }
   img {
-      border-style: none;
+    border-style: none;
   }
   blockquote,
   q {
-      quotes: none;
+    quotes: none;
   }
   blockquote:after,
   blockquote:before,
   q:after,
   q:before {
-      content: "";
-      content: none;
+    content: "";
+    content: none;
   }
   [hidden] {
-      display: none !important;
+    display: none !important;
   }
   [disabled] {
-      cursor: not-allowed;
+    cursor: not-allowed;
   }
   :focus:not(:focus-visible) {
-      outline: none;
+    outline: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -447,14 +443,6 @@ const Stylesheet = createGlobalStyle`
   }
 
   ul li {
-    position: relative;
-    padding-left: var(--gutter);
-  }
-  ul li::before {
-    position: absolute;
-    left: 0;
-    content: "•";
-    font-size: var(--font-small-medium);
   }
 
   ol {
