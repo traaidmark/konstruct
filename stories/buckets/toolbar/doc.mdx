@@ -1,0 +1,46 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Toolbar
+
+A simple toolbar component you can use to add tools and features to headings.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-bucket-toolbar
+  `}
+/>
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import Section from '@traaidmark/konstruct-bucket-toolbar';
+    
+    const DemoComponent = () => (
+      <Toolbar
+        heading="Why we are so great"
+        headingAs={ (props) => <h2 { ...props } }
+        text={ <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</> }
+        actions=[
+          <a>Sign Up now</a>,
+          <a>Do this other thing</a>
+        ],
+      />
+    );
+    export default DemoComponent;
+  `}
+/>
+
+## Props
+
+<ArgsTable />
+
+
