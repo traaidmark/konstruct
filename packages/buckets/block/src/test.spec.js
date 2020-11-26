@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Toolbar from '.';
+import Block from '.';
 
 // 1.2. END ....................................................................
 
@@ -21,26 +21,25 @@ import Toolbar from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  heading: 'Why we are so great',
-  headingAs: (props) => <h3 { ...props } />,
-  text: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</>,
+  title: 'Why we are so great',
   actions: [
-    <a>Sign Up now</a>,
-    <a>Do this other thing</a>
+    <a>One</a>,
+    <a>Two</a>
   ],
+  children: <p>Hello world</p>
 };
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Bucket: Toolbar', () => {
+describe('Bucket: Block', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Toolbar />
+      <Block />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -51,7 +50,7 @@ describe('Bucket: Toolbar', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Toolbar { ...props } />
+      <Block { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
