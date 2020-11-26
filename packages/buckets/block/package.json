@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-bucket-block",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "publishConfig": {
@@ -12,7 +12,7 @@
     "directory": "packages/buckets/block"
   },
   "dependencies": {
-    "@traaidmark/konstruct-mixins": "^1.1.1",
+    "@traaidmark/konstruct-mixins": "^1.1.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "5.2.0"
