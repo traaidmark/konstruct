@@ -114,7 +114,7 @@ const Toolbar  = ({
   // 2.1.3. ACTIONS
 
   const Actions = useCallback(() => {
-    return actions.length > 1 && (
+    return actions.length > 0 && (
       <Styled.actions>
         <ul>
           {
