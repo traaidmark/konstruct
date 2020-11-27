@@ -1,0 +1,42 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Gallery
+
+A simple image gallery.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-media-gallery
+  `}
+/>
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import Section from '@traaidmark/konstruct-media-gallery';
+    
+    const DemoComponent = () => (
+      <Gallery
+        images=[
+          https://www.url.tld/images/image-1.jpg
+        ],
+      />
+    );
+    export default DemoComponent;
+  `}
+/>
+
+## Props
+
+<ArgsTable />
+
+
