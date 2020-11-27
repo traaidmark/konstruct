@@ -18,6 +18,7 @@ const Variables = createGlobalStyle`
   :root {
 
     --color-white-rgb:          255, 255, 255;
+    --color-lighter-rgb:          245, 249, 250;
     --color-light-rgb:          230, 231, 232;
     --color-rgb:                133, 136, 143;
     --color-dark-rgb:           34,40,53;
@@ -25,6 +26,7 @@ const Variables = createGlobalStyle`
     --color-black-rgb:          0,0,0;
     
     --color-white:              rgba(var(--color-white-rgb), 1);
+    --color-lighter:              rgba(var(--color-light-rgb), 1);
     --color-light:              rgba(var(--color-light-rgb), 1);
     --color:                    rgba(var(--color-rgb), 1);
     --color-dark:               rgba(var(--color-dark-rgb), 1);
@@ -61,6 +63,8 @@ const Variables = createGlobalStyle`
     --color-facebook:           #3b5998;
     --color-linkedin:           #0077B5;
     --color-google:             #dd4b39;
+
+    --color-body:               var(--color-lighter);
 
     --color-headings:           var(--color-darker);
     --color-sub-headings:       var(--color-dark);
