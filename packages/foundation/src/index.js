@@ -18,7 +18,7 @@ const Variables = createGlobalStyle`
   :root {
 
     --color-white-rgb:          255, 255, 255;
-    --color-lighter-rgb:          245, 249, 250;
+    --color-lighter-rgb:        245, 249, 250;
     --color-light-rgb:          230, 231, 232;
     --color-rgb:                133, 136, 143;
     --color-dark-rgb:           34,40,53;
