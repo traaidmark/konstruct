@@ -26,7 +26,7 @@ const Variables = createGlobalStyle`
     --color-black-rgb:          0,0,0;
     
     --color-white:              rgba(var(--color-white-rgb), 1);
-    --color-lighter:              rgba(var(--color-lighter-rgb), 1);
+    --color-lighter:            rgba(var(--color-lighter-rgb), 1);
     --color-light:              rgba(var(--color-light-rgb), 1);
     --color:                    rgba(var(--color-rgb), 1);
     --color-dark:               rgba(var(--color-dark-rgb), 1);
