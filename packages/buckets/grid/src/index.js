@@ -26,11 +26,15 @@ const GridContainer = styled.div`
   };
   @media ${ _setDevice.m } {
     grid-template-columns: ${ ({ mediumCols }) => mediumCols && mediumCols };
-    grid-gap: ${ ({ medium }) => medium && medium.gutter && medium.gutter };
+    grid-gap: ${ ({ mediumGutter }) => mediumGutter && mediumGutter };
   };
   @media ${ _setDevice.l } {
     grid-template-columns: ${ ({ largeCols }) => largeCols && largeCols };
     grid-gap: ${ ({ largeGutter }) => largeGutter && largeGutter };
+  };
+  @media ${ _setDevice.xl } {
+    grid-template-columns: ${ ({ xLargeCols }) => xLargeCols && xLargeCols };
+    grid-gap: ${ ({ xLargeGutter }) => xLargeGutter && xLargeGutter };
   };
 
 `;
@@ -45,6 +49,8 @@ const GridContainer = styled.div`
 
 const Grid  = ({
   children,
+  xLargeCols = '1fr 1fr',
+  xLargeGutter = 'var(--gutter-medium)',
   largeCols = '1fr 1fr',
   largeGutter = 'var(--gutter-medium)',
   mediumCols = '1fr 1fr',
@@ -69,6 +75,8 @@ const Grid  = ({
       mediumGutter={ mediumGutter }
       largeCols={ largeCols }
       largeGutter={ largeGutter }
+      xLargeCols={ xLargeCols }
+      xLargeGutter={ xLargeGutter }
       { ...rest }
     >
       { children }
@@ -88,6 +96,10 @@ const Grid  = ({
 Grid.propTypes = {
   /** Content of component */
   children: propTypes.node.isRequired,
+  /** Columns template for extra large viewports */
+  xLargeCols: propTypes.string,
+  /** Grid gap for extra large viewports */
+  xLargeGutter: propTypes.string,
   /** Columns template for large viewports */
   largeCols: propTypes.string,
   /** Grid gap for large viewports */
