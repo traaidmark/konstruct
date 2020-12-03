@@ -137,6 +137,7 @@ exports[`Parts: Card renders correctly with all props 1`] = `
   flex-direction: row;
   margin: 0;
   padding: 0;
+  list-style: none;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -150,7 +151,12 @@ exports[`Parts: Card renders correctly with all props 1`] = `
 }
 
 .c4 li {
+  list-style: none;
   padding-left: 0;
+}
+
+.c4 li::marker {
+  display: none;
 }
 
 .c4 li:before {
@@ -209,6 +215,7 @@ exports[`Parts: Card renders correctly with all props 1`] = `
   flex-direction: row;
   margin: 0;
   padding: 0;
+  list-style: none;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -223,7 +230,12 @@ exports[`Parts: Card renders correctly with all props 1`] = `
 }
 
 .c5 li {
+  list-style: none;
   padding-left: 0;
+}
+
+.c5 li::marker {
+  display: none;
 }
 
 .c5 li:before {

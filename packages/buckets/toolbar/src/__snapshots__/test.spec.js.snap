@@ -38,6 +38,7 @@ exports[`Bucket: Toolbar renders correctly with all props 1`] = `
   flex-direction: row;
   margin: 0;
   padding: 0;
+  list-style: none;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -49,7 +50,12 @@ exports[`Bucket: Toolbar renders correctly with all props 1`] = `
 }
 
 .c2 ul li {
+  list-style: none;
   padding-left: 0;
+}
+
+.c2 ul li::marker {
+  display: none;
 }
 
 .c2 ul li:before {

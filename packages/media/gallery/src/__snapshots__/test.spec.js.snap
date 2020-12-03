@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media: Gallery renders correctly with all props 1`] = `
+.c0 {
+  --gallery-thumb-radius: var(--radius-small);
+  --gallery-img-radius: var(--radius-small);
+  --gallery-img-color: var(--color-white);
+  --gallery-thumb-hover-color: var(--color-accent);
+  --gallery-thumb-active-color: var(--color-dark);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.c2 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-flex-direction: column!important;
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 0 var(--gutter-small);
+}
+
+.c2 li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c2 li::marker {
+  display: none;
+}
+
+.c2 li:before {
+  display: none;
+}
+
+.c2 li:marker {
+  display: none;
+}
+
+.c2 li:not(:last-child) {
+  margin-bottom: var(--gutter-small);
+}
+
+.c2 li {
+  margin-bottom: var(--gutter-small);
+}
+
+.c2 li button {
+  background: none;
+  width: 80px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  background: var(--color);
+  border: solid 2px var(--color-white);
+  border-radius: var(--gallery-thumb-radius);
+  -webkit-transition: var(--transition-fast);
+  transition: var(--transition-fast);
+}
+
+.c2 li button:hover {
+  cursor: pointer;
+  border-color: var(--gallery-thumb-hover-color);
+  box-shadow: var(--shadow);
+}
+
+.c2 li img {
+  border-radius: var(--gallery-thumb-radius);
+  display: block;
+  width: 100px;
+  -webkit-transition: var(--transition-slow);
+  transition: var(--transition-slow);
+}
+
+.c2 li img:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.c1 {
+  background-color: var(--gallery-img-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--gallery-img-radius);
+  padding: 5px;
+}
+
+.c1 img {
+  display: block;
+  border-radius: var(--gallery-img-radius);
+}
+
+@media (max-width:480px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:480px) {
+  .c2 {
+    width: 100%;
+    margin-left: 0!important;
+    -webkit-flex-direction: row!important;
+    -ms-flex-direction: row!important;
+    flex-direction: row!important;
+    overflow-x: auto;
+  }
+
+  .c2 li {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .c2 {
+    width: 100%;
+    margin-left: 0!important;
+    -webkit-flex-direction: row!important;
+    -ms-flex-direction: row!important;
+    flex-direction: row!important;
+    overflow-x: auto;
+  }
+
+  .c2 li {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+
+@media (max-width:480px) {
+  .c1 {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .c1 {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+<figure
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <img
+      src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/c9aa14dd-faf1-498c-95e0-e7a960fa5fa2.jpg"
+    />
+  </div>
+  <ul
+    className="c2"
+  >
+    <li>
+      <button
+        isActive={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-0"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/c9aa14dd-faf1-498c-95e0-e7a960fa5fa2.jpg"
+        />
+      </button>
+    </li>
+    <li>
+      <button
+        isActive={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-1"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/3c5bf569-6bab-42a8-9106-715932ad8c0d.jpg"
+        />
+      </button>
+    </li>
+    <li>
+      <button
+        isActive={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-2"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/d27c20af-2724-4ba0-8f44-90a5da719039.jpg"
+        />
+      </button>
+    </li>
+    <li>
+      <button
+        isActive={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-3"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/e8703d4a-7485-4d66-b976-e69c842d4037.jpg"
+        />
+      </button>
+    </li>
+    <li>
+      <button
+        isActive={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-4"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/560afd67-11b6-49b0-952e-a528e27cba8a.jpg"
+        />
+      </button>
+    </li>
+    <li>
+      <button
+        isActive={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="gallery-thumbnails-5"
+          src="https://s3.eu-central-1.amazonaws.com/api-documents-service-public-prd/46304cf5-87dc-454e-b86a-7ab90f67a083.jpg"
+        />
+      </button>
+    </li>
+  </ul>
+</figure>
+`;
+
+exports[`Media: Gallery renders correctly without any props 1`] = `
+.c0 {
+  --gallery-thumb-radius: var(--radius-small);
+  --gallery-img-radius: var(--radius-small);
+  --gallery-img-color: var(--color-white);
+  --gallery-thumb-hover-color: var(--color-accent);
+  --gallery-thumb-active-color: var(--color-dark);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.c1 {
+  background-color: var(--gallery-img-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--gallery-img-radius);
+  padding: 5px;
+}
+
+.c1 img {
+  display: block;
+  border-radius: var(--gallery-img-radius);
+}
+
+@media (max-width:480px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:480px) {
+  .c1 {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+@media (min-width:481px) and (max-width:1023px) {
+  .c1 {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+<figure
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <img />
+  </div>
+</figure>
+`;
