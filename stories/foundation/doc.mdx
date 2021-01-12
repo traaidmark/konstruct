@@ -1,0 +1,53 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Data
+
+The `<Sticker />` component is a small data display component.
+
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-sticker;
+  `}
+/>
+
+## Dependencies
+
+This component needs `@traaidmark/konstruct-foundation` to work.
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import Sticker from '@traaidmark/konstruct-parts-sticker';
+    
+    const DemoComponent = () => {
+      
+      return (
+        <Sticker
+          label="Amount"
+          prefix="usd"
+          value="23.00"
+          size="default"
+          align: "left"
+          placement: "top"
+        />
+      );
+    };
+    export default DemoComponent;
+  `}
+/>
+
+## Props
+
+<ArgsTable />
+
+

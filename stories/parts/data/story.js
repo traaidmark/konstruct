@@ -16,7 +16,7 @@ import mdx from './doc.mdx';
 
 import List from '../../../storybook-components/List';
 
-import Foundation from '../../../packages/foundation/src';
+import '../../../packages/foundation/src/index.css';
 import Data from '../../../packages/parts/data/src';
 
 // 1.2. END ....................................................................
@@ -42,7 +42,7 @@ export default {
 // 3.1. DEMO ...................................................................
 
 export const Demo = (args) => (
-  <Foundation>
+  <>
     <List>
       <li>
         <Data { ...args }/>
@@ -58,7 +58,7 @@ export const Demo = (args) => (
       />
       `}
     />
-  </Foundation>
+  </>
 );
 Demo.args = {
   size: 'default',
@@ -71,7 +71,7 @@ Demo.args = {
 // 3.2. SIZES ..................................................................
 
 export const Sizes = (args) => (
-  <Foundation>
+  <>
     <List>
       <li>
         <Data prefix="usd" value="46000.00" size="small" />
@@ -83,7 +83,7 @@ export const Sizes = (args) => (
         <Data prefix="usd" value="46000.00" size="large" />
       </li>
     </List>
-  </Foundation>
+  </>
 );
 
 // 3.2. END ....................................................................

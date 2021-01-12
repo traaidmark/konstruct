@@ -16,7 +16,7 @@ import mdx from './doc.mdx';
 
 import List from '../../../storybook-components/List';
 
-import Foundation from '../../../packages/foundation/src';
+import '../../../packages/foundation/src/index.css';
 import Sticker from '../../../packages/parts/sticker/src';
 
 // 1.2. END ....................................................................
@@ -42,7 +42,7 @@ export default {
 // 3.1. DEMO ...................................................................
 
 export const Demo = (args) => (
-  <Foundation>
+  <>
     <List>
       <li>
         <Sticker { ...args }/>
@@ -61,7 +61,7 @@ export const Demo = (args) => (
       />
       `}
     />
-  </Foundation>
+  </>
 );
 Demo.args = {
   size: 'default',
@@ -77,7 +77,7 @@ Demo.args = {
 // 3.2. VARIANTS ...............................................................
 
 export const Variants = (args) => (
-  <Foundation>
+  <>
     <h3>Size variations:</h3>
     <List>
       <li>
@@ -111,7 +111,7 @@ export const Variants = (args) => (
         <Sticker {...args} placement="bottom" />
       </li>
     </List>
-  </Foundation>
+  </>
 );
 
 Variants.args = {
