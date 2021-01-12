@@ -16,7 +16,7 @@ import mdx from './doc.mdx';
 
 import List from '../../../storybook-components/List';
 
-import Foundation from '../../../packages/foundation/src';
+import '../../../packages/foundation/src/index.css';
 
 import Flag from '../../../packages/parts/flag/src';
 
@@ -43,7 +43,7 @@ export default {
 // 3.1. DEMO ...................................................................
 
 export const Demo = (args) => (
-  <Foundation>
+  <>
     <List>
       <li><Flag { ...args } /></li>
     </List>
@@ -56,7 +56,7 @@ export const Demo = (args) => (
       />
       `}
     />
-  </Foundation>
+  </>
 );
 Demo.args = {
   variant: 'info',
@@ -68,14 +68,14 @@ Demo.args = {
 // 3.3. DEFAULT STYLES .........................................................
 
 export const DefaultStyles = (args) => (
-  <Foundation>
+  <>
     <List>
       <li><Flag text="info" variant="info" /></li>
       <li><Flag text="new" variant="new" /></li>
       <li><Flag text="warning" variant="warning" /></li>
       <li><Flag text="error" variant="error" /></li>
     </List>
-  </Foundation>
+  </>
 );
 
 // 3.3. END ....................................................................

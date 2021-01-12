@@ -14,7 +14,7 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import Foundation from '../../../packages/foundation/src';
+import '../../../packages/foundation/src/index.css';
 import Section from '../../../packages/buckets/section/src';
 
 import Toolbar from '../../../packages/buckets/toolbar/src';
@@ -42,7 +42,7 @@ export default {
 // 3.1. DEMO ...................................................................
 
 export const Demo = (args) => (
-  <Foundation>
+  <>
     <Section>
       <Toolbar { ...args } />
     </Section>
@@ -60,7 +60,7 @@ export const Demo = (args) => (
       />
       `}
     />
-  </Foundation>
+  </>
   
 );
 

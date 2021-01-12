@@ -16,7 +16,7 @@ import mdx from './doc.mdx';
 
 import List from '../../../storybook-components/List';
 
-import Foundation from '../../../packages/foundation/src';
+import '../../../packages/foundation/src/index.css';
 import Button from '../../../packages/parts/button/src';
 
 // 1.2. END ....................................................................
@@ -42,7 +42,7 @@ export default {
 // 3.1. TEXT LINK ..............................................................
 
 export const Links = (args) => (
-  <Foundation>
+  <>
     <h3>Text Link</h3>
     <List>
       <li><Button to="https://google.com">Link without variant</Button></li>
@@ -60,7 +60,7 @@ export const Links = (args) => (
       </Button>
       `}
     />
-  </Foundation>
+  </>
 );
 Links.args = {
   children: 'Button Text',
@@ -73,7 +73,7 @@ Links.args = {
 // 3.2. TEXT BUTTON ............................................................
 
 export const Buttons = (args) => (
-  <Foundation>
+  <>
     <h3>Text Buttons</h3>
     <List>
       <li><Button>Button without variant</Button></li>
@@ -91,7 +91,7 @@ export const Buttons = (args) => (
       </Button>
       `}
     />
-  </Foundation>
+  </>
 );
 Buttons.args = {
   children: 'Button Text',
@@ -104,14 +104,14 @@ Buttons.args = {
 // 3.3. BUTTON SIZES ...........................................................
 
 export const Sizes = (args) => (
-  <Foundation>
+  <>
     <h3>Text Sizes</h3>
     <List>
       <li><Button variant="primary" size="small">Small Size</Button></li>
       <li><Button variant="primary" size="default">Default Size</Button></li>
       <li><Button variant="primary" size="large">Large Size</Button></li>
     </List>
-  </Foundation>
+  </>
 );
 
 // 3.3. END ....................................................................
@@ -119,7 +119,7 @@ export const Sizes = (args) => (
 // 3.3. DEFAULT STYLES .........................................................
 
 export const DefaultStyles = (args) => (
-  <Foundation>
+  <>
     <h3>Primary Text Styles</h3>
     <List>
       <li><Button variant="primary">{ args.children }</Button></li>
@@ -134,7 +134,7 @@ export const DefaultStyles = (args) => (
       <li><Button variant="secondary-warning">{ args.children }</Button></li>
       <li><Button variant="secondary-success">{ args.children }</Button></li>
     </List>
-  </Foundation>
+  </>
 );
 DefaultStyles.args = {
   children: 'Link Text',
