@@ -1,8 +1,8 @@
 {
   "name": "@traaidmark/konstruct-foundation",
   "version": "1.1.4",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "lib/index.css",
+  "module": "lib/index.css",
   "publishConfig": {
     "access": "public"
   },
@@ -10,16 +10,6 @@
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/foundation"
-  },
-  "dependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "styled-components": "5.2.0"
-  },
-  "peerDependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "styled-components": "5.2.0"
   },
   "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
 }
