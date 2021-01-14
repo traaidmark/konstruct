@@ -154,6 +154,68 @@ export const FormElements = (args) => (
       </aside>
     </Grid>
   </Section>
+  <Section>
+    <h3>Radio Element</h3>
+    
+    <Grid>
+      <aside>
+        <h4><code>input type="radio"</code></h4>
+        <ul>
+          <li><label><input type="radio" name="radio1" value="yes" /> Yes</label></li>
+          <li><label><input type="radio" name="radio1" value="no" /> No</label></li>
+        </ul>
+      </aside>
+      <aside>
+        <h4><code>input type="radio" disabled</code></h4>
+        <ul>
+          <li><label><input type="radio" name="radio2" value="yes" checked disabled /> Yes</label></li>
+          <li><label><input type="radio" name="radio2" value="no" disabled /> No</label></li>
+        </ul>
+      </aside>
+      <aside>
+        <h4><code>input type="radio" class="hasError"</code></h4>
+        <ul>
+          <li><label><input type="radio" name="radio3" value="yes" className="hasError" /> Yes</label></li>
+          <li><label><input type="radio" name="radio3" value="no" className="hasError" /> No</label></li>
+        </ul>
+      </aside>
+      
+    </Grid>
+  </Section>
+  <Section>
+    <h3>Checkbox Element</h3>
+    
+    <Grid>
+      <aside>
+        <h4><code>input type="checkbox"</code></h4>
+        <ul>
+          <li><label><input type="checkbox" name="checkbox1" /> I want the extra warranty</label></li>
+          <li><label><input type="checkbox" name="checkbox2" /> I want to receive the newsletter</label></li>
+        </ul>
+      </aside>
+      <aside>
+        <h4><code>input type="checkbox" disabled</code></h4>
+        <ul>
+          <li><label><input type="checkbox" name="checkbox3" checked disabled /> I want the extra warranty</label></li>
+          <li><label><input type="checkbox" name="checkbox4" disabled /> I want to receive the newsletter</label></li>
+        </ul>
+      </aside>
+      <aside>
+        <h4><code>input type="checkbox" class="hasError"</code></h4>
+        <ul>
+          <li><label><input type="checkbox" name="checkbox5" className="hasError" /> I want the extra warranty</label></li>
+          <li><label><input type="checkbox" name="checkbox3" className="hasError" /> I want to receive the newsletter</label></li>
+        </ul>
+      </aside>
+      
+    </Grid>
+  </Section>
+  <Section>
+    <h3>Textarea</h3>
+    <h4><code>textarea</code></h4>
+    <textarea></textarea>
+  </Section>
+  
   </>
 );
 

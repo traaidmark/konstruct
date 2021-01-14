@@ -340,9 +340,9 @@ a:hovered {
 }
 
 code {
-  background: var(--color-dark);
-  color: var(--color-light);
-  padding: 2px 5px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--gutter-small);
   border-radius: var(--radius-small);
 }
 
