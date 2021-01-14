@@ -6,58 +6,49 @@
 
   /* 1.1. COLOR VARIABLES ................................................... */
 
-  --color-white-rgb:          255, 255, 255;
-  --color-lighter-rgb:        245, 249, 250;
-  --color-light-rgb:          230, 231, 232;
-  --color-rgb:                133, 136, 143;
-  --color-dark-rgb:           34,40,53;
-  --color-darker-rgb:         10,16,30;
-  --color-black-rgb:          0,0,0;
-  
-  --color-white:              rgba(var(--color-white-rgb), 1);
-  --color-lighter:            rgba(var(--color-lighter-rgb), 1);
-  --color-light:              rgba(var(--color-light-rgb), 1);
-  --color:                    rgba(var(--color-rgb), 1);
-  --color-dark:               rgba(var(--color-dark-rgb), 1);
-  --color-darker:             rgba(var(--color-darker-rgb), 1);
-  --color-black:              rgba(var(--color-black-rgb), 1);
-
-  --color-red-rgb:            237,108,99;
-  --color-orange-rgb:         246,139,57;
-  --color-green-rgb:          93,226,165;
-  --color-blue-rgb:           66,175,227;
-  
-  --color-red:                rgba(var(--color-red-rgb), 1);
-  --color-orange:             rgba(var(--color-orange-rgb), 1);
-  --color-green:              rgba(var(--color-green-rgb), 1);
-  --color-blue:               rgba(var(--color-blue-rgb), 1);
-
-  --color-primary-rgb:        61,68,136;
-  --color-secondary-rgb:      24,34,59;
-
-  --color-primary:            rgba(var(--color-primary-rgb), 1);
-  --color-secondary:          rgba(var(--color-secondary-rgb), 1);
-  --color-accent:             var(--color-wm-red);
-
-  --color-facebook:           #3b5998;
-  --color-linkedin:           #0077B5;
-  --color-google:             #dd4b39;
-
-  --color-body:               var(--color-lighter);
-
-  --color-headings:           var(--color-darker);
-  --color-sub-headings:       var(--color-dark);
-  --color-copy:               var(--color-dark);
-  --color-sub-copy:           var(--color);
-
-  --color-link:               var(--color-blue);
+  --color-white-rgb: 255, 255, 255;
+  --color-lighter-rgb: 245, 249, 250;
+  --color-light-rgb: 230, 231, 232;
+  --color-rgb: 133, 136, 143;
+  --color-dark-rgb: 34, 40, 53;
+  --color-darker-rgb: 10, 16, 30;
+  --color-black-rgb: 0, 0, 0;
+  --color-white: rgba(var(--color-white-rgb), 1);
+  --color-lighter: rgba(var(--color-lighter-rgb), 1);
+  --color-light: rgba(var(--color-light-rgb), 1);
+  --color: rgba(var(--color-rgb), 1);
+  --color-dark: rgba(var(--color-dark-rgb), 1);
+  --color-darker: rgba(var(--color-darker-rgb), 1);
+  --color-black: rgba(var(--color-black-rgb), 1);
+  --color-red-rgb: 237, 108, 99;
+  --color-orange-rgb: 246, 139, 57;
+  --color-green-rgb: 93, 226, 165;
+  --color-blue-rgb: 66, 175, 227;
+  --color-red: rgba(var(--color-red-rgb), 1);
+  --color-orange: rgba(var(--color-orange-rgb), 1);
+  --color-green: rgba(var(--color-green-rgb), 1);
+  --color-blue: rgba(var(--color-blue-rgb), 1);
+  --color-primary-rgb: 61, 68, 136;
+  --color-secondary-rgb: 24, 34, 59;
+  --color-primary: rgba(var(--color-primary-rgb), 1);
+  --color-secondary: rgba(var(--color-secondary-rgb), 1);
+  --color-accent: var(--color-wm-red);
+  --color-facebook: #3b5998;
+  --color-linkedin: #0077b5;
+  --color-google: #dd4b39;
+  --color-body: var(--color-lighter);
+  --color-headings: var(--color-darker);
+  --color-sub-headings: var(--color-dark);
+  --color-copy: var(--color-dark);
+  --color-sub-copy: var(--color);
+  --color-link: var(--color-blue);
 
   /* 1.1. END ............................................................... */
 
   /* 1.2. FONT VARIABLES .................................................... */
 
-  --family-primary: "Roboto", Helvetica, Arial;
-  --family-secondary: "Gilroy", Helvetica, Arial;
+  --family-primary: "Roboto", helvetica, arial;
+  --family-secondary: "Gilroy", helvetica, arial;
 
   /* 1.2. END ............................................................... */
 
@@ -85,62 +76,62 @@
 
   /* 1.5. WEIGHT VARIABLES .................................................. */
 
-  --weight-thin:              100;
-  --weight-light:             300;
-  --weight-regular:           400;
-  --weight-medium:            500;
-  --weight-semiBold:          600;
-  --weight-bold:              700;
-  --weight-heavy:             900;
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semiBold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 900;
 
   /* 1.5. END ............................................................... */
 
   /* 1.6. LAYER VARIABLES ................................................... */
 
-  --layer-1:                  10;
-  --layer-2:                  20;
-  --layer-3:                  30;
-  --layer-4:                  40;
-  --layer-5:                  50;
-  --layer-6:                  60;
-  --layer-7:                  70;
-  --layer-8:                  80;
-  --layer-9:                  90;
-  --layer-10:                 100;
+  --layer-1: 10;
+  --layer-2: 20;
+  --layer-3: 30;
+  --layer-4: 40;
+  --layer-5: 50;
+  --layer-6: 60;
+  --layer-7: 70;
+  --layer-8: 80;
+  --layer-9: 90;
+  --layer-10: 100;
 
   /* 1.6. END ............................................................... */
 
   /* 1.7. GUTTER VARIABLES .................................................. */
 
-  --gutter:                   20px;
-  --gutter-small:             10px;
-  --gutter-medium:            40px;
-  --gutter-large:             80px;
-  --gutter-jumbo:             120px;
+  --gutter: 20px;
+  --gutter-small: 10px;
+  --gutter-medium: 40px;
+  --gutter-large: 80px;
+  --gutter-jumbo: 120px;
 
   /* 1.7. END ............................................................... */
 
   /* 1.8. RADIUS VARIABLES .................................................. */
 
-  --radius-small:             5px;
-  --radius-medium:            10px;
-  --radius-large:             20px;
+  --radius-small: 5px;
+  --radius-medium: 10px;
+  --radius-large: 20px;
 
   /* 1.8. END ............................................................... */
 
   /* 1.9. TRANSITION VARIABLES .............................................. */
 
-  --transition:               0.5s;
-  --transition-slow:          1s;
-  --transition-fast:          0.3s;
+  --transition: 0.5s;
+  --transition-slow: 1s;
+  --transition-fast: 0.3s;
 
   /* 1.9. END ............................................................... */
 
   /* 1.10. TRANSITION VARIABLES ............................................. */
 
-  --shadow:                   1px 1px 10px rgba(0,0,0, 0.25);
-  --shadow-text:              0px 0px 10px rgba(0,0,0, 0.85);
-  --shadow-text-light:        0px 0px 5px rgba(0,0,0, 0.25);
+  --shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  --shadow-text: 0 0 10px rgba(0, 0, 0, 0.85);
+  --shadow-text-light: 0 0 5px rgba(0, 0, 0, 0.25);
 
   /* 1.10. END .............................................................. */
 
@@ -169,7 +160,13 @@
 * {
   font-family: var(--family-primary);
   font-size: var(--size-normal);
-  line-height: var(--font-normal);
+  line-height: var(--lineheight-normal);
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html {
@@ -178,7 +175,8 @@ html {
   color: var(--color-copy);
 }
 
-html, body {
+html,
+body {
   min-height: 100vh;
   background-color: var(--color-body);
 }
@@ -203,33 +201,77 @@ body {
   }
 }
 
-html, body,
-h1, h2, h3, h4, h5, h6,
-a, p, span,
-em, small, strong,
-sub, sup,
-mark, del, ins, strike,
-abbr, dfn,
-blockquote, q, cite,
-code, pre,
-ol, ul, li, dl, dt, dd,
-div, section, article,
-main, aside, nav,
-header, hgroup, footer,
-img, figure, figcaption,
-address, time,
-audio, video,
-canvas, iframe,
-details, summary,
-fieldset, form, label, legend,
-table, caption,
-tbody, tfoot, thead,
-tr, th, td {
-    font-size: inherit;
-    margin: 0;
-    padding: 0;
-    border: 0;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
 article,
 aside,
 footer,
@@ -239,41 +281,42 @@ section,
 main {
   display: block;
 }
-* {
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 img,
 video {
   max-width: 100%;
 }
+
 img {
   border-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
   content: "";
   content: none;
 }
+
 [hidden] {
   display: none !important;
 }
+
 [disabled] {
   cursor: not-allowed;
 }
+
 :focus:not(:focus-visible) {
   outline: none;
 }
@@ -282,37 +325,41 @@ q:before {
 
 /* 3. COPY & TEXT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: var(--gutter);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--color-headings);
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   color: var(--color-sub-headings);
 }
 
 h1 {
-
   font-family: var(--family-secondary);
   font-weight: var(--weight-bold);
-
   margin-bottom: var(--gutter-medium);
-  
   font-size: var(--size-xxlarge);
   line-height: var(--lineheight-xxlarge);
-  
+
 }
 
 h2 {
   font-family: var(--family-secondary);
   font-weight: var(--weight-bold);
-
   margin-top: 0;
   margin-bottom: var(--gutter);
-
   font-size: var(--size-xlarge);
   line-height: var(--lineheight-xlarge);
 
@@ -328,12 +375,14 @@ h4 {
   line-height: var(--lineheight-normal);
 }
 
-h3, h4 {
+h3,
+h4 {
   font-family: var(--family-primary);
   font-weight: var(--weight-regular);
 }
 
-h5, h6 {
+h5,
+h6 {
   font-family: var(--family-secondary);
   font-weight: var(--weight-bold);
   font-size: var(--size-small);
@@ -343,6 +392,7 @@ h5, h6 {
 p {
   color: var(--color-copy);
 }
+
 p:not(:last-child) {
   margin-bottom: var(--gutter);
 }
@@ -353,19 +403,21 @@ small {
   color: var(--color-sub-copy);
 }
 
-ul:not(:last-child), 
+ol {
+  counter-reset: my-awesome-counter;
+}
+
+ul:not(:last-child),
 ol:not(:last-child) {
   margin-bottom: var(--gutter);
 }
 
-ol {
-  counter-reset: my-awesome-counter;
-}
 ol li {
   counter-increment: my-awesome-counter;
   position: relative;
   padding-left: var(--gutter);
 }
+
 ol li::before {
   position: absolute;
   left: 0;
@@ -380,10 +432,10 @@ a:visited {
   text-decoration: none;
   transition: var(--transition);
 }
-a:hovered {
+
+a:hover {
   cursor: pointer;
   color: var(--color-link-hover);
-  text-decoration: underline;
 }
 
 code {
@@ -405,10 +457,11 @@ label {
   justify-content: flex-start;
   align-items: center;
   color: var(--label-color);
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-lineHeight);
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small-lineHeight);
   margin: 0;
 }
+
 label input {
   flex: none;
   width: fit-content;
@@ -433,24 +486,18 @@ input[type=week],
 input[type=datetime-local],
 input[type=search],
 input[type=number] {
-
   flex: 1;
-
   display: block;
   background: none;
   width: 100%;
-
   padding: var(--gutter-small);
   outline: none;
-
   border: solid var(--field-border-width) var(--field-border-color);
   border-radius: var(--radius-small);
-
   transition: var(--transition);
-
   color: var(--field-color);
   font-weight: var(--weight-bold);
-  
+
 }
 
 input[type=color] {
@@ -463,6 +510,22 @@ input[type=color] {
 
 input.hasError {
   border-color: var(--field-border-error-color);
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-dark);
+}
+
+input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--color-dark);
+}
+
+input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--color-dark);
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: var(--color-dark);
 }
 
 input:hover {
@@ -479,39 +542,21 @@ input:disabled {
   color: var(--color-dark);
 }
 
-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: var(--color-dark);
-}
-input::-moz-placeholder { /* Firefox 19+ */
-  color: var(--color-dark);
-}
-input:-ms-input-placeholder { /* IE 10+ */
-  color: var(--color-dark);
-}
-input:-moz-placeholder { /* Firefox 18- */
-  color: var(--color-dark);
-}
-
 /* 4.2. END ................................................................. */
 
 /* 4.3. TEXTAREA ............................................................ */
 
 textarea {
   flex: 1;
-
   display: block;
   background: none;
   width: 100%;
   min-height: 200px;
-
   padding: var(--gutter-small);
   outline: none;
-
   border: solid var(--field-border-width) var(--field-border-color);
   border-radius: var(--radius-small);
-
   transition: var(--transition);
-
   color: var(--field-color);
   font-weight: var(--weight-regular);
 }
@@ -520,7 +565,7 @@ textarea {
 
 /* 4.4. RADIO ............................................................... */
 
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
   input[type='radio'],
   input[type='checkbox'] {
     -webkit-appearance: none;
@@ -533,81 +578,74 @@ textarea {
     background: var(--color-white);
     transition: var(--transition-fast);
   }
+
   input[type='checkbox'] {
     border-radius: var(--radius-small);
   }
 
-  input[type='radio']:after,
-  input[type='checkbox']:after {
-  
+  input[type='radio']::after,
+  input[type='checkbox']::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%,0);
+    transform: translate3d(-50%, -50%, 0);
     content: '';
     width: 10px;
     height: 10px;
     background: var(--color-white);
     border-radius: 100%;
     transition: var(--transition-fast);
-  
   }
-  
+
   input[type='radio']:checked,
   input[type='checkbox']:checked {
     border-color: var(--field-disc-selected-color);
   }
-  input[type='radio']:checked:after,
-  input[type='checkbox']:checked:after {
+
+  input[type='radio']:checked::after,
+  input[type='checkbox']:checked::after {
     background: var(--field-disc-selected-color);
   }
-  
+
   input[type='radio']:hover,
   input[type='checkbox']:hover {
     border-color: var(--field-border-focus-color);
     cursor: pointer;
   }
-  
-  input[type='radio']:hover:after,
-  input[type='checkbox']:hover:after {
-    transform: translate3d(-50%, -50%,0) scale(1.15);
+
+  input[type='radio']:hover::after,
+  input[type='checkbox']:hover::after {
+    transform: translate3d(-50%, -50%, 0) scale(1.15);
   }
-  
+
   input[type='radio']:disabled,
   input[type='checkbox']:disabled {
     border-color: var(--field-border-disabled-color);
   }
-  
+
   input[type='radio']:disabled:hover,
   input[type='checkbox']:disabled:hover {
     cursor: not-allowed;
     background: var(--color-white);
   }
-  input[type='radio']:checked:disabled:after,
-  input[type='checkbox']:checked:disabled:after {
+
+  input[type='radio']:checked:disabled::after,
+  input[type='checkbox']:checked:disabled::after {
     background: var(--field-border-disabled-color);
   }
-  
+
   input[type='radio'].hasError,
   input[type='checkbox'].hasError {
     border-color: var(--field-border-error-color);
   }
-  input[type='radio'].hasError:checked:after,
-  input[type='checkbox'].hasError:checked:after {
+
+  input[type='radio'].hasError:checked::after,
+  input[type='checkbox'].hasError:checked::after {
     background: var(--field-border-error-color);
   }
 }
 
 /* 4.4. END ................................................................. */
-
-/* 4.1. LABEL ............................................................... */
-/* 4.1. END ................................................................. */
-
-/* 4.1. LABEL ............................................................... */
-/* 4.1. END ................................................................. */
-
-/* 4.1. LABEL ............................................................... */
-/* 4.1. END ................................................................. */
 
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
