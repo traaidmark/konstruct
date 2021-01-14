@@ -12,7 +12,8 @@
     "directory": "packages/foundation"
   },
   "scripts": {
-    "build": "postcss src/* -d lib/"
+    "build": "postcss src/* -d lib/",
+    "stylelint": "stylelint src/*.css"
   },
   "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf",
   "devDependencies": {
