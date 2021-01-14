@@ -1,9 +1,11 @@
 import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-# Data
+# Foundation
 
-The `<Sticker />` component is a small data display component.
+The Konstruct Foundation is foundation layer css library that sets a good browser reset, and then adds minimal styling on base html elements to give you a good head start in your application.
+
+It's built to be minimally opinionated with most visual decisions stored as css variables that can easily be overridden.
 
 - [Installation](#installation)
 - [Dependencies](#dependencies)
@@ -14,15 +16,17 @@ The `<Sticker />` component is a small data display component.
 
 <Source
   code={dedent`
-    yarn add @traaidmark/konstruct-part-sticker;
+    yarn add @traaidmark/konstruct-foundation;
   `}
 />
 
 ## Dependencies
 
-This component needs `@traaidmark/konstruct-foundation` to work.
+None.
 
 ## Usage
+
+
 
 <Source
   code={dedent`
@@ -45,9 +49,5 @@ This component needs `@traaidmark/konstruct-foundation` to work.
     export default DemoComponent;
   `}
 />
-
-## Props
-
-<ArgsTable />
 
 

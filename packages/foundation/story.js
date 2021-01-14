@@ -14,7 +14,11 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../../packages/foundation/src/index.css';
+import './src/index.css';
+import './src/forms.css';
+
+import Section from '../buckets/section/src';
+import Grid from '../buckets/grid/src';
 
 // 1.2. END ....................................................................
 
@@ -23,7 +27,7 @@ import '../../packages/foundation/src/index.css';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Foundation',
+  title: '01: Foundation',
   parameters: {
     docs: {
       page: mdx,
@@ -61,6 +65,38 @@ export const Text = (args) => (
 );
 
 // 3.1. END ....................................................................
+
+// 3.2. FORM ELEMENTS ..........................................................
+
+export const FormElements = (args) => (
+  <Section headerTitle="Input field">
+    <Grid>
+      <aside>
+        <h3>Text</h3>
+        <input type="text" name="name" placeholder="First name" />
+      </aside>
+      <aside>
+        <h3>Disabled Input</h3>
+        <input type="text" name="name" placeholder="First name" disabled />
+      </aside>
+      <aside>
+        <h3>Error State</h3>
+        <input type="text" name="name" placeholder="First name" className="hasError" />
+      </aside>
+      <aside>
+        <h3>Text</h3>
+        <input type="text" name="name" placeholder="First name" />
+      </aside>
+      <aside>
+        <h3>Text</h3>
+        <input type="text" name="name" placeholder="First name" />
+      </aside>
+      
+    </Grid>
+  </Section>
+);
+
+// 3.2. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

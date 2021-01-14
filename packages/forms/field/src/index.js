@@ -14,6 +14,22 @@ import propTypes from 'prop-types';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const Field = ({
+  extended = false,
+  input = 'default',
+  type = 'text',
+  label,
+  name,
+  placeholder,
+  value,
+  onChange,
+  prefix,
+  postfix,
+  isDisabled = false,
+  message = undefined,
+  hasError = false,
+  required = false,
+  fieldRef,
+  size = 'default',
   ...rest
 }) => {
   
@@ -23,9 +39,31 @@ const Field = ({
   // 3.2. RENDER ...............................................................
 
   return (
-    <p { ...rest }>
-      hello world
-    </p>
+    <div>
+      { 
+        label && (
+          <label htmlFor={ name }>
+            { label }
+          </label>
+        )
+      }
+      { prefix && <span>{ prefix }</span> }
+      <input
+        id={ name }
+        name={ name }
+        type={ type }
+        placeholder={ placeholder }
+        value={ value }
+        onChange={ e => handleChange(e) }
+        onKeyDown={ e => handleKeyDown(e) }
+        disabled={ isDisabled && 'disabled' }
+        ref={ fieldRef }
+        required={ required }
+        { ...rest }
+      />
+      { postfix && <span>{ postfix }</span> }
+      { message && <small>{ message }</small> }
+    </div>
   );
 
   // 3.2. END ..................................................................

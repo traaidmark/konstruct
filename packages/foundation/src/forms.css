@@ -1,0 +1,79 @@
+/* FOUNDATION ############################################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --field-color: var(--color-darker);
+  --field-color-focus: var(--color-darker);
+  --field-color-disabled: var(--color);
+  --field-color-placeholder: var(--color);
+  --field-border-color: var(--color-dark);
+  --field-border-error-color: var(--color-red);
+  --field-border-focus-color: var(--color-darker);
+  --field-border-disabled-color: var(--color-dark);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. INPUT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */
+
+input {
+
+  flex: 1;
+
+  display: block;
+  background: none;
+  width: 100%;
+
+  padding: var(--gutter-small);
+  outline: none;
+
+  border: 2px solid var(--color);
+  border-radius: var(--radius-small);
+
+  transition: var(--transition);
+
+  color: var(--field-color);
+  font-weight: var(--weight-bold);
+  
+}
+
+input.hasError {
+  border-color: var(--field-border-error-color);
+}
+
+input:hover {
+  border-color: var(--field-border-color);
+}
+
+input:focus {
+  border-color: var(--color-border-focus-color);
+  color: var(--field-color-focus);
+}
+
+input:disabled {
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-dark);
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--color-dark);
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--color-dark);
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: var(--color-dark);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 1. TABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

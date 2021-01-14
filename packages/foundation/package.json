@@ -11,5 +11,9 @@
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/foundation"
   },
-  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
+  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf",
+  "devDependencies": {
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
+  }
 }

@@ -42,12 +42,14 @@ export default {
 
 export const Demo = (args) => (
   <>
-    <Field />
+    <Field { ...args } />
   </>
 );
 Demo.args = {
-  variant: 'info',
-  text: 'Info',
+  type: 'text',
+  placeholder: 'Placeholder text',
+  label: 'Label Text',
+  onChange: () => console.log('lols'),
 };
 
 // 3.1. END ....................................................................
