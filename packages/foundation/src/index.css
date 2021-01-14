@@ -339,6 +339,13 @@ a:hovered {
   text-decoration: underline;
 }
 
+code {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 2px 5px;
+  border-radius: var(--radius-small);
+}
+
 /* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* 4. FORMS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */

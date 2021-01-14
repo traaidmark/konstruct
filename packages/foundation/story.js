@@ -69,31 +69,92 @@ export const Text = (args) => (
 // 3.2. FORM ELEMENTS ..........................................................
 
 export const FormElements = (args) => (
-  <Section headerTitle="Input field">
+  <>
+    <h1>Form elements</h1>
+    
+    <Section>
+      <h2>Input Field</h2>
+      <Grid>
+        <aside>
+          <h4><code>input type="text"</code></h4>
+          <input type="text" name="name" placeholder="First name" />
+        </aside>
+        <aside>
+          <h4><code>input type="text" disabled</code></h4>
+          <input type="text" name="name" placeholder="First name" disabled />
+        </aside>
+        <aside>
+          <h4><code>input type="text" class="hasError"</code></h4>
+          <input type="text" name="name" placeholder="First name" className="hasError" />
+        </aside>
+      </Grid>
+    </Section>
+    <Section>
+    <h3>Other input types</h3>
     <Grid>
       <aside>
-        <h3>Text</h3>
-        <input type="text" name="name" placeholder="First name" />
+        <h4><code>input type="email"</code></h4>
+        <input type="email" name="email" placeholder="yourname@provider.com" />
       </aside>
       <aside>
-        <h3>Disabled Input</h3>
-        <input type="text" name="name" placeholder="First name" disabled />
+        <h4><code>input type="password"</code></h4>
+        <input type="password" name="password" placeholder="yourSecurePassword" />
       </aside>
       <aside>
-        <h3>Error State</h3>
-        <input type="text" name="name" placeholder="First name" className="hasError" />
+        <h4><code>input type="number"</code></h4>
+        <input type="number" name="number" />
       </aside>
       <aside>
-        <h3>Text</h3>
-        <input type="text" name="name" placeholder="First name" />
+        <h4><code>input type="tel"</code></h4>
+        <input type="tel" name="tel" />
       </aside>
       <aside>
-        <h3>Text</h3>
-        <input type="text" name="name" placeholder="First name" />
+        <h4><code>input type="url"</code></h4>
+        <input type="url" name="url" />
       </aside>
-      
+      <aside>
+        <h4><code>input type="file"</code></h4>
+        <input type="file" name="file" />
+      </aside>
+      <aside>
+        <h4><code>input type="image"</code></h4>
+        <input type="image" name="image" />
+      </aside>
+      <aside>
+        <h4><code>input type="date"</code></h4>
+        <input type="date" name="date" />
+      </aside>
+      <aside>
+        <h4><code>input type="time"</code></h4>
+        <input type="time" name="time" />
+      </aside>
+      <aside>
+        <h4><code>input type="month"</code></h4>
+        <input type="month" name="month" />
+      </aside>
+      <aside>
+        <h4><code>input type="week"</code></h4>
+        <input type="week" name="week" />
+      </aside>
+      <aside>
+        <h4><code>input type="datetime-local"</code></h4>
+        <input type="datetime-local" name="datetime-local" />
+      </aside>
+      <aside>
+        <h4><code>input type="color"</code></h4>
+        <input type="color" name="color" />
+      </aside>
+      <aside>
+        <h4><code>input type="range"</code></h4>
+        <input type="range" name="range" min="0" max="10" />
+      </aside>
+      <aside>
+        <h4><code>input type="search"</code></h4>
+        <input type="search" name="search" />
+      </aside>
     </Grid>
   </Section>
+  </>
 );
 
 // 3.2. END ....................................................................
