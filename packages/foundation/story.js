@@ -15,7 +15,6 @@ import { Source } from '@storybook/addon-docs/blocks';
 import mdx from './doc.mdx';
 
 import './src/index.css';
-import './src/forms.css';
 
 import Section from '../buckets/section/src';
 import Grid from '../buckets/grid/src';

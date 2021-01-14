@@ -4,6 +4,8 @@
 
 :root {
 
+  /* 1.1. COLOR VARIABLES ................................................... */
+
   --color-white-rgb:          255, 255, 255;
   --color-lighter-rgb:        245, 249, 250;
   --color-light-rgb:          230, 231, 232;
@@ -30,16 +32,6 @@
   --color-green:              rgba(var(--color-green-rgb), 1);
   --color-blue:               rgba(var(--color-blue-rgb), 1);
 
-  --color-wm-blue-rgb:        3,221,246;
-  --color-wm-purple-rgb:      183,105,247;
-  --color-wm-red-rgb:         255,102,113;
-  --color-wm-yellow-rgb:      255,199,131;
-  
-  --color-wm-blue:            rgba(var(--color-wm-blue-rgb), 1);
-  --color-wm-purple:          rgba(var(--color-wm-purple-rgb), 1);
-  --color-wm-red:             rgba(var(--color-wm-red-rgb), 1);
-  --color-wm-yellow:          rgba(var(--color-wm-yellow-rgb), 1);
-
   --color-primary-rgb:        61,68,136;
   --color-secondary-rgb:      24,34,59;
 
@@ -58,23 +50,40 @@
   --color-copy:               var(--color-dark);
   --color-sub-copy:           var(--color);
 
-  --color-link:               var(--color-wm-blue);
+  --color-link:               var(--color-blue);
 
-  --family-primary:           "Roboto", Helvetica, Arial;
-  --family-secondary:         "Gilroy", Helvetica, Arial;
+  /* 1.1. END ............................................................... */
 
-  --font-xxlarge-size:        3.157rem;
-  --font-xxlarge-lineHeight:  3.5rem;
-  --font-xlarge-size:         2.369rem;
-  --font-xlarge-lineHeight:   2.7rem;
-  --font-large-size:          1.777rem;
-  --font-large-lineHeight:    2rem;
-  --font-medium-size:         1.333rem;
-  --font-medium-lineHeight:   1.7rem;
-  --font-normal-size:         1rem;
-  --font-normal-lineHeight:   1.4rem;
-  --font-small-size:          0.75rem;
-  --font-small-lineHeight:    0.9rem;
+  /* 1.2. FONT VARIABLES .................................................... */
+
+  --family-primary: "Roboto", Helvetica, Arial;
+  --family-secondary: "Gilroy", Helvetica, Arial;
+
+  /* 1.2. END ............................................................... */
+
+  /* 1.3. FONT SIZE VARIABLES ............................................... */
+
+  --size-xxlarge: 3.157rem;
+  --size-xlarge: 2.369rem;
+  --size-large: 1.777rem;
+  --size-medium: 1.333rem;
+  --size-normal: 1rem;
+  --size-small: 0.75rem;
+
+  /* 1.3. END ............................................................... */
+
+  /* 1.4. LINE HEIGHT VARIABLES ............................................. */
+
+  --lineheight-xxlarge: 3.5rem;
+  --lineheight-xlarge: 2.7rem;
+  --lineheight-large: 2rem;
+  --lineheight-medium: 1.7rem;
+  --lineheight-normal: 1.4rem;
+  --lineheight-small: 0.9rem;
+
+  /* 1.4. END ............................................................... */
+
+  /* 1.5. WEIGHT VARIABLES .................................................. */
 
   --weight-thin:              100;
   --weight-light:             300;
@@ -83,6 +92,10 @@
   --weight-semiBold:          600;
   --weight-bold:              700;
   --weight-heavy:             900;
+
+  /* 1.5. END ............................................................... */
+
+  /* 1.6. LAYER VARIABLES ................................................... */
 
   --layer-1:                  10;
   --layer-2:                  20;
@@ -95,23 +108,57 @@
   --layer-9:                  90;
   --layer-10:                 100;
 
+  /* 1.6. END ............................................................... */
+
+  /* 1.7. GUTTER VARIABLES .................................................. */
+
   --gutter:                   20px;
   --gutter-small:             10px;
   --gutter-medium:            40px;
   --gutter-large:             80px;
   --gutter-jumbo:             120px;
 
+  /* 1.7. END ............................................................... */
+
+  /* 1.8. RADIUS VARIABLES .................................................. */
+
   --radius-small:             5px;
   --radius-medium:            10px;
   --radius-large:             20px;
-  
-  --shadow:                   1px 1px 10px rgba(0,0,0, 0.25);
-  --shadow-text:              0px 0px 10px rgba(0,0,0, 0.85);
-  --shadow-text-light:        0px 0px 5px rgba(0,0,0, 0.25);
-  
+
+  /* 1.8. END ............................................................... */
+
+  /* 1.9. TRANSITION VARIABLES .............................................. */
+
   --transition:               0.5s;
   --transition-slow:          1s;
   --transition-fast:          0.3s;
+
+  /* 1.9. END ............................................................... */
+
+  /* 1.10. TRANSITION VARIABLES ............................................. */
+
+  --shadow:                   1px 1px 10px rgba(0,0,0, 0.25);
+  --shadow-text:              0px 0px 10px rgba(0,0,0, 0.85);
+  --shadow-text-light:        0px 0px 5px rgba(0,0,0, 0.25);
+
+  /* 1.10. END .............................................................. */
+
+  /* 1.11. FORM VARIABLES ................................................... */
+
+  --label-color: var(--color-dark);
+  --field-color: var(--color-darker);
+  --field-color-focus: var(--color-darker);
+  --field-color-disabled: var(--color);
+  --field-color-placeholder: var(--color);
+  --field-border-width: 1px;
+  --field-border-color: var(--color-light);
+  --field-border-error-color: var(--color-red);
+  --field-border-focus-color: var(--color);
+  --field-border-disabled-color: var(--color-light);
+  --field-disc-selected-color: var(--color-blue);
+
+  /* 1.11. END .............................................................. */
 
 }
 
@@ -121,8 +168,8 @@
 
 * {
   font-family: var(--family-primary);
-  font-size: var(--font-normal-size);
-  line-height: var(--font-normal-lineHeight);
+  font-size: var(--size-normal);
+  line-height: var(--font-normal);
 }
 
 html {
@@ -254,8 +301,8 @@ h1 {
 
   margin-bottom: var(--gutter-medium);
   
-  font-size: var(--font-xxlarge-size);
-  line-height: var(--font-xxlarge-lineHeight);
+  font-size: var(--size-xxlarge);
+  line-height: var(--lineheight-xxlarge);
   
 }
 
@@ -266,19 +313,19 @@ h2 {
   margin-top: 0;
   margin-bottom: var(--gutter);
 
-  font-size: var(--font-xlarge-size);
-  line-height: var(--font-xlarge-lineHeight);
+  font-size: var(--size-xlarge);
+  line-height: var(--lineheight-xlarge);
 
 }
 
 h3 {
-  font-size: var(--font-large-size);
-  line-height: var(--font-large-lineHeight);
+  font-size: var(--size-large);
+  line-height: var(--lineheight-large);
 }
 
 h4 {
-  font-size: var(--font-normal-size);
-  line-height: var(--font-normal-lineHeight);
+  font-size: var(--size-normal);
+  line-height: var(--lineheight-normal);
 }
 
 h3, h4 {
@@ -289,8 +336,8 @@ h3, h4 {
 h5, h6 {
   font-family: var(--family-secondary);
   font-weight: var(--weight-bold);
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-lineHeight);
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
 }
 
 p {
@@ -301,8 +348,8 @@ p:not(:last-child) {
 }
 
 small {
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-lineHeight);
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
   color: var(--color-sub-copy);
 }
 
@@ -348,13 +395,220 @@ code {
 
 /* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* 4. FORMS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */
+/* 4. FORMS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* 4.1. LABEL ............................................................... */
 
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--label-color);
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  margin: 0;
+}
+label input {
+  flex: none;
+  width: fit-content;
+  margin-right: var(--gutter-small);
+}
+
+/* 4.1. END ................................................................. */
+
+/* 4.2. TEXT INPUT .......................................................... */
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=file],
+input[type=image],
+input[type=date],
+input[type=time],
+input[type=month],
+input[type=week],
+input[type=datetime-local],
+input[type=search],
+input[type=number] {
+
+  flex: 1;
+
+  display: block;
+  background: none;
+  width: 100%;
+
+  padding: var(--gutter-small);
+  outline: none;
+
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: var(--radius-small);
+
+  transition: var(--transition);
+
+  color: var(--field-color);
+  font-weight: var(--weight-bold);
+  
+}
+
+input[type=color] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: 100%;
+}
+
+input.hasError {
+  border-color: var(--field-border-error-color);
+}
+
+input:hover {
+  border-color: var(--field-border-color);
+}
+
+input:focus {
+  border-color: var(--color-border-focus-color);
+  color: var(--field-color-focus);
+}
+
+input:disabled {
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-dark);
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--color-dark);
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--color-dark);
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: var(--color-dark);
+}
+
+/* 4.2. END ................................................................. */
+
+/* 4.3. TEXTAREA ............................................................ */
+
+textarea {
+  flex: 1;
+
+  display: block;
+  background: none;
+  width: 100%;
+  min-height: 200px;
+
+  padding: var(--gutter-small);
+  outline: none;
+
+  border: solid var(--field-border-width) var(--field-border-color);
+  border-radius: var(--radius-small);
+
+  transition: var(--transition);
+
+  color: var(--field-color);
+  font-weight: var(--weight-regular);
+}
+
+/* 4.3. END ................................................................. */
+
+/* 4.4. RADIO ............................................................... */
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='radio'],
+  input[type='checkbox'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: solid var(--field-border-width) var(--field-border-color);
+    background: var(--color-white);
+    transition: var(--transition-fast);
+  }
+  input[type='checkbox'] {
+    border-radius: var(--radius-small);
+  }
+
+  input[type='radio']:after,
+  input[type='checkbox']:after {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%,0);
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--color-white);
+    border-radius: 100%;
+    transition: var(--transition-fast);
+  
+  }
+  
+  input[type='radio']:checked,
+  input[type='checkbox']:checked {
+    border-color: var(--field-disc-selected-color);
+  }
+  input[type='radio']:checked:after,
+  input[type='checkbox']:checked:after {
+    background: var(--field-disc-selected-color);
+  }
+  
+  input[type='radio']:hover,
+  input[type='checkbox']:hover {
+    border-color: var(--field-border-focus-color);
+    cursor: pointer;
+  }
+  
+  input[type='radio']:hover:after,
+  input[type='checkbox']:hover:after {
+    transform: translate3d(-50%, -50%,0) scale(1.15);
+  }
+  
+  input[type='radio']:disabled,
+  input[type='checkbox']:disabled {
+    border-color: var(--field-border-disabled-color);
+  }
+  
+  input[type='radio']:disabled:hover,
+  input[type='checkbox']:disabled:hover {
+    cursor: not-allowed;
+    background: var(--color-white);
+  }
+  input[type='radio']:checked:disabled:after,
+  input[type='checkbox']:checked:disabled:after {
+    background: var(--field-border-disabled-color);
+  }
+  
+  input[type='radio'].hasError,
+  input[type='checkbox'].hasError {
+    border-color: var(--field-border-error-color);
+  }
+  input[type='radio'].hasError:checked:after,
+  input[type='checkbox'].hasError:checked:after {
+    background: var(--field-border-error-color);
+  }
+}
+
+/* 4.4. END ................................................................. */
+
+/* 4.1. LABEL ............................................................... */
+/* 4.1. END ................................................................. */
+
+/* 4.1. LABEL ............................................................... */
+/* 4.1. END ................................................................. */
+
+/* 4.1. LABEL ............................................................... */
+/* 4.1. END ................................................................. */
 
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* 1. TABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++* */
-/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* END OF FILE ############################################################## */
