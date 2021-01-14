@@ -8,9 +8,7 @@ The Konstruct Foundation is foundation layer css library that sets a good browse
 It's built to be minimally opinionated with most visual decisions stored as css variables that can easily be overridden.
 
 - [Installation](#installation)
-- [Dependencies](#dependencies)
-- [Usage](#usage)
-- [Props](#props)
+- [Coverage](#coverage)
 
 ## Installation
 
@@ -20,34 +18,174 @@ It's built to be minimally opinionated with most visual decisions stored as css 
   `}
 />
 
-## Dependencies
+## Variables
 
-None.
-
-## Usage
+This library provides a set of variables to help you work consistently with everyday tasks. Below is a list of the current variables created:
 
 
+### Color variables
 
 <Source
   code={dedent`
-    import React from 'react';
-    import Sticker from '@traaidmark/konstruct-parts-sticker';
-    
-    const DemoComponent = () => {
-      
-      return (
-        <Sticker
-          label="Amount"
-          prefix="usd"
-          value="23.00"
-          size="default"
-          align: "left"
-          placement: "top"
-        />
-      );
-    };
-    export default DemoComponent;
+    --color-white-rgb: 255, 255, 255;
+    --color-lighter-rgb: 245, 249, 250;
+    --color-light-rgb: 230, 231, 232;
+    --color-rgb: 133, 136, 143;
+    --color-dark-rgb: 34, 40, 53;
+    --color-darker-rgb: 10, 16, 30;
+    --color-black-rgb: 0, 0, 0;
+    --color-white: rgba(var(--color-white-rgb), 1);
+    --color-lighter: rgba(var(--color-lighter-rgb), 1);
+    --color-light: rgba(var(--color-light-rgb), 1);
+    --color: rgba(var(--color-rgb), 1);
+    --color-dark: rgba(var(--color-dark-rgb), 1);
+    --color-darker: rgba(var(--color-darker-rgb), 1);
+    --color-black: rgba(var(--color-black-rgb), 1);
+    --color-red-rgb: 237, 108, 99;
+    --color-orange-rgb: 246, 139, 57;
+    --color-green-rgb: 93, 226, 165;
+    --color-blue-rgb: 66, 175, 227;
+    --color-red: rgba(var(--color-red-rgb), 1);
+    --color-orange: rgba(var(--color-orange-rgb), 1);
+    --color-green: rgba(var(--color-green-rgb), 1);
+    --color-blue: rgba(var(--color-blue-rgb), 1);
+    --color-primary-rgb: 61, 68, 136;
+    --color-secondary-rgb: 24, 34, 59;
+    --color-primary: rgba(var(--color-primary-rgb), 1);
+    --color-secondary: rgba(var(--color-secondary-rgb), 1);
+    --color-accent: var(--color-wm-red);
+    --color-facebook: #3b5998;
+    --color-linkedin: #0077b5;
+    --color-google: #dd4b39;
+    --color-body: var(--color-lighter);
+    --color-headings: var(--color-darker);
+    --color-sub-headings: var(--color-dark);
+    --color-copy: var(--color-dark);
+    --color-sub-copy: var(--color);
+    --color-link: var(--color-blue);
   `}
 />
 
+### Font variables
+
+<Source
+  code={dedent`
+    --family-primary: "Roboto", helvetica, arial;
+    --family-secondary: "Gilroy", helvetica, arial;
+  `}
+/>
+
+### Font Size variables
+
+<Source
+  code={dedent`
+    --size-xxlarge: 3.157rem;
+    --size-xlarge: 2.369rem;
+    --size-large: 1.777rem;
+    --size-medium: 1.333rem;
+    --size-normal: 1rem;
+    --size-small: 0.75rem;
+  `}
+/>
+
+### Lineheight variables
+
+<Source
+  code={dedent`
+    --lineheight-xxlarge: 3.5rem;
+    --lineheight-xlarge: 2.7rem;
+    --lineheight-large: 2rem;
+    --lineheight-medium: 1.7rem;
+    --lineheight-normal: 1.4rem;
+    --lineheight-small: 0.9rem;
+  `}
+/>
+
+### Z-index layer variables
+
+<Source
+  code={dedent`
+    --layer-1: 10;
+    --layer-2: 20;
+    --layer-3: 30;
+    --layer-4: 40;
+    --layer-5: 50;
+    --layer-6: 60;
+    --layer-7: 70;
+    --layer-8: 80;
+    --layer-9: 90;
+    --layer-10: 100;
+  `}
+/>
+
+### Gutter variables
+
+<Source
+  code={dedent`
+    --gutter: 20px;
+    --gutter-small: 10px;
+    --gutter-medium: 40px;
+    --gutter-large: 80px;
+    --gutter-jumbo: 120px;
+  `}
+/>
+
+### Radius variables
+
+<Source
+  code={dedent`
+    --radius-small: 5px;
+    --radius-medium: 10px;
+    --radius-large: 20px;
+  `}
+/>
+
+### Transition variables
+
+<Source
+  code={dedent`
+    --transition: 0.5s;
+    --transition-slow: 1s;
+    --transition-fast: 0.3s;
+  `}
+/>
+
+### Shadow variables
+
+<Source
+  code={dedent`
+    --shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    --shadow-text: 0 0 10px rgba(0, 0, 0, 0.85);
+    --shadow-text-light: 0 0 5px rgba(0, 0, 0, 0.25);
+  `}
+/>
+
+### Form element variables
+
+<Source
+  code={dedent`
+    --label-color: var(--color-dark);
+    --field-color: var(--color-darker);
+    --field-color-focus: var(--color-darker);
+    --field-color-disabled: var(--color);
+    --field-color-placeholder: var(--color);
+    --field-border-width: 1px;
+    --field-border-color: var(--color-light);
+    --field-border-error-color: var(--color-red);
+    --field-border-focus-color: var(--color);
+    --field-border-disabled-color: var(--color-light);
+    --field-disc-selected-color: var(--color-blue);
+  `}
+/>
+
+## Coverage
+
+This library is meant to cover the base html foundation, but that's an ongoing process still. Currently this library provides styling for:
+
+* CSS Variables for common things
+* Browser reset
+* Typography foundation
+* Form input elements
+
+**Note:** This library doesn't want to make any opinions that can affect layout as far as possible, so we don't expect to add anything like grids or specific spacing on containers (`div, section, header, form, etc`);
 

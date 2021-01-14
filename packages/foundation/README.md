@@ -1,23 +1,9 @@
 # Konstruct Foundation
 
-A core foundation library that includes common css reset work, typography foundation & a bunch of overideable css variables. Serves as a great foundation on which to build awesome things for the web.
+The Konstruct Foundation is foundation layer css library that sets a good browser reset, and then adds minimal styling on base html elements to give you a good head start in your application.
 
-## Usage Instructions
+It's built to be minimally opinionated with most visual decisions stored as css variables that can easily be overridden.
 
-### Import
+## Documentation
 
-**Example:**
-
-```js
-@import Foundation from '@traaidmark/architect-core';
-```
-
-### Usage
-
-```js
-<Core name="Default">
-  { children }
-</Core>
-```
-
-<!-- PROPS -->
+If you're looking for documentation, then just head on over to our [documentation site](https://konstruct.traaidmark.com)
