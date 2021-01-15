@@ -6,13 +6,12 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import 'jest-styled-components';
 
 // 1.1. END ....................................................................
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Flag from './src';
+import Field from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,21 +20,32 @@ import Flag from './src';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  text: 'usd',
-  variant: 'info',
+  type: 'text',
+  label: 'field label',
+  name: 'field',
+  placeholder: 'enter your details',
+  value: '01',
+  onChange: () => console.log('lol'),
+  prefix: 'zar',
+  postfix: 'zar',
+  isDisabled: false,
+  message: 'This is a test message',
+  hasError: false,
+  required: false,
+  size: 'default',
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts: Flag', () => {
+describe('Form: Field', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Flag />
+      <Field />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -46,7 +56,7 @@ describe('Parts: Flag', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Flag { ...props } />
+      <Field { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
