@@ -214,6 +214,50 @@ export const FormElements = (args) => (
     <h4><code>textarea</code></h4>
     <textarea></textarea>
   </Section>
+  <Section>
+    <h3>Select</h3>
+    <Grid>
+      <aside>
+        <h4><code>select</code></h4>
+        <select name="select">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+          <option>Option 7</option>
+          <option>Option 8</option>
+        </select>
+      </aside>
+      <aside>
+        <h4><code>select disabled</code></h4>
+        <select name="select" disabled>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+          <option>Option 7</option>
+          <option>Option 8</option>
+        </select>
+      </aside>
+      <aside>
+        <h4><code>select class="hasError"</code></h4>
+        <select name="select" className="hasError">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+          <option>Option 7</option>
+          <option>Option 8</option>
+        </select>
+      </aside>
+    </Grid>
+  </Section>
   
   </>
 );
