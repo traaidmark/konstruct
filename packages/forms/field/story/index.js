@@ -18,7 +18,7 @@ import '../../../packages/foundation/src/index.css';
 
 import {
   TextField
-} from './src';
+} from '../src';
 
 import Section from '../../buckets/section/src';
 import Grid from '../../buckets/grid/src';

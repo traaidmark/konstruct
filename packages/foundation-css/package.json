@@ -1,0 +1,15 @@
+{
+  "name": "@traaidmark/konstruct-foundation-css",
+  "version": "0.0.0",
+  "main": "lib/index.css",
+  "module": "lib/index.css",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:traaidmark/konstruct.git",
+    "directory": "packages/foundation-css"
+  },
+  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
+}
