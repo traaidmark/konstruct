@@ -7,21 +7,112 @@
   "author": "Adrian Kirsten",
   "license": "Apache 2",
   "private": true,
+  "browserslist": "last 2 versions",
   "workspaces": [
     "packages/**/*"
   ],
+  "babel": {
+    "comments": false,
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "namespace": "traaidmark-konstruct",
+          "minify": true,
+          "transpileTemplateLiterals": true
+        }
+      ]
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "jest": {
+    "cacheDirectory": ".jest-cache",
+    "coverageDirectory": ".jest-coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/packages/(?:.+?)/lib/"
+    ],
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/packages/(?:.+?)/lib/"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": 0,
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    },
+    "overrides": [
+      {"files": ["packages/foundation"]}
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "comment-empty-line-before": null,
+      "block-closing-brace-empty-line-before": null
+    },
+    "ignoreFiles": ["**/lib"]
+  },
   "scripts": {
     "auth": "npm login --registry=https://npm.pkg.github.com --scope=@traaidmark",
     "bootstrap": "lerna bootstrap",
     "start": "start-storybook -p 5555",
-    "build": "lerna exec --parallel -- yarn build",
-    "build-storybook": "yarn build-storybook",
-    "publish-storybook": "./bin/publish-storybook.sh",
+    "build:js": "lerna exec --parallel -- babel --root-mode upward src -d lib",
+    "build:css": "lerna exec --parallel -- postcss src/*.css -d lib",
+    "build": "yarn build:css && yarn build:js",
+    "storybook:build": "yarn build-storybook",
+    "storybook:publish": "./bin/publish-storybook.sh",
     "test": "jest",
     "test:update": "jest --updateSnapshot",
     "test:coverage": "jest --coverage",
-    "lint": "eslint packages/*",
-    "chromatic": "npx chromatic --project-token 6w62zlt93a9"
+    "lint:js": "eslint packages/* --no-error-on-unmatched-pattern",
+    "lint:css": "stylelint packages/**/**/"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -38,12 +129,24 @@
     "babel-plugin-styled-components": "^1.11.1",
     "chromatic": "^5.3.0",
     "concurrently": "^5.3.0",
+    "cssnano": "^4.1.10",
     "eslint": "^7.12.1",
     "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26.6.1",
+    "jest-haste-map": "^26.6.1",
+    "jest-resolve": "^26.6.1",
     "lerna": "^3.22.1",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "react-test-renderer": "^17.0.1",
     "styled-components": "^5.2.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
     "ts-dedent": "^2.0.0",
     "webpack": "^5.2.0"
   }

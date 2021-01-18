@@ -1,0 +1,6 @@
+*.js
+*.json
+story
+lib
+node_modules
+
