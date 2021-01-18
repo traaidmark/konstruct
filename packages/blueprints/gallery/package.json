@@ -1,5 +1,5 @@
 {
-  "name": "@traaidmark/konstruct-media-gallery",
+  "name": "@traaidmark/konstruct-blueprint-gallery",
   "version": "0.0.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/media/gallery"
+    "directory": "packages/blueprint/gallery"
   },
   "dependencies": {
     "@traaidmark/konstruct-mixins": "^1.1.2",

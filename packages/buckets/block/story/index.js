@@ -27,7 +27,7 @@ import Block from '../../../buckets/block/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Bucket: Block',
+  title: '02 Buckets/Block',
   parameters: {
     docs: {
       page: mdx,

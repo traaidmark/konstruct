@@ -27,7 +27,7 @@ import Flag from '../../../parts/flag/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Flag',
+  title: '03 Parts/Flag',
   parameters: {
     docs: {
       page: mdx,

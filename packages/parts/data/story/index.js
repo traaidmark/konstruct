@@ -26,7 +26,7 @@ import Data from '../../../parts/data/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Data',
+  title: '03 Parts/Data',
   parameters: {
     docs: {
       page: mdx,

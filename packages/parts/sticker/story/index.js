@@ -26,7 +26,7 @@ import Sticker from '../src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Sticker',
+  title: '03 Parts/Sticker',
   parameters: {
     docs: {
       page: mdx,

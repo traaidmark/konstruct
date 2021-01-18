@@ -26,7 +26,7 @@ import Grid from '../../buckets/grid/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: '01: Foundation',
+  title: '01 Foundation/Foundation',
   parameters: {
     docs: {
       page: mdx,

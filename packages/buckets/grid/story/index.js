@@ -3,7 +3,7 @@ import '../../../foundation-css/src/index.css';
 import Grid from '../../../buckets/grid/src';
 import mdx from './doc.mdx';
 export default {
-  title: 'Bucket: Grid',
+  title: '02 Buckets/Grid',
   parameters: {
     docs: {
       page: mdx,

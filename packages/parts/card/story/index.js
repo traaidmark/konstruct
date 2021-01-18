@@ -26,7 +26,7 @@ import Card from '../../../parts/card/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Card',
+  title: '03 Parts/Card',
   parameters: {
     docs: {
       page: mdx,
