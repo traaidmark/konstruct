@@ -14,10 +14,10 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import List from '../../../storybook-components/List';
+import List from '../../../../storybook-components/List';
 
-import '../../../packages/foundation/src/index.css';
-import Data from '../../../packages/parts/data/src';
+import '../../../foundation-css/src/index.css';
+import Sticker from '../src';
 
 // 1.2. END ....................................................................
 
@@ -26,13 +26,13 @@ import Data from '../../../packages/parts/data/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Data',
+  title: 'Part: Sticker',
   parameters: {
     docs: {
       page: mdx,
     },
   },
-  component: Data,
+  component: Sticker,
 };
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -45,16 +45,19 @@ export const Demo = (args) => (
   <>
     <List>
       <li>
-        <Data { ...args }/>
+        <Sticker { ...args }/>
       </li>
     </List>
     <h3>Code</h3>
     <Source
       code={dedent`
-      <Data
+      <Sticker
+        label="Amount"
         prefix="usd"
-        value="2300.00"
+        value="23.00"
         size="default"
+        align: "left"
+        placement: "top"
       />
       `}
     />
@@ -64,27 +67,59 @@ Demo.args = {
   size: 'default',
   prefix: 'usd',
   value: '2300.00',
+  label: 'Amount',
+  align: 'left',
+  placement: 'top',
 };
 
 // 3.1. END ....................................................................
 
-// 3.2. SIZES ..................................................................
+// 3.2. VARIANTS ...............................................................
 
-export const Sizes = (args) => (
+export const Variants = (args) => (
   <>
+    <h3>Size variations:</h3>
     <List>
       <li>
-        <Data prefix="usd" value="46000.00" size="small" />
+        <Sticker {...args} size="small" />
       </li>
       <li>
-        <Data prefix="usd" value="46000.00" size="default" />
+        <Sticker {...args} size="default" />
       </li>
       <li>
-        <Data prefix="usd" value="46000.00" size="large" />
+        <Sticker {...args} size="large" />
+      </li>
+    </List>
+    <h3>Horizontal label alignment variations:</h3>
+    <List>
+      <li>
+        <Sticker {...args} align="left" />
+      </li>
+      <li>
+        <Sticker {...args} align="center" />
+      </li>
+      <li>
+        <Sticker {...args} align="right" />
+      </li>
+    </List>
+    <h3>Vertical label placement variations:</h3>
+    <List>
+      <li>
+        <Sticker {...args} placement="top" />
+      </li>
+      <li>
+        <Sticker {...args} placement="bottom" />
       </li>
     </List>
   </>
 );
+
+Variants.args = {
+  prefix: 'usd',
+  value: '2300.00',
+  label: 'Amount',
+  placement: 'top',
+};
 
 // 3.2. END ....................................................................
 

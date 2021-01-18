@@ -14,11 +14,10 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import List from '../../../storybook-components/List';
+import '../../../foundation-css/src/index.css';
+import Section from '../../../buckets/section/src';
 
-import '../../../packages/foundation/src/index.css';
-
-import Flag from '../../../packages/parts/flag/src';
+import Toolbar from '../../../buckets/toolbar/src';
 
 // 1.2. END ....................................................................
 
@@ -27,13 +26,13 @@ import Flag from '../../../packages/parts/flag/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Part: Flag',
+  title: 'Bucket: Toolbar',
   parameters: {
     docs: {
       page: mdx,
     },
   },
-  component: Flag,
+  component: Toolbar,
 };
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -44,41 +43,38 @@ export default {
 
 export const Demo = (args) => (
   <>
-    <List>
-      <li><Flag { ...args } /></li>
-    </List>
+    <Section>
+      <Toolbar { ...args } />
+    </Section>
     <h3>Code</h3>
     <Source
       code={dedent`
-      <Flag
-        variant="info"
-        text="Info"
+      <Toolbar
+        heading="Why we are so great"
+        headingAs={ (props) => <h2 { ...props } }
+        text={ <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</> }
+        actions=[
+          <a>Sign Up now</a>,
+          <a>Do this other thing</a>
+        ],
       />
       `}
     />
   </>
+  
 );
+
 Demo.args = {
-  variant: 'info',
-  text: 'Info',
+  heading: 'Why we are so great',
+  headingAs: undefined,
+  text: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</>,
+  actions: [
+    <a>Sign Up now</a>,
+    <a>Do this other thing</a>
+  ],
 };
 
 // 3.1. END ....................................................................
-
-// 3.3. DEFAULT STYLES .........................................................
-
-export const DefaultStyles = (args) => (
-  <>
-    <List>
-      <li><Flag text="info" variant="info" /></li>
-      <li><Flag text="new" variant="new" /></li>
-      <li><Flag text="warning" variant="warning" /></li>
-      <li><Flag text="error" variant="error" /></li>
-    </List>
-  </>
-);
-
-// 3.3. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

@@ -14,14 +14,12 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../../../packages/foundation/src/index.css';
+import '../../../foundation-css/src/index.css';
 
-import {
-  TextField
-} from '../src';
+import TextField from '../src';
 
-import Section from '../../buckets/section/src';
-import Grid from '../../buckets/grid/src';
+import Section from '../../../buckets/section/src';
+import Grid from '../../../buckets/grid/src';
 
 // 1.2. END ....................................................................
 

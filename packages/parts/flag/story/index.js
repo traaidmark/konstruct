@@ -14,10 +14,11 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../../../packages/foundation/src/index.css';
-import Section from '../../../packages/buckets/section/src';
+import List from '../../../../storybook-components/List';
 
-import Toolbar from '../../../packages/buckets/toolbar/src';
+import '../../../foundation-css/src/index.css';
+
+import Flag from '../../../parts/flag/src';
 
 // 1.2. END ....................................................................
 
@@ -26,13 +27,13 @@ import Toolbar from '../../../packages/buckets/toolbar/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Bucket: Toolbar',
+  title: 'Part: Flag',
   parameters: {
     docs: {
       page: mdx,
     },
   },
-  component: Toolbar,
+  component: Flag,
 };
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -43,38 +44,41 @@ export default {
 
 export const Demo = (args) => (
   <>
-    <Section>
-      <Toolbar { ...args } />
-    </Section>
+    <List>
+      <li><Flag { ...args } /></li>
+    </List>
     <h3>Code</h3>
     <Source
       code={dedent`
-      <Toolbar
-        heading="Why we are so great"
-        headingAs={ (props) => <h2 { ...props } }
-        text={ <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</> }
-        actions=[
-          <a>Sign Up now</a>,
-          <a>Do this other thing</a>
-        ],
+      <Flag
+        variant="info"
+        text="Info"
       />
       `}
     />
   </>
-  
 );
-
 Demo.args = {
-  heading: 'Why we are so great',
-  headingAs: undefined,
-  text: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.</>,
-  actions: [
-    <a>Sign Up now</a>,
-    <a>Do this other thing</a>
-  ],
+  variant: 'info',
+  text: 'Info',
 };
 
 // 3.1. END ....................................................................
+
+// 3.3. DEFAULT STYLES .........................................................
+
+export const DefaultStyles = (args) => (
+  <>
+    <List>
+      <li><Flag text="info" variant="info" /></li>
+      <li><Flag text="new" variant="new" /></li>
+      <li><Flag text="warning" variant="warning" /></li>
+      <li><Flag text="error" variant="error" /></li>
+    </List>
+  </>
+);
+
+// 3.3. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

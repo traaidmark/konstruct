@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../packages/foundation/src/index.css';
-import Section from '../../../packages/buckets/section/src';
+import '../../../foundation-css/src/index.css';
+import Section from '../../../buckets/section/src';
 import mdx from './doc.mdx';
 export default {
   title: 'Bucket: Section',

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../../packages/foundation/src/index.css';
-import Grid from '../../../packages/buckets/grid/src';
+import '../../../foundation-css/src/index.css';
+import Grid from '../../../buckets/grid/src';
 import mdx from './doc.mdx';
 export default {
   title: 'Bucket: Grid',

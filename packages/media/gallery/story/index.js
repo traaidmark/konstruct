@@ -14,10 +14,10 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../../../packages/foundation/src/index.css';
-import Section from '../../../packages/buckets/section/src';
+import '../../../foundation-css/src/index.css';
+import Section from '../../../buckets/section/src';
 
-import Gallery from '../../../packages/media/gallery/src';
+import Gallery from '../../../media/gallery/src';
 
 // 1.2. END ....................................................................
 
