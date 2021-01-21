@@ -11,6 +11,15 @@
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/form/field"
   },
+  "scripts": {
+    "build:js": "babel --root-mode upward src -d lib",
+    "build:css": "postcss src/stylesheet.css -d lib/",
+    "build": "concurrently 'yarn build:css' 'yarn build:js'",
+    "lint:css": "stylelint src/*.css",
+    "lint:js": "eslint src",
+    "lint": "concurrently 'yarn lint:js' 'yarn lint:css'",
+    "test": "jest test.js"
+  },
   "dependencies": {
     "react": "17.0.1",
     "react-dom": "17.0.1"
