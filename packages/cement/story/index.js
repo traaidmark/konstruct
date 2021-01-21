@@ -18,6 +18,7 @@ import '../src/index.css';
 import '../src/part-button.css';
 import '../src/part-flag.css';
 import '../src/part-data.css';
+import '../src/part-sticker.css';
 
 
 import Section from '../../buckets/section/src';
@@ -439,6 +440,155 @@ export const PartData = (args) => (
             <div className="part-data part-data--xlarge">
               <i>USD</i>
               <strong>300.00</strong>
+            </div>
+            `}
+          />
+        </aside>
+      </Grid>
+    </Section>
+  </>
+);
+
+// 3.5. END ....................................................................
+
+// 3.5. DATA ...................................................................
+
+export const PartSticker = (args) => (
+  <>
+    <Section noLeft noRight noTop>
+      <List>
+        <li>
+          <div className="part-sticker">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+        </li>
+      </List>
+      <h4>Code</h4>
+      <Source
+        code={dedent`
+        <div className="part-sticker">
+          <small>Sticker Label</small>
+          <div className="part-data">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
+        </div>
+        `}
+      />
+    </Section>
+    <Section noLeft noRight noTop>
+      <h3>Vertical Orientation</h3>
+      <Grid>
+        <aside>
+          <h5><code>part-sticker--top</code></h5>
+          <div className="part-sticker part-sticker--top">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-sticker part-sticker--top">
+              <small>Sticker Label</small>
+              <div className="part-data">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+          <h5><code>part-sticker--bottom</code></h5>
+          <div className="part-sticker part-sticker--bottom">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-sticker part-data--bottom">
+              <small>Sticker Label</small>
+              <div className="part-data">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+      </Grid>
+    </Section>
+    <Section noLeft noRight noTop>
+      <h3>Horizontal Orientation</h3>
+      <Grid>
+        <aside>
+          <h5><code>part-sticker--left</code></h5>
+          <div className="part-sticker part-sticker--left">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-sticker part-sticker--left">
+              <small>Sticker Label</small>
+              <div className="part-data">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+          <h5><code>part-sticker--center</code></h5>
+          <div className="part-sticker part-sticker--center">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-sticker part-data--center">
+              <small>Sticker Label</small>
+              <div className="part-data">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+          <h5><code>part-sticker--right</code></h5>
+          <div className="part-sticker part-sticker--right">
+            <small>Sticker Label</small>
+            <div className="part-data">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-sticker part-data--right">
+              <small>Sticker Label</small>
+              <div className="part-data">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
             </div>
             `}
           />

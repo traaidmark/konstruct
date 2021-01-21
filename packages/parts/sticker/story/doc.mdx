@@ -1,9 +1,9 @@
 import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-# Data
+# Sticker
 
-The `<Sticker />` component is a small data display component.
+The `<Sticker />` component is a small extension on the data display component.
 
 - [Installation](#installation)
 - [Dependencies](#dependencies)
@@ -18,9 +18,22 @@ The `<Sticker />` component is a small data display component.
   `}
 />
 
-## Dependencies
+## Style Dependencies
 
-This component needs `@traaidmark/konstruct-foundation` to work.
+Konstruct components separate js from css, which makes the css libraries platform agnostic.
+
+So you need to install the Cement library too, and import the required files.
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-cement;
+  `}
+/>
+
+Import the following css libraries wherever you choose to import your css files. I suggest a single location for ease of maintenance.
+
+* `@traaidmark/konstruct-cement/data.css`
+* `@traaidmark/konstruct-cement/sticker.css`
 
 ## Usage
 
@@ -36,9 +49,6 @@ This component needs `@traaidmark/konstruct-foundation` to work.
           label="Amount"
           prefix="usd"
           value="23.00"
-          size="default"
-          align: "left"
-          placement: "top"
         />
       );
     };

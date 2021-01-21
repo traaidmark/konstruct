@@ -1,0 +1,58 @@
+/* FOUNDATION [ PART > DATA ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --sticker-label-color: var(--color);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.part-sticker {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-top;
+
+  width: fit-content;
+
+}
+
+.part-sticker > small {
+  display: block;
+  font-weight: var(--weight-regular);
+  color: var(--sticker-label-color);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. ORIENTATION VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.part-sticker--top {
+  flex-direction: column;
+  justify-content: flex-top;
+}
+
+.part-sticker--bottom {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.part-sticker--left {
+  align-items: flex-start;
+}
+.part-sticker--center {
+  align-items: center;
+}
+.part-sticker--right {
+  align-items: flex-end;
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

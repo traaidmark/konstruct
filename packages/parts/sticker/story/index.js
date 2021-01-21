@@ -16,7 +16,6 @@ import mdx from './doc.mdx';
 
 import List from '../../../../storybook-components/List';
 
-
 import Sticker from '../src';
 
 // 1.2. END ....................................................................
@@ -45,7 +44,7 @@ export const Demo = (args) => (
   <>
     <List>
       <li>
-        <Sticker { ...args }/>
+        <Sticker { ...args } />
       </li>
     </List>
     <h3>Code</h3>
@@ -55,73 +54,18 @@ export const Demo = (args) => (
         label="Amount"
         prefix="usd"
         value="23.00"
-        size="default"
-        align: "left"
-        placement: "top"
       />
       `}
     />
   </>
 );
 Demo.args = {
-  size: 'default',
-  prefix: 'usd',
-  value: '2300.00',
   label: 'Amount',
-  align: 'left',
-  placement: 'top',
+  prefix: 'usd',
+  value: '2300.00'
 };
 
 // 3.1. END ....................................................................
-
-// 3.2. VARIANTS ...............................................................
-
-export const Variants = (args) => (
-  <>
-    <h3>Size variations:</h3>
-    <List>
-      <li>
-        <Sticker {...args} size="small" />
-      </li>
-      <li>
-        <Sticker {...args} size="default" />
-      </li>
-      <li>
-        <Sticker {...args} size="large" />
-      </li>
-    </List>
-    <h3>Horizontal label alignment variations:</h3>
-    <List>
-      <li>
-        <Sticker {...args} align="left" />
-      </li>
-      <li>
-        <Sticker {...args} align="center" />
-      </li>
-      <li>
-        <Sticker {...args} align="right" />
-      </li>
-    </List>
-    <h3>Vertical label placement variations:</h3>
-    <List>
-      <li>
-        <Sticker {...args} placement="top" />
-      </li>
-      <li>
-        <Sticker {...args} placement="bottom" />
-      </li>
-    </List>
-  </>
-);
-
-Variants.args = {
-  prefix: 'usd',
-  value: '2300.00',
-  label: 'Amount',
-  placement: 'top',
-};
-
-// 3.2. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
