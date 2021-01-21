@@ -1,4 +1,4 @@
-/* PARTS [ STYLES > BUTTONS ] ############################################### */
+/* FOUNDATION [ PART > BUTTON ] ############################################# */
 
 /* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -62,17 +62,17 @@
 
 /* 3. SIZE VARIATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-button-large {
+.part-button--large {
   padding: var(--gutter-small) var(--gutter);
   font-size: var(--size-medium);
   line-height: var(--lineheight-medium);
 }
-.part-button-small {
+.part-button--small {
   padding: 5px var(--gutter-small);
   font-size: var(--size-small);
   line-height: var(--lineheight-small);
 }
-.part-button-full {
+.part-button--full {
   width: 100%;
 }
 
@@ -80,7 +80,7 @@
 
 /* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-button-danger {
+.part-button--danger {
   --button-text-color: var(--color-darker);
   --button-text-color-hover: var(--color-red);
   --button-bg-color: var(--color-red);
@@ -89,7 +89,7 @@
   --button-border-color-hover: var(--color-darker);
 }
 
-.part-button-warning {
+.part-button--warning {
   --button-text-color: var(--color-darker);
   --button-text-color-hover: var(--color-orange);
   --button-bg-color: var(--color-orange);
@@ -98,7 +98,7 @@
   --button-border-color-hover: var(--color-darker);
 }
 
-.part-button-safe {
+.part-button--safe {
   --button-text-color: var(--color-darker);
   --button-text-color-hover: var(--color-green);
   --button-bg-color: var(--color-green);
