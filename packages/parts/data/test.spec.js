@@ -6,7 +6,6 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import 'jest-styled-components';
 
 // 1.1. END ....................................................................
 
@@ -23,7 +22,6 @@ import Data from './src';
 const props = {
   prefix: 'usd',
   value: '23.00',
-  size: 'large',
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -47,11 +45,7 @@ describe('Parts: Data', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Data
-        prefix={ props.prefix }
-        value={ props.value }
-        size={ props.size }
-      />
+      <Data { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -6,7 +6,6 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import 'jest-styled-components';
 
 // 1.1. END ....................................................................
 
@@ -22,7 +21,6 @@ import Flag from './src';
 
 const props = {
   text: 'usd',
-  variant: 'info',
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

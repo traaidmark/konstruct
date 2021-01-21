@@ -6,7 +6,6 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import 'jest-styled-components';
 
 // 1.1. END ....................................................................
 
@@ -24,9 +23,6 @@ const props = {
   prefix: 'usd',
   value: '2300.00',
   label: 'Amount',
-  placement: 'top',
-  align: 'left',
-  size: 'large'
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -50,14 +46,7 @@ describe('Parts: Sticker', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Sticker
-        prefix={ props.prefix }
-        value={ props.value }
-        size={ props.size }
-        align={ props.align }
-        placement={ props.placement }
-        label={ props.label }
-      />
+      <Sticker { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
