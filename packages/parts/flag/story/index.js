@@ -16,8 +16,6 @@ import mdx from './doc.mdx';
 
 import List from '../../../../storybook-components/List';
 
-import '../../../foundation-css/src/index.css';
-
 import Flag from '../../../parts/flag/src';
 
 // 1.2. END ....................................................................
@@ -46,39 +44,28 @@ export const Demo = (args) => (
   <>
     <List>
       <li><Flag { ...args } /></li>
+      <li><Flag { ...args } className="part-flag--info" /></li>
+      <li><Flag { ...args } className="part-flag--new" /></li>
+      <li><Flag { ...args } className="part-flag--aware" /></li>
+      <li><Flag { ...args } className="part-flag--important" /></li>
     </List>
-    <h3>Code</h3>
+    <h4>Code</h4>
     <Source
       code={dedent`
-      <Flag
-        variant="info"
-        text="Info"
-      />
+      <Flag text="03" />
+      <Flag text="03" className="part-flag--info" />
+      <Flag text="03" className="part-flag--new" />
+      <Flag text="03" className="part-flag--aware" />
+      <Flag text="03" className="part-flag--important" />
       `}
     />
   </>
 );
 Demo.args = {
-  variant: 'info',
-  text: 'Info',
+  text: '03',
 };
 
 // 3.1. END ....................................................................
-
-// 3.3. DEFAULT STYLES .........................................................
-
-export const DefaultStyles = (args) => (
-  <>
-    <List>
-      <li><Flag text="info" variant="info" /></li>
-      <li><Flag text="new" variant="new" /></li>
-      <li><Flag text="warning" variant="warning" /></li>
-      <li><Flag text="error" variant="error" /></li>
-    </List>
-  </>
-);
-
-// 3.3. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

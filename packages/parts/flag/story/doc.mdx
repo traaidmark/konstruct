@@ -3,7 +3,7 @@ import dedent from 'ts-dedent';
 
 # Flag
 
-Super small component to display a small flag with themeable styles.
+Super small component to display a small flag component.
 
 The component comes with default styling and a primary / secondary variant that is updated based on color settings, but you can easily create your own variants with simple css variables.
 
@@ -23,20 +23,21 @@ The component comes with default styling and a primary / secondary variant that 
 
 ## Dependencies
 
-This component needs `@traaidmark/konstruct-foundation` to work if you want to use default styles.
+* `@traaidmark/konstruct-foundation-css`
 
 ## Usage
 
 <Source
   code={dedent`
     import React from 'react';
+    import '@traaidmark/konstruct-foundation-css/flag.css';
     import Flag from '@traaidmark/konstruct-parts-flag';
     
     const DemoComponent = () => {
       return (
         <Flag
-          variant="info"
-          text="Info"
+          className="part-flag--info"
+          text="Info text"
         />
       );
     };
@@ -44,30 +45,11 @@ This component needs `@traaidmark/konstruct-foundation` to work if you want to u
   `}
 />
 
+**Note:** I usually prefer to import my css files in a single place, like the main entry file of my app or someplace where I can manage all my css imports in a single place.
+
 ## Theming
 
-Variants are created by creating a set of css variables, according to a set structure like the below example:
-
-<Source
-  language='css'
-  code={dedent`
-    :root {
-      --flag-[NAME]--text-color:        var(--color-darker);
-      --btn-[NAME]--background-color:   var(--color-blue);
-    }
-  `}
-/>
-
-The variant name is taken from the css variable name itself: `--flag-[NAME]--text-color`.
-
-You can then use your new variant by entering `[NAME]` as your variant in the component:
-
-<Source
-  language='html'
-  code={dedent`
-    <flag variant="[NAME]" text="Info" />
-  `}
-/>
+The styling of this component is all done in css under the ```.part-flag``` class name, and is customizable through css variables. You can find more information on theming in the ```konstruct-foundation-css``` package.
 
 ## Props
 
