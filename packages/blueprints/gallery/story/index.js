@@ -14,7 +14,7 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../../../foundation-css/src/index.css';
+
 import Section from '../../../buckets/section/src';
 
 import Gallery from '../src';

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../foundation-css/src/index.css';
+
 import Section from '../../../buckets/section/src';
 import mdx from './doc.mdx';
 export default {

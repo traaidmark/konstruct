@@ -20,13 +20,14 @@ The `<Data />` component is a small data display component.
 
 ## Dependencies
 
-This component needs `@traaidmark/konstruct-foundation` to work.
+* `@traaidmark/konstruct-foundation`
 
 ## Usage
 
 <Source
   code={dedent`
     import React from 'react';
+    import '@traaidmark/konstruct-foundation-css/data.css';
     import Data from '@traaidmark/konstruct-parts-data';
     
     const DemoComponent = () => {
@@ -42,6 +43,9 @@ This component needs `@traaidmark/konstruct-foundation` to work.
     export default DemoComponent;
   `}
 />
+
+
+**Note:** I usually prefer to import my css files in a single place, like the main entry file of my app or someplace where I can manage all my css imports in a single place.
 
 ## Props
 

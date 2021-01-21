@@ -16,7 +16,7 @@ import mdx from './doc.mdx';
 
 import List from '../../../../storybook-components/List';
 
-import '../../../foundation-css/src/index.css';
+
 import Sticker from '../src';
 
 // 1.2. END ....................................................................

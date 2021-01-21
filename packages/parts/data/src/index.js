@@ -26,7 +26,7 @@ const Data = ({
 
   return (
     <div
-      className={ size }
+      className={ `part-data ${ className ? className : '' }` }
       { ...rest }
     >
       { prefix && <i>{ prefix }</i> }
