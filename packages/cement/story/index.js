@@ -17,6 +17,7 @@ import mdx from './doc.mdx';
 import '../src/index.css';
 import '../src/part-button.css';
 import '../src/part-flag.css';
+import '../src/part-data.css';
 
 
 import Section from '../../buckets/section/src';
@@ -370,6 +371,84 @@ export const PartFlag = (args) => (
 );
 
 // 3.4. END ....................................................................
+
+// 3.5. DATA ...................................................................
+
+export const PartData = (args) => (
+  <>
+    <Section noLeft noRight noTop>
+      <List>
+        <li>
+          <div className="part-data">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
+        </li>
+      </List>
+      <h4>Code</h4>
+      <Source
+        code={dedent`
+        <div className="part-data">
+          <i>USD</i>
+          <strong>300.00</strong>
+        </div>
+        `}
+      />
+    </Section>
+    <Section noLeft noRight noTop>
+      <h3>Size Variations</h3>
+      <Grid>
+        <aside>
+          <h5><code>part-data--small</code></h5>
+          <div className="part-data part-data--small">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-data part-data--small">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+          <h5><code>part-data--large</code></h5>
+          <div className="part-data part-data--large">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-data part-data--large">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+          <h5><code>part-data--xlarge</code></h5>
+          <div className="part-data part-data--xlarge">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
+          <Source
+            code={dedent`
+            <div className="part-data part-data--xlarge">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+            `}
+          />
+        </aside>
+      </Grid>
+    </Section>
+  </>
+);
+
+// 3.5. END ....................................................................
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
