@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bucket: Block renders correctly with all props 1`] = `
+.c0 {
+  --block-radius: var(--radius-small);
+  --block-bg-color: var(--color-white);
+  --block-border-color: var(--color);
+  --block-title-color: var(--color-sub-headings);
+  --block-text-color: var(--color-sub-copy);
+  border: none;
+  border-radius: var(--block-radius);
+  background-color: var(--block-bg-color);
+  padding: var(--gutter);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: var(--gutter-small);
+  margin-bottom: var(--gutter);
+  border-bottom: solid 1px var(--color-light);
+}
+
+.c1 h4 {
+  font-family: var(--family-secondary);
+  color: var(--block-title-color);
+  margin: 0;
+}
+
+.c2 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-left: var(--gutter-small);
+}
+
+.c2 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+}
+
+.c2 ul li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c2 ul li::marker {
+  display: none;
+}
+
+.c2 ul li:before {
+  display: none;
+}
+
+.c2 ul li:marker {
+  display: none;
+}
+
+.c2 ul li:not(:last-child) {
+  margin-right: var(--gutter-small);
+}
+
+.c3 {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--block-text-color);
+  max-height: auto;
+  overflow-y: visible;
+}
+
+.c3 p,
+.c3 li,
+.c3 span,
+.c3 strong,
+.c3 small {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--block-text-color);
+}
+
+.c3 li {
+  border-bottom: solid 1px var(--color-light);
+  padding-bottom: var(--gutter-small);
+  margin-bottom: var(--gutter-small);
+}
+
+@media (max-width:480px) {
+  .c2 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:480px) {
+  .c3 {
+    margin-bottom: var(--gutter);
+  }
+}
+
+<aside
+  className="c0"
+>
+  <header
+    className="c1"
+  >
+    <h4>
+      Why we are so great
+    </h4>
+    <nav
+      className="c2"
+    >
+      <ul>
+        <li>
+          <a>
+            One
+          </a>
+        </li>
+        <li>
+          <a>
+            Two
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div
+    className="c3"
+  >
+    <p>
+      Hello world
+    </p>
+  </div>
+</aside>
+`;
+
+exports[`Bucket: Block renders correctly without any props 1`] = `
+.c0 {
+  --block-radius: var(--radius-small);
+  --block-bg-color: var(--color-white);
+  --block-border-color: var(--color);
+  --block-title-color: var(--color-sub-headings);
+  --block-text-color: var(--color-sub-copy);
+  border: none;
+  border-radius: var(--block-radius);
+  background-color: var(--block-bg-color);
+  padding: var(--gutter);
+}
+
+.c1 {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--block-text-color);
+  max-height: auto;
+  overflow-y: visible;
+}
+
+.c1 p,
+.c1 li,
+.c1 span,
+.c1 strong,
+.c1 small {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--block-text-color);
+}
+
+.c1 li {
+  border-bottom: solid 1px var(--color-light);
+  padding-bottom: var(--gutter-small);
+  margin-bottom: var(--gutter-small);
+}
+
+@media (max-width:480px) {
+  .c1 {
+    margin-bottom: var(--gutter);
+  }
+}
+
+<aside
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+</aside>
+`;

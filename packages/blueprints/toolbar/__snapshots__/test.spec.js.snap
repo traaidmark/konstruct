@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bucket: Toolbar renders correctly with all props 1`] = `
+.c0 {
+  --toolbar-border-color: var(--color-light);
+  --toolbar-heading-color: var(--color-headings);
+  --toolbar-text-color: var(--color-sub-copy);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: solid 1px var(--toolbar-border-color);
+  padding-bottom: var(--gutter);
+}
+
+.c2 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-left: var(--gutter-medium);
+}
+
+.c2 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+}
+
+.c2 ul li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c2 ul li::marker {
+  display: none;
+}
+
+.c2 ul li:before {
+  display: none;
+}
+
+.c2 ul li:marker {
+  display: none;
+}
+
+.c2 ul li:not(:last-child) {
+  margin-right: var(--gutter-small);
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6 {
+  margin-bottom: var(--gutter-small);
+  color: var(--toolbar-heading-color);
+}
+
+.c1 p {
+  color: var(--toolbar-text-color);
+}
+
+@media (max-width:480px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:480px) {
+  .c2 {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width:480px) {
+  .c2 {
+    margin-left: var(--gutter-small);
+  }
+}
+
+@media (max-width:480px) {
+  .c1 {
+    margin-bottom: var(--gutter);
+  }
+}
+
+<header
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h3>
+      Why we are so great
+    </h3>
+    <p>
+      Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien.
+    </p>
+  </div>
+  <nav
+    className="c2"
+  >
+    <ul>
+      <li>
+        <a>
+          Sign Up now
+        </a>
+      </li>
+      <li>
+        <a>
+          Do this other thing
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`Bucket: Toolbar renders correctly without any props 1`] = `
+.c0 {
+  --toolbar-border-color: var(--color-light);
+  --toolbar-heading-color: var(--color-headings);
+  --toolbar-text-color: var(--color-sub-copy);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: solid 1px var(--toolbar-border-color);
+  padding-bottom: var(--gutter);
+}
+
+.c1 h1,
+.c1 h2,
+.c1 h3,
+.c1 h4,
+.c1 h5,
+.c1 h6 {
+  margin-bottom: var(--gutter-small);
+  color: var(--toolbar-heading-color);
+}
+
+.c1 p {
+  color: var(--toolbar-text-color);
+}
+
+@media (max-width:480px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:480px) {
+  .c1 {
+    margin-bottom: var(--gutter);
+  }
+}
+
+<header
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+</header>
+`;

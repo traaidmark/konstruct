@@ -11,94 +11,6 @@
   "workspaces": [
     "packages/**/*"
   ],
-  "babel": {
-    "comments": false,
-    "plugins": [
-      [
-        "babel-plugin-styled-components",
-        {
-          "namespace": "traaidmark-konstruct",
-          "minify": true,
-          "transpileTemplateLiterals": true
-        }
-      ]
-    ],
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
-  "jest": {
-    "cacheDirectory": ".jest-cache",
-    "coverageDirectory": ".jest-coverage",
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/packages/(?:.+?)/lib/"
-    ],
-    "coverageReporters": [
-      "html",
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
-    "testPathIgnorePatterns": [
-      "<rootDir>/packages/(?:.+?)/lib/"
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2021": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "react",
-      "react-hooks"
-    ],
-    "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "indent": [
-        "error",
-        2
-      ],
-      "linebreak-style": 0,
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi": [
-        "error",
-        "always"
-      ]
-    },
-    "overrides": [
-      {"files": ["packages/foundation"]}
-    ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "comment-empty-line-before": null,
-      "block-closing-brace-empty-line-before": null
-    },
-    "ignoreFiles": ["**/lib"]
-  },
   "scripts": {
     "auth": "npm login --registry=https://npm.pkg.github.com --scope=@traaidmark",
     "bootstrap": "lerna bootstrap",
@@ -136,6 +48,7 @@
     "jest": "^26.6.1",
     "jest-haste-map": "^26.6.1",
     "jest-resolve": "^26.6.1",
+    "jest-styled-components": "^7.0.3",
     "lerna": "^3.22.1",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",

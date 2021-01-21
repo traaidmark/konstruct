@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Parts: Card renders correctly with all props 1`] = `
+.c0 {
+  --card-text-align: left;
+  --card-border-radius: var(--radius-small);
+  --card-title-font: var(--family-secondary);
+  --card-title-weight: var(--weight-bold);
+  --card-title-color: var(--color-dark);
+  --card-content-color: var(--color);
+  --card-meta-color: var(--color);
+  --card-meta-border-color: var(--color-light);
+  --card-border-color: var(--color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+}
+
+.c1 {
+  margin: 0 0 15px 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+}
+
+.c1 iframe {
+  width: 100%!important;
+  max-height: 250px;
+}
+
+.c1 img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  -webkit-transition: var(--transition-slow);
+  transition: var(--transition-slow);
+}
+
+.c1 svg {
+  max-width: none;
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: var(--gutter);
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  -webkit-transition: var(--transition-fast);
+  transition: var(--transition-fast);
+  position: relative;
+  border-top-left-radius: 0!important;
+}
+
+.c2:after {
+  content: "";
+  width: var(--gutter);
+  height: var(--gutter);
+  position: absolute;
+  background: var(--color-white);
+  -webkit-clip-path: polygon(0% 0%,0% 100%,100% 100%);
+  clip-path: polygon(0% 0%,0% 100%,100% 100%);
+  top: -20px;
+  left: 0;
+}
+
+.c2:after {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.c3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: var(--gutter);
+  text-align: var(--card-text-align);
+}
+
+.c3 h3 {
+  font-family: var(--card-title-font);
+  font-weight: var(--card-title-weight);
+  font-size: var(--font-medium-size);
+  line-height: var(--font-medium-lineHeight);
+  color: var(--card-title-color);
+  margin: 0 0 var(--gutter-small) 0!important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: var(--weight-light);
+}
+
+.c3 p,
+.c3 li {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--card-content-color);
+}
+
+.c4 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: var(--gutter-small)!important;
+  padding-top: var(--gutter-small);
+  border-top: solid 1px var(--card-meta-border-color);
+}
+
+.c4 li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c4 li::marker {
+  display: none;
+}
+
+.c4 li:before {
+  display: none;
+}
+
+.c4 li:marker {
+  display: none;
+}
+
+.c4 li:not(:last-child) {
+  margin-right: var(--gutter-small);
+}
+
+.c4 li {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--card-meta-color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 li img,
+.c4 li svg {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  margin-right: 5px;
+}
+
+.c4 li:not(:first-child) {
+  border-left: solid 1px var(--color-light);
+  padding-left: 5px;
+}
+
+.c5 {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.c5 li::marker {
+  display: none;
+}
+
+.c5 li:before {
+  display: none;
+}
+
+.c5 li:marker {
+  display: none;
+}
+
+.c5 li:not(:last-child) {
+  margin-right: var(--gutter-small);
+}
+
+<article
+  className="c0"
+>
+  <figure
+    className="c1"
+  >
+    <img
+      alt="This is a neat title for a card."
+      src="https://source.unsplash.com/500x250/?workbench"
+    />
+  </figure>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <h3>
+        This is a neat title for a card.
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lorem mi. Nullam ornare purus quis mauris venenatis, vitae consequat mauris interdum.
+      </p>
+    </div>
+    <ul
+      className="c4"
+    >
+      <li>
+        30 Minutes ago...
+      </li>
+      <li>
+        Uncategorised
+      </li>
+      <li>
+        Adrian Kirsten
+      </li>
+    </ul>
+    <ul
+      className="c5"
+    >
+      <li>
+        <a>
+          Click here!
+        </a>
+      </li>
+    </ul>
+  </div>
+</article>
+`;
+
+exports[`Parts: Card renders correctly without any props 1`] = `
+.c0 {
+  --card-text-align: left;
+  --card-border-radius: var(--radius-small);
+  --card-title-font: var(--family-secondary);
+  --card-title-weight: var(--weight-bold);
+  --card-title-color: var(--color-dark);
+  --card-content-color: var(--color);
+  --card-meta-color: var(--color);
+  --card-meta-border-color: var(--color-light);
+  --card-border-color: var(--color);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: var(--gutter);
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  -webkit-transition: var(--transition-fast);
+  transition: var(--transition-fast);
+}
+
+.c1:after {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: var(--gutter);
+  text-align: var(--card-text-align);
+}
+
+.c2 h3 {
+  font-family: var(--card-title-font);
+  font-weight: var(--card-title-weight);
+  font-size: var(--font-medium-size);
+  line-height: var(--font-medium-lineHeight);
+  color: var(--card-title-color);
+  margin: 0 0 var(--gutter-small) 0!important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-weight: var(--weight-light);
+}
+
+.c2 p,
+.c2 li {
+  font-size: var(--font-small-size);
+  line-height: var(--font-small-lineHeight);
+  color: var(--card-content-color);
+}
+
+<article
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    />
+  </div>
+</article>
+`;
