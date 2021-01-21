@@ -1,4 +1,4 @@
-// PARTS [ CARD > TESTS ] ######################################################
+// BUCKET [ BLOCK > TESTS ] ####################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Card from '.';
+import Block from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,39 +21,25 @@ import Card from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  imageSrc: 'https://source.unsplash.com/500x250/?workbench',
-  imageAlt: 'This is a neat title for a card.',
-  title: 'This is a neat title for a card.',
+  title: 'Why we are so great',
   actions: [
-    <a>Click here!</a>
+    <a>One</a>,
+    <a>Two</a>
   ],
-  meta: [
-    '30 Minutes ago...',
-    'Uncategorised',
-    'Adrian Kirsten'
-  ],
-  tags: [
-    <small>almost sold!</small>,
-    <small>USA</small>
-  ],
-  children: (
-    <>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lorem mi. Nullam ornare purus quis mauris venenatis, vitae consequat mauris interdum.</p>
-    </>
-  )
-}
+  children: <p>Hello world</p>
+};
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts: Card', () => {
+describe('Bucket: Block', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Card />
+      <Block />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -64,12 +50,12 @@ describe('Parts: Card', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Card { ...props } />
+      <Block { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  // 3.1. END ..................................................................
+  // 3.2. END ..................................................................
 
 });
 

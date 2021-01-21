@@ -1,4 +1,4 @@
-// BUCKET [ GRID > TESTS ] #####################################################
+// PARTS [ DATA > TESTS ] ######################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Grid from '.';
+import Data from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,28 +21,22 @@ import Grid from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  largeCols: '1fr 1fr',
-  largeGutter: 'var(--gutter-medium)',
-  mediumCols: '1fr 1fr',
-  mediumGutter: 'var(--gutter)',
-  smallCols: '1fr',
-  smallGutter: 'var(--gutter)',
-};
+  prefix: 'usd',
+  value: '23.00',
+  size: 'large',
+}
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Bucket: Grid', () => {
+describe('Parts: Data', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Grid>
-        <div>col 1</div>  
-        <div>col 2</div>  
-      </Grid>
+      <Data />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -53,22 +47,16 @@ describe('Bucket: Grid', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Grid
-        smallCols={ props.smallCols }
-        smallGutter={ props.smallGutter }
-        mediumCols={ props.mediumCols }
-        mediumGutter={ props.mediumGutter }
-        largeCols={ props.largeCols }
-        largeGutter={ props.largeGutter }
-      >
-        <div>col 1</div>  
-        <div>col 2</div>  
-      </Grid>
+      <Data
+        prefix={ props.prefix }
+        value={ props.value }
+        size={ props.size }
+      />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  // 3.2. END ..................................................................
+  // 3.1. END ..................................................................
 
 });
 

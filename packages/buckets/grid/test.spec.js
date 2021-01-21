@@ -1,4 +1,4 @@
-// PARTS [ FLAG > TESTS ] ######################################################
+// BUCKET [ GRID > TESTS ] #####################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Flag from '.';
+import Grid from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,21 +21,28 @@ import Flag from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  text: 'usd',
-  variant: 'info',
-}
+  largeCols: '1fr 1fr',
+  largeGutter: 'var(--gutter-medium)',
+  mediumCols: '1fr 1fr',
+  mediumGutter: 'var(--gutter)',
+  smallCols: '1fr',
+  smallGutter: 'var(--gutter)',
+};
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts: Flag', () => {
+describe('Bucket: Grid', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Flag />
+      <Grid>
+        <div>col 1</div>  
+        <div>col 2</div>  
+      </Grid>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -46,12 +53,22 @@ describe('Parts: Flag', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Flag { ...props } />
+      <Grid
+        smallCols={ props.smallCols }
+        smallGutter={ props.smallGutter }
+        mediumCols={ props.mediumCols }
+        mediumGutter={ props.mediumGutter }
+        largeCols={ props.largeCols }
+        largeGutter={ props.largeGutter }
+      >
+        <div>col 1</div>  
+        <div>col 2</div>  
+      </Grid>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  // 3.1. END ..................................................................
+  // 3.2. END ..................................................................
 
 });
 

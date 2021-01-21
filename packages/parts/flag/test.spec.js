@@ -1,4 +1,4 @@
-// PARTS [ DATA > TESTS ] ######################################################
+// PARTS [ FLAG > TESTS ] ######################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Sticker from '.';
+import Flag from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,25 +21,21 @@ import Sticker from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  prefix: 'usd',
-  value: '2300.00',
-  label: 'Amount',
-  placement: 'top',
-  align: 'left',
-  size: 'large'
+  text: 'usd',
+  variant: 'info',
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts: Sticker', () => {
+describe('Parts: Flag', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Sticker />
+      <Flag />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -50,14 +46,7 @@ describe('Parts: Sticker', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Sticker
-        prefix={ props.prefix }
-        value={ props.value }
-        size={ props.size }
-        align={ props.align }
-        placement={ props.placement }
-        label={ props.label }
-      />
+      <Flag { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

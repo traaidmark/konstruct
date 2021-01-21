@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Section from '.';
+import Section from './src';
 
 // 1.2. END ....................................................................
 

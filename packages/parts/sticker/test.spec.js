@@ -1,4 +1,4 @@
-// BUCKET [ BLOCK > TESTS ] ####################################################
+// PARTS [ DATA > TESTS ] ######################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Block from '.';
+import Sticker from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,25 +21,25 @@ import Block from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  title: 'Why we are so great',
-  actions: [
-    <a>One</a>,
-    <a>Two</a>
-  ],
-  children: <p>Hello world</p>
-};
+  prefix: 'usd',
+  value: '2300.00',
+  label: 'Amount',
+  placement: 'top',
+  align: 'left',
+  size: 'large'
+}
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Bucket: Block', () => {
+describe('Parts: Sticker', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Block />
+      <Sticker />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -50,12 +50,19 @@ describe('Bucket: Block', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Block { ...props } />
+      <Sticker
+        prefix={ props.prefix }
+        value={ props.value }
+        size={ props.size }
+        align={ props.align }
+        placement={ props.placement }
+        label={ props.label }
+      />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  // 3.2. END ..................................................................
+  // 3.1. END ..................................................................
 
 });
 

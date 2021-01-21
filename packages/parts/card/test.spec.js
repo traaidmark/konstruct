@@ -1,4 +1,4 @@
-// PARTS [ BUTTON > TESTS ] ####################################################
+// PARTS [ CARD > TESTS ] ######################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Button from '.';
+import Card from './src';
 
 // 1.2. END ....................................................................
 
@@ -21,22 +21,39 @@ import Button from '.';
 // 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const props = {
-  children: 'Button Label',
-  variant: 'primary',
-  size: 'large',
+  imageSrc: 'https://source.unsplash.com/500x250/?workbench',
+  imageAlt: 'This is a neat title for a card.',
+  title: 'This is a neat title for a card.',
+  actions: [
+    <a>Click here!</a>
+  ],
+  meta: [
+    '30 Minutes ago...',
+    'Uncategorised',
+    'Adrian Kirsten'
+  ],
+  tags: [
+    <small>almost sold!</small>,
+    <small>USA</small>
+  ],
+  children: (
+    <>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lorem mi. Nullam ornare purus quis mauris venenatis, vitae consequat mauris interdum.</p>
+    </>
+  )
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Parts > Button', () => {
+describe('Parts: Card', () => {
 
   // 3.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Button>{ props.children }</Button>
+      <Card />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -47,12 +64,7 @@ describe('Parts > Button', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Button
-        variant={ props.variant }
-        size={ props.size }
-      >
-        { props.children }
-      </Button>
+      <Card { ...props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
