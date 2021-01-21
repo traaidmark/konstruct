@@ -31,7 +31,7 @@ import List from '../../../storybook-components/List';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: '01 Foundation/Foundation',
+  title: '01 Foundation/Cement',
   parameters: {
     docs: {
       page: mdx,

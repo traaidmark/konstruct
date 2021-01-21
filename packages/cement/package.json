@@ -1,5 +1,5 @@
 {
-  "name": "@traaidmark/konstruct-foundation-css",
+  "name": "@traaidmark/konstruct-cement",
   "version": "0.0.0",
   "main": "lib/index.css",
   "module": "lib/index.css",
@@ -9,7 +9,7 @@
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
-    "directory": "packages/foundation-css"
+    "directory": "packages/cement"
   },
   "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
 }
