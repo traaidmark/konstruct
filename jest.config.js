@@ -11,5 +11,8 @@ module.exports = {
       statements: 100
     }
   },
-  testPathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/']
+  testPathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/'],
+  moduleNameMapper: {
+    "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+  }
 };
