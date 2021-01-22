@@ -1,0 +1,13 @@
+{
+  "name": "@traaidmark/konstruct-cement-parts",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:traaidmark/konstruct.git",
+    "directory": "packages/cement/parts"
+  },
+  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
+}
