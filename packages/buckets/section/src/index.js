@@ -43,10 +43,10 @@ const Section  = ({
   const Header = useCallback(() => {
     if (headerTitle || headerText) {
       return(
-        <Styled.header>
+        <header className="b-section__header">
           { headerTitle && <h2>{ headerTitle }</h2> }
           { headerText && <p>{ headerText }</p> }
-        </Styled.header>
+        </header>
       );
     };
     return null;
@@ -59,7 +59,7 @@ const Section  = ({
   const FooterActions = useCallback(() => {
     if (footerActions && footerActions.length > 0) {
       return(
-        <ul>
+        <ul className="u-list-horizontal u-list-horizontal--center">
           {
             footerActions.map((i,k) => {
               return <li key={ `section-footer-action-${ k }` }>{ i }</li>
@@ -79,10 +79,10 @@ const Section  = ({
   const Footer = useCallback(() => {
     if (footerTitle || footerActions) {
       return(
-        <Styled.footer>
+        <footer className="b-section__footer">
           { footerTitle && <h3>{ footerTitle }</h3> }
           <FooterActions />
-        </Styled.footer>
+        </footer>
       );
     };
     return null;
@@ -97,21 +97,13 @@ const Section  = ({
 
   return (
 
-    <Styled.container
-      noTop={ noTop }
-      noBottom={ noBottom }
-      noLeft={ noLeft }
-      noRight={ noRight }
-      variantX={ variantX }
-      variantY={ variantY }
-      scrollX={ scrollX }
-      scrollY={ scrollY }
+    <section classname={ `b-section` }
       { ...rest }
     >
       <Header />
       { children }
       <Footer />
-    </Styled.container>
+    </section>
 
   );
 

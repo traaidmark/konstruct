@@ -76,6 +76,10 @@
   padding-right: var(--list-gutter);
 }
 
+.u-list-horizontal--center {
+  justify-content: center;
+}
+
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* END OF FILE ############################################################## */
