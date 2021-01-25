@@ -14,7 +14,7 @@
 
 /* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-flag {
+.p-flag {
 
   font-size: var(--size-small);
   line-height: var(--lineheight-small);
@@ -32,22 +32,22 @@
 
 /* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-flag--info {
+.p-flag--info {
   --flag-bg-color: var(--color-blue);
   --flag-text-color: var(--color-darker);
 }
 
-.part-flag--new {
+.p-flag--new {
   --flag-bg-color: var(--color-green);
   --flag-text-color: var(--color-darker);
 }
 
-.part-flag--aware {
+.p-flag--aware {
   --flag-bg-color: var(--color-orange);
   --flag-text-color: var(--color-darker);
 }
 
-.part-flag--important {
+.p-flag--important {
   --flag-bg-color: var(--color-red);
   --flag-text-color: var(--color-darker);
 }

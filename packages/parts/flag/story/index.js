@@ -44,19 +44,19 @@ export const Demo = (args) => (
   <>
     <List>
       <li><Flag { ...args } /></li>
-      <li><Flag { ...args } className="part-flag--info" /></li>
-      <li><Flag { ...args } className="part-flag--new" /></li>
-      <li><Flag { ...args } className="part-flag--aware" /></li>
-      <li><Flag { ...args } className="part-flag--important" /></li>
+      <li><Flag { ...args } className="p-flag--info" /></li>
+      <li><Flag { ...args } className="p-flag--new" /></li>
+      <li><Flag { ...args } className="p-flag--aware" /></li>
+      <li><Flag { ...args } className="p-flag--important" /></li>
     </List>
     <h4>Code</h4>
     <Source
       code={dedent`
       <Flag text="03" />
-      <Flag text="03" className="part-flag--info" />
-      <Flag text="03" className="part-flag--new" />
-      <Flag text="03" className="part-flag--aware" />
-      <Flag text="03" className="part-flag--important" />
+      <Flag text="03" className="p-flag--info" />
+      <Flag text="03" className="p-flag--new" />
+      <Flag text="03" className="p-flag--aware" />
+      <Flag text="03" className="p-flag--important" />
       `}
     />
   </>

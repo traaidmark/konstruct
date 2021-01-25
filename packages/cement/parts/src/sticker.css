@@ -12,7 +12,7 @@
 
 /* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-sticker {
+.p-sticker {
 
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
 
 }
 
-.part-sticker > small {
+.p-sticker > small {
   display: block;
   font-weight: var(--weight-regular);
   color: var(--sticker-label-color);
@@ -33,23 +33,23 @@
 
 /* 3. ORIENTATION VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.part-sticker--top {
+.p-sticker--top {
   flex-direction: column;
   justify-content: flex-top;
 }
 
-.part-sticker--bottom {
+.p-sticker--bottom {
   flex-direction: column-reverse;
   justify-content: flex-end;
 }
 
-.part-sticker--left {
+.p-sticker--left {
   align-items: flex-start;
 }
-.part-sticker--center {
+.p-sticker--center {
   align-items: center;
 }
-.part-sticker--right {
+.p-sticker--right {
   align-items: flex-end;
 }
 
