@@ -49,12 +49,32 @@ export const BucketSection = (args) => (
       <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
       <footer className="b-section__footer">
         <h3>This is a call to action header</h3>
-        <ul class="u-list-horizontal u-list--center">
+        <ul class="u-list-horizontal u-list-horizontal--center">
           <li><a href="">Action Link</a></li>
           <li><a href="">Action Link</a></li>
         </ul>
       </footer>
     </section>
+
+    <h4>Code</h4>
+    <Source
+      code={dedent`
+      <section className="b-section">
+        <header className="b-section__header">
+          <h2>Default Section</h2>
+          <p>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
+        </header>
+        <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
+        <footer className="b-section__footer">
+          <h3>This is a call to action header</h3>
+          <ul class="u-list-horizontal u-list-horizontal--center">
+            <li><a href="">Action Link</a></li>
+            <li><a href="">Action Link</a></li>
+          </ul>
+        </footer>
+      </section>
+      `}
+    />
     
   </>
 );
