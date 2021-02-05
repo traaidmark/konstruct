@@ -1,0 +1,72 @@
+/* CEMENT [ BUCKET > GRID ] ################################################# */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --data-prefix-color: var(--color);
+  --data-value-color: var(--color-dark);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-data {
+
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.p-data > strong {
+
+  font-weight: var(--weight-bold);
+  color: var(--data-value-color);
+
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+
+}
+
+.p-data > i {
+  
+  color: var(--data-prefix-color)!important;
+  
+  margin-right: 5px;
+
+  font-style: normal;
+  font-weight: var(--weight-light);
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+  
+  text-transform: uppercase;
+
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SIZE VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-data--small > i,
+.p-data--small > strong {
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+}
+
+.p-data--large > i,
+.p-data--large > strong {
+  font-size: var(--size-large);
+  line-height: var(--lineheight-large);
+}
+
+.p-data--xlarge > i,
+.p-data--xlarge > strong {
+  font-size: var(--size-xlarge);
+  line-height: var(--lineheight-xlarge);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

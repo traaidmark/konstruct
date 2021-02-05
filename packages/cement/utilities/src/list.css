@@ -1,0 +1,85 @@
+/* FOUNDATION [ PART > DATA ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --list-border-width: 1px;
+  --list-border-color: var(--color-light);
+  --list-gutter: var(--gutter-small);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.u-list-vertical {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.u-list-vertical > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.u-list-horizontal {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.u-list-horizontal > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.u-list-horizontal > li:not(:last-child) {
+  margin: 0 var(--list-gutter) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. ORIENTATION VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.u-list--underlined > li:not(:last-child) {
+  border-bottom: solid var(--list-border-width) var(--list-border-color);
+  padding-bottom: var(--list-gutter);
+  margin-bottom: var(--list-gutter);
+}
+
+.u-list--divided > li:not(:last-child) {
+  border-right: solid var(--list-border-width) var(--list-border-color);
+  padding-right: var(--list-gutter);
+}
+
+.u-list-horizontal--center {
+  justify-content: center;
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

@@ -6,48 +6,19 @@
 
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
-import {
-  _setFontSize,
-} from '@traaidmark/konstruct-mixins';
 import Data from '@traaidmark/konstruct-part-data';
 
 // 1.1. END ....................................................................
-
-// 1.2. STYLESHEET .............................................................
-
-// 1.2.1. CONTAINER
-
-const StickerContainer = styled.div`
-
-  --sticker-label-color:      var(--color);
-
-  display: block;
-  text-align: ${ ({ align }) => align && align };
-
-  small {
-    display: block;
-    font-weight: var(--weight-regular);
-    color: var(--sticker-label-color)!important;
-  }
-
-`;
-
-// 1.2.1. END
-
-// 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const Sticker = ({
-  label = '',
-  value = '',
-  prefix = '',
-  placement = 'bottom',
-  align = 'center',
-  size = 'default',
+  label = undefined,
+  value = undefined,
+  prefix = undefined,
+  className = undefined,
   ...rest
 }) => {
 
@@ -57,11 +28,13 @@ const Sticker = ({
   // 2.2. RENDER ...............................................................
 
   return (
-    <StickerContainer align={ align } { ...rest }>
-      { placement === 'top' && <small>{ label }</small> }
-      <Data value={ value } size={ size } prefix={ prefix } />
-      { placement === 'bottom' && <small>{ label }</small> }
-    </StickerContainer>
+    <div
+      className={ `part-sticker ${ className ? className : '' }` }
+      { ...rest }
+    >
+      { label && <small>{ label }</small> }
+      <Data value={ value } prefix={ prefix } />
+    </div>
   );
 
   // 2.2. END ..................................................................
@@ -79,12 +52,7 @@ Sticker.propTypes = {
   prefix: propTypes.string,
   /** Display your value. */
   value: propTypes.string,
-  /** Modify the size of your sticker. */
-  size: propTypes.oneOf([ 'small', 'default', 'large', 'xlarge']),
-  /** Modify the alignment of your sticker. */
-  align: propTypes.oneOf([ 'left', 'right', 'center']),
-  /** Modify the vertical placement of your label. */
-  placement: propTypes.oneOf([ 'top', 'bottom']),
+  className: propTypes.string,
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1,4 +1,6 @@
 *.spec.js
-stories
+story
 lib
 node_modules
+foundation
+foundation/*

@@ -1,0 +1,112 @@
+/* FOUNDATION [ PART > BUTTON ] ############################################# */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --button-font: var(--family-secondary);
+  --button-font-weight: var(--weight-bold);
+  --button-radius: var(--radius-small);
+  --button-border-width: 2px;
+
+  --button-text-color: var(--color-blue);
+  --button-text-color-hover: var(--color-darker);
+  --button-bg-color: var(--color-darker);
+  --button-bg-color-hover: var(--color-blue);
+  --button-border-color: var(--color-darker);
+  --button-border-color-hover: var(--color-blue);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-button {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+
+  background-color: var(--button-bg-color);
+  border: solid var(--button-border-width) var(--button-border-color);
+  border-radius: var(--button-radius);
+
+  font-weight: var(--button-font-weight);
+  font-family: var(--button-font);
+  color: var(--button-text-color);
+
+  box-shadow: none;
+  transform: translateY(0) scale(1);
+  transition: var(--transition-fast);
+
+  padding: var(--gutter-small) var(--gutter);
+    
+}
+
+.p-button:hover {
+  cursor: pointer;
+
+  background-color: var(--button-bg-color-hover);
+  border-color: var(--button-border-color-hover);
+
+  color: var(--button-text-color-hover);
+
+  box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SIZE VARIATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-button--large {
+  padding: var(--gutter-small) var(--gutter);
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+}
+.p-button--small {
+  padding: 5px var(--gutter-small);
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+}
+.p-button--full {
+  width: 100%;
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-button--danger {
+  --button-text-color: var(--color-darker);
+  --button-text-color-hover: var(--color-red);
+  --button-bg-color: var(--color-red);
+  --button-bg-color-hover: var(--color-darker);
+  --button-border-color: var(--color-red);
+  --button-border-color-hover: var(--color-darker);
+}
+
+.p-button--warning {
+  --button-text-color: var(--color-darker);
+  --button-text-color-hover: var(--color-orange);
+  --button-bg-color: var(--color-orange);
+  --button-bg-color-hover: var(--color-darker);
+  --button-border-color: var(--color-orange);
+  --button-border-color-hover: var(--color-darker);
+}
+
+.p-button--safe {
+  --button-text-color: var(--color-darker);
+  --button-text-color-hover: var(--color-green);
+  --button-bg-color: var(--color-green);
+  --button-bg-color-hover: var(--color-darker);
+  --button-border-color: var(--color-green);
+  --button-border-color-hover: var(--color-darker);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

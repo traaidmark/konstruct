@@ -5,3 +5,4 @@ node_modules
 lib
 .jest-cache
 .jest-coverage
+.yarn-error.log

@@ -1,0 +1,54 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Data
+
+The `<Data />` component is a small data display component.
+
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-data;
+  `}
+/>
+
+## Dependencies
+
+* `@traaidmark/konstruct-foundation`
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import '@traaidmark/konstruct-foundation-css/data.css';
+    import Data from '@traaidmark/konstruct-parts-data';
+    
+    const DemoComponent = () => {
+      
+      return (
+        <Data
+          prefix="usd"
+          value="23.00"
+          size="default"
+        />
+      );
+    };
+    export default DemoComponent;
+  `}
+/>
+
+
+**Note:** I usually prefer to import my css files in a single place, like the main entry file of my app or someplace where I can manage all my css imports in a single place.
+
+## Props
+
+<ArgsTable />
+
+

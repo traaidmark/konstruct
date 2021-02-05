@@ -1,0 +1,58 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Flag
+
+Super small component to display a small flag component.
+
+The component comes with default styling and a primary / secondary variant that is updated based on color settings, but you can easily create your own variants with simple css variables.
+
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [Theming](#theming)
+- [Props](#props)
+
+## Installation
+
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-flag;
+  `}
+/>
+
+## Dependencies
+
+* `@traaidmark/konstruct-foundation-css`
+
+## Usage
+
+<Source
+  code={dedent`
+    import React from 'react';
+    import '@traaidmark/konstruct-foundation-css/flag.css';
+    import Flag from '@traaidmark/konstruct-parts-flag';
+    
+    const DemoComponent = () => {
+      return (
+        <Flag
+          className="p-flag--info"
+          text="Info text"
+        />
+      );
+    };
+    export default DemoComponent;
+  `}
+/>
+
+**Note:** I usually prefer to import my css files in a single place, like the main entry file of my app or someplace where I can manage all my css imports in a single place.
+
+## Theming
+
+The styling of this component is all done in css under the ```.p-flag``` class name, and is customizable through css variables. You can find more information on theming in the ```konstruct-foundation-css``` package.
+
+## Props
+
+<ArgsTable />
+
+
