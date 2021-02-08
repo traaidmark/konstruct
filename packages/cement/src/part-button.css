@@ -47,6 +47,7 @@
 }
 
 .p-button:hover {
+  
   cursor: pointer;
 
   background-color: var(--button-bg-color-hover)!important;
