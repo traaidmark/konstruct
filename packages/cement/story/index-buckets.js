@@ -14,9 +14,9 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../src/section.css';
-import '../src/grid.css';
-import '../src/block.css';
+import '../src/bucket-section.css';
+import '../src/bucket-grid.css';
+import '../src/bucket-block.css';
 
 // 1.2. END ....................................................................
 

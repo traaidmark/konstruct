@@ -17,8 +17,8 @@ import mdx from './doc.mdx';
 import '../src/core.css';
 
 
-import Section from '../../../buckets/section/src';
-import Grid from '../../../buckets/grid/src';
+import Section from '../../buckets/section/src';
+import Grid from '../../buckets/grid/src';
 
 // 1.2. END ....................................................................
 

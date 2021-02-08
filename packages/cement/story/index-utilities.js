@@ -14,13 +14,11 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../src/list.css';
+import '../src/utility-list.css';
 
 
-import Section from '../../../buckets/section/src';
-import Grid from '../../../buckets/grid/src';
-
-import List from '../../../../storybook-components/List';
+import Section from '../../buckets/section/src';
+import Grid from '../../buckets/grid/src';
 
 // 1.2. END ....................................................................
 

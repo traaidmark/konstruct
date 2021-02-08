@@ -14,16 +14,16 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
-import '../src/button.css';
-import '../src/flag.css';
-import '../src/data.css';
-import '../src/sticker.css';
+import '../src/part-button.css';
+import '../src/part-flag.css';
+import '../src/part-data.css';
+import '../src/part-sticker.css';
 
 
-import Section from '../../../buckets/section/src';
-import Grid from '../../../buckets/grid/src';
+import Section from '../../buckets/section/src';
+import Grid from '../../buckets/grid/src';
 
-import List from '../../../../storybook-components/List';
+import List from '../../../storybook-components/List';
 
 // 1.2. END ....................................................................
 
