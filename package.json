@@ -16,7 +16,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "start-storybook -p 5555",
     "build:js": "lerna exec --parallel -- babel --root-mode upward src -d lib",
-    "build:css": "lerna exec --parallel --no-bail -- postcss src/*.css -d lib",
+    "build:css": "postcss packages/cement/src/*.css -d packages/cement/lib",
     "build": "yarn build:css && yarn build:js",
     "storybook:build": "yarn build-storybook",
     "storybook:publish": "./bin/publish-storybook.sh",
@@ -24,7 +24,7 @@
     "test:update": "jest --updateSnapshot",
     "test:coverage": "jest --coverage",
     "lint:js": "eslint packages/* --no-error-on-unmatched-pattern",
-    "lint:css": "stylelint packages/cement/**/src/*.css"
+    "lint:css": "stylelint packages/cement/src/*.css"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
