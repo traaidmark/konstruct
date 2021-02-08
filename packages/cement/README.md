@@ -1,6 +1,6 @@
-# Konstruct Foundation
+# Konstruct Cement
 
-The Konstruct Foundation is foundation layer css library that sets a good browser reset, and then adds minimal styling on base html elements to give you a good head start in your application.
+The Konstruct Cement is a css library that sets a good browser reset, and then adds minimal styling on base html elements to give you a good head start in your application.
 
 It's built to be minimally opinionated with most visual decisions stored as css variables that can easily be overridden.
 
