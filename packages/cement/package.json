@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD:packages/cement/core/package.json
   "name": "@traaidmark/konstruct-cement-core",
   "version": "1.0.0-alpha.0",
+=======
+  "name": "@traaidmark/konstruct-cement",
+  "version": "0.0.0",
+>>>>>>> develop:packages/cement/package.json
   "main": "lib/core.css",
   "module": "lib/core.css",
   "publishConfig": {
