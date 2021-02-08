@@ -1,5 +1,5 @@
 {
-  "name": "@traaidmark/konstruct-cement-core",
+  "name": "@traaidmark/konstruct-cement",
   "version": "0.0.0",
   "main": "lib/core.css",
   "module": "lib/core.css",
