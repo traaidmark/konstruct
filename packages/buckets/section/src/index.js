@@ -9,26 +9,13 @@ import propTypes from 'prop-types';
 
 // 1.1. END ....................................................................
 
-// 1.2. INTERNAL DEPENDENCIES ..................................................
-
-import Styled from './stylesheet';
-
-// 1.2. END ....................................................................
-
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const Section  = ({
   children,
-  noTop,
-  noBottom,
-  noLeft,
-  noRight,
-  variantX = 'default',
-  variantY = 'default',
-  scrollX = false,
-  scrollY = false,
+  className = '',
   headerTitle,
   headerText,
   footerTitle,
@@ -74,7 +61,7 @@ const Section  = ({
 
   // 2.2.2. END
 
-  // 2.2.2. RENDER FOOTER
+  // 2.2.3. RENDER FOOTER
 
   const Footer = useCallback(() => {
     if (footerTitle || footerActions) {
@@ -89,7 +76,7 @@ const Section  = ({
   }, [footerTitle, footerActions]);
 
 
-  // 2.2.2. END
+  // 2.2.3. END
 
   // 2.1. END ..................................................................
 
@@ -97,7 +84,7 @@ const Section  = ({
 
   return (
 
-    <section classname={ `b-section` }
+    <section className={ `b-section ${ className }` }
       { ...rest }
     >
       <Header />
@@ -117,8 +104,8 @@ const Section  = ({
 // 3. PROP-TYPES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Section.propTypes = {
-  /** Content of component */
   children: propTypes.node.isRequired,
+  className: propTypes.string,
   /** Header title renders `h2`, you can add html in here too. */
   headerTitle: propTypes.oneOfType([
     propTypes.string,
@@ -136,26 +123,6 @@ Section.propTypes = {
   ]),
   /** An array of html `[<a>Awesome link</a>, <small>text</small>]` */
   footerActions: propTypes.array,
-  /** Remove all padding from top */
-  noTop: propTypes.bool,
-  /** Remove all padding from bottom */
-  noBottom: propTypes.bool,
-  /** Remove all padding from left */
-  noLeft: propTypes.bool,
-  /** Remove all padding from right */
-  noRight: propTypes.bool,
-  /** Variant determining the gutter size on the sides */
-  variantX: propTypes.oneOf([
-    'default',
-    'wide',
-    'narrow',
-  ]),
-  /** Variant determining the gutter size on top and bottom */
-  variantY: propTypes.oneOf([
-    'default',
-    'shallow',
-    'deep',
-  ]),
   /** If you want the section to be scrollable on X-axis */
   scrollX: propTypes.bool,
   /** If you want the section to be scrollable on Y-axis */

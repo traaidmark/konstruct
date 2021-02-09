@@ -1,163 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Bucket > Section renders correctly with all props 1`] = `
-.c0 {
-  overflow-x: scroll;
-  overflow-y: scroll;
-  padding-left: var(--gutter-medium);
-  padding-right: var(--gutter-medium);
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
-  padding-top: 0!important;
-  padding-bottom: 0!important;
-  padding-left: 0!important;
-  padding-right: 0!important;
-}
-
-.c1 {
-  margin-bottom: var(--gutter-medium);
-  margin-right: auto;
-  margin-left: auto;
-  width: 50%;
-  text-align: center!important;
-}
-
-.c1 h2 {
-  margin: 0 0 var(--gutter-small) 0;
-}
-
-.c1 p {
-  font-size: var(--font-medium-size);
-  line-height: var(--font-medium-lineHeight);
-}
-
-.c2 {
-  display: -webkit-box!important;
-  display: -webkit-flex!important;
-  display: -ms-flexbox!important;
-  display: flex!important;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: var(--gutter-medium)!important;
-}
-
-.c2 ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 ul li {
-  list-style: none;
-  padding-left: 0;
-}
-
-.c2 ul li::marker {
-  display: none;
-}
-
-.c2 ul li:before {
-  display: none;
-}
-
-.c2 ul li:marker {
-  display: none;
-}
-
-.c2 ul li:not(:last-child) {
-  margin-right: var(--gutter-small);
-}
-
-@media (max-width:480px) {
-  .c0 {
-    padding: var(--gutter);
-  }
-}
-
-@media (max-width:480px) {
-  .c1 {
-    margin-bottom: var(--gutter);
-    width: 100%;
-  }
-}
-
-@media (min-width:481px) and (max-width:1023px) {
-  .c1 {
-    margin-bottom: var(--gutter);
-    width: 80%;
-  }
-}
-
-@media (min-width:1024px) and (max-width:1440px) {
-  .c1 {
-    margin-bottom: var(--gutter);
-    width: 60%;
-  }
-}
-
-@media (max-width:480px) {
-  .c2 ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    -webkit-flex-direction: column!important;
-    -ms-flex-direction: column!important;
-    flex-direction: column!important;
-  }
-
-  .c2 ul li {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .c2 ul li::marker {
-    display: none;
-  }
-
-  .c2 ul li:before {
-    display: none;
-  }
-
-  .c2 ul li:marker {
-    display: none;
-  }
-
-  .c2 ul li:not(:last-child) {
-    margin-bottom: var(--gutter-small);
-  }
-}
-
 <section
-  className="c0"
+  className="b-section b-section--shallow"
 >
   <header
-    className="c1"
+    className="b-section__header"
   >
     <h2>
       Why we are so great
@@ -171,12 +19,14 @@ exports[`Bucket > Section renders correctly with all props 1`] = `
   </header>
   Test
   <footer
-    className="c2"
+    className="b-section__footer"
   >
     <h3>
       Sign up today!
     </h3>
-    <ul>
+    <ul
+      className="u-list-horizontal u-list-horizontal--center"
+    >
       <li>
         <a>
           Link 1
@@ -193,47 +43,8 @@ exports[`Bucket > Section renders correctly with all props 1`] = `
 `;
 
 exports[`Bucket > Section renders correctly without any props 1`] = `
-.c0 {
-  padding-top: var(--gutter-medium);
-  padding-bottom: var(--gutter-medium);
-}
-
-@media (min-width:481px) and (max-width:1023px) {
-  .c0 {
-    padding-left: var(--gutter-medium);
-    padding-right: var(--gutter-medium);
-  }
-}
-
-@media (min-width:1024px) and (max-width:1440px) {
-  .c0 {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
-
-@media (min-width:1441px) {
-  .c0 {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-
-@media (max-width:480px) {
-  .c0 {
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-  }
-}
-
-@media (max-width:480px) {
-  .c0 {
-    padding: var(--gutter);
-  }
-}
-
 <section
-  className="c0"
+  className="b-section "
 >
   Test
 </section>
