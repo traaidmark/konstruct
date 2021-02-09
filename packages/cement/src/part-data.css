@@ -3,7 +3,6 @@
 /* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 :root {
-
   --data-prefix-color: var(--color);
   --data-value-color: var(--color-dark);
 
@@ -14,33 +13,26 @@
 /* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .p-data {
-
   display: inline-flex;
   align-items: center;
 
 }
 
 .p-data > strong {
-
   font-weight: var(--weight-bold);
   color: var(--data-value-color);
-
   font-size: var(--size-medium);
   line-height: var(--lineheight-medium);
 
 }
 
 .p-data > i {
-  
-  color: var(--data-prefix-color)!important;
-  
+  color: var(--data-prefix-color) !important;
   margin-right: 5px;
-
   font-style: normal;
   font-weight: var(--weight-light);
   font-size: var(--size-medium);
   line-height: var(--lineheight-medium);
-  
   text-transform: uppercase;
 
 }

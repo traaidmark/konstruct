@@ -3,12 +3,10 @@
 /* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 :root {
-
   --button-font: var(--family-secondary);
   --button-font-weight: var(--weight-bold);
   --button-radius: var(--radius-small);
   --button-border-width: 2px;
-
   --button-text-color: var(--color-blue);
   --button-text-color-hover: var(--color-darker);
   --button-bg-color: var(--color-darker);
@@ -23,39 +21,29 @@
 /* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .p-button {
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: fit-content;
-
-  background-color: var(--button-bg-color)!important;
-  border: solid var(--button-border-width) var(--button-border-color)!important;
-  border-radius: var(--button-radius)!important;
-
-  font-weight: var(--button-font-weight)!important;
-  font-family: var(--button-font)!important;
-  color: var(--button-text-color)!important;
-
+  background-color: var(--button-bg-color) !important;
+  border: solid var(--button-border-width) var(--button-border-color) !important;
+  border-radius: var(--button-radius) !important;
+  font-weight: var(--button-font-weight) !important;
+  font-family: var(--button-font) !important;
+  color: var(--button-text-color) !important;
   box-shadow: none;
   transform: translateY(0) scale(1);
   transition: var(--transition-fast);
-
   padding: var(--gutter-small) var(--gutter);
-    
+
 }
 
 .p-button:hover {
-  
   cursor: pointer;
-
-  background-color: var(--button-bg-color-hover)!important;
-  border-color: var(--button-border-color-hover)!important;
-
-  color: var(--button-text-color-hover)!important;
-
-  box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
+  background-color: var(--button-bg-color-hover) !important;
+  border-color: var(--button-border-color-hover) !important;
+  color: var(--button-text-color-hover) !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px) scale(1.02);
 }
 
@@ -68,11 +56,13 @@
   font-size: var(--size-medium);
   line-height: var(--lineheight-medium);
 }
+
 .p-button--small {
   padding: 5px var(--gutter-small);
   font-size: var(--size-small);
   line-height: var(--lineheight-small);
 }
+
 .p-button--full {
   width: 100%;
 }

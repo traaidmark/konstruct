@@ -3,7 +3,6 @@
 /* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 :root {
-
   --flag-radius: var(--radius-medium);
   --flag-bg-color: var(--color-light);
   --flag-text-color: var(--color-darker);
@@ -15,14 +14,11 @@
 /* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .p-flag {
-
   font-size: var(--size-small);
   line-height: var(--lineheight-small);
   font-weight: var(--weight-bold);
-
   background-color: var(--flag-bg-color);
   color: var(--flag-text-color);
-
   padding: 2px var(--gutter-small);
   border-radius: var(--flag-radius);
 

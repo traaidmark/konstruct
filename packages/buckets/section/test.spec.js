@@ -28,14 +28,7 @@ const props = {
     <a>Link 1</a>,
     <a>Link 2</a>,
   ],
-  noTop: true,
-  noRight: true,
-  noBottom: true,
-  noLeft: true,
-  scrollX: true,
-  scrollY: true,
-  variantX: 'wide',
-  variantY: 'shallow',
+  className: 'b-section--shallow',
 }
 
 // 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -65,14 +58,7 @@ describe('Bucket > Section', () => {
         headerText={ props.headerText }
         footerTitle={ props.footerTitle }
         footerActions={ props.footerActions }
-        noTop={ props.noTop }
-        noRight={ props.noRight }
-        noBottom={ props.noBottom }
-        noLeft={ props.noLeft }
-        scrollX={ props.scrollX }
-        scrollY={ props.scrollY }
-        variantX={ props.variantX }
-        variantY={ props.variantY }
+        className={ props.className }
       >
         { 'Test' }
       </Section>
