@@ -25,10 +25,6 @@ export const Demo = (args) => (
 );
 
 Demo.args = {
-  smallCols: '1fr',
-  smallGutter: 'var(--gutter)',
-  mediumCols: '1fr 1fr',
-  mediumGutter: 'var(--gutter)',
-  largeCols: '1fr 1fr',
-  largeGutter: 'var(--gutter)',
+  columns: ['1fr 1fr', '1fr 1fr', '1fr 1fr', '1fr',],
+  gutters: ['var(--gutter-large)', 'var(--gutter-medium)', 'var(--gutter)', 'var(--gutter-small)'],
 };

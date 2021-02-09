@@ -6,42 +6,8 @@
 
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
-import {
-  _setDevice,
-} from '@traaidmark/konstruct-mixins';
 
 // 1.1. END ....................................................................
-
-// 1.2. STYLESHEET .............................................................
-
-// 1.2.1. CONTAINER
-
-const GridContainer = styled.div`
-
-  display: grid;
-  @media ${ _setDevice.s } {
-    grid-template-columns: ${ ({ smallCols }) => smallCols && smallCols };
-    grid-gap: ${ ({ smallGutter }) => smallGutter && smallGutter };
-  };
-  @media ${ _setDevice.m } {
-    grid-template-columns: ${ ({ mediumCols }) => mediumCols && mediumCols };
-    grid-gap: ${ ({ mediumGutter }) => mediumGutter && mediumGutter };
-  };
-  @media ${ _setDevice.l } {
-    grid-template-columns: ${ ({ largeCols }) => largeCols && largeCols };
-    grid-gap: ${ ({ largeGutter }) => largeGutter && largeGutter };
-  };
-  @media ${ _setDevice.xl } {
-    grid-template-columns: ${ ({ xLargeCols }) => xLargeCols && xLargeCols };
-    grid-gap: ${ ({ xLargeGutter }) => xLargeGutter && xLargeGutter };
-  };
-
-`;
-
-// 1.2.1. END
-
-// 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -49,18 +15,28 @@ const GridContainer = styled.div`
 
 const Grid  = ({
   children,
-  xLargeCols = '1fr 1fr',
-  xLargeGutter = 'var(--gutter-medium)',
-  largeCols = '1fr 1fr',
-  largeGutter = 'var(--gutter-medium)',
-  mediumCols = '1fr 1fr',
-  mediumGutter = 'var(--gutter)',
-  smallCols = '1fr',
-  smallGutter = 'var(--gutter)',
+  className,
+  columns = [],
+  gutters = [],
   ...rest
 }) => {
 
   // 2.1. FUNCTIONS ............................................................
+
+  // 2.1.1. CLASS NAME
+
+  const preparedStyles = {
+    '--grid-gap-xl': gutters[0] ? gutters[0] : undefined,
+    '--grid-gap-l': gutters[1] ? gutters[1] : undefined,
+    '--grid-gap-m': gutters[2] ? gutters[2] : undefined,
+    '--grid-gap-s': gutters[3] ? gutters[3] : undefined,
+    '--grid-col-xl': columns[0] ? columns[0] : undefined,
+    '--grid-col-l': columns[1] ? columns[1] : undefined,
+    '--grid-col-m': columns[2] ? columns[2] : undefined,
+    '--grid-col-s': columns[3] ? columns[3] : undefined,
+  };
+
+  // 2.1.1. END
 
   // 2.1. END ..................................................................
 
@@ -68,19 +44,13 @@ const Grid  = ({
 
   return (
 
-    <GridContainer
-      smallCols={ smallCols }
-      smallGutter={ smallGutter }
-      mediumCols={ mediumCols }
-      mediumGutter={ mediumGutter }
-      largeCols={ largeCols }
-      largeGutter={ largeGutter }
-      xLargeCols={ xLargeCols }
-      xLargeGutter={ xLargeGutter }
+    <div
+      className={ `b-grid ${ className ? className : '' }` }
+      style={ preparedStyles }
       { ...rest }
     >
       { children }
-    </GridContainer>
+    </div>
 
   );
 
@@ -94,24 +64,12 @@ const Grid  = ({
 // 3. PROP-TYPES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Grid.propTypes = {
-  /** Content of component */
   children: propTypes.node.isRequired,
-  /** Columns template for extra large viewports */
-  xLargeCols: propTypes.string,
-  /** Grid gap for extra large viewports */
-  xLargeGutter: propTypes.string,
-  /** Columns template for large viewports */
-  largeCols: propTypes.string,
-  /** Grid gap for large viewports */
-  largeGutter: propTypes.string,
-  /** Columns template for medium viewports */
-  mediumCols: propTypes.string,
-  /** Grid gap for medium viewports */
-  mediumGutter: propTypes.string,
-  /** Columns template for small viewports */
-  smallCols: propTypes.string,
-  /** Grid gap for small viewports */
-  smallGutter: propTypes.string,
+  className: propTypes.string,
+  /** Array of columns for viewports [XL, L, M, S] */
+  columns: propTypes.array,
+  /** Array of grid gaps for viewports [XL, L, M, S] */
+  gutters: propTypes.array,
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

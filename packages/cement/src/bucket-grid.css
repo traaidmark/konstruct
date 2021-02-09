@@ -1,72 +1,56 @@
-/* CEMENT [ BUCKET > GRID ] ################################################# */
+/* CEMENT [ BUCKET > GRIDS ] ################################################ */
 
 /* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 :root {
+  --grid-gap-xl: var(--gutter-large);
+  --grid-gap-l: var(--gutter-medium);
+  --grid-gap-m: var(--gutter);
+  --grid-gap-s: var(--gutter-small);
 
-  --data-prefix-color: var(--color);
-  --data-value-color: var(--color-dark);
-
+  --grid-col-xl: 1fr 1fr;
+  --grid-col-l: 1fr 1fr;
+  --grid-col-m: 1fr 1fr;
+  --grid-col-s: 1fr;
 }
 
 /* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* 2. GRID ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.p-data {
-
-  display: inline-flex;
-  align-items: center;
-
+.b-grid {
+  display: grid;
+  background: red;
 }
 
-.p-data > strong {
-
-  font-weight: var(--weight-bold);
-  color: var(--data-value-color);
-
-  font-size: var(--size-medium);
-  line-height: var(--lineheight-medium);
-
+@media screen and (max-width: 480px) {
+  .b-grid  {
+    grid-template-columns: var(--grid-col-s);
+    grid-gap: var(--grid-gap-s);
+  }
 }
 
-.p-data > i {
-  
-  color: var(--data-prefix-color)!important;
-  
-  margin-right: 5px;
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .b-grid  {
+    grid-template-columns: var(--grid-col-m);
+    grid-gap: var(--grid-gap-m);
+  }
+}
 
-  font-style: normal;
-  font-weight: var(--weight-light);
-  font-size: var(--size-medium);
-  line-height: var(--lineheight-medium);
-  
-  text-transform: uppercase;
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .b-grid  {
+    grid-template-columns: var(--grid-col-l);
+    grid-gap: var(--grid-gap-l);
+  }
+}
 
+@media screen and (min-width: 1441px) {
+  .b-grid  {
+    grid-template-columns: var(--grid-col-xl);
+    grid-gap: var(--grid-gap-xl);
+  }
 }
 
 /* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* 3. SIZE VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-.p-data--small > i,
-.p-data--small > strong {
-  font-size: var(--size-small);
-  line-height: var(--lineheight-small);
-}
-
-.p-data--large > i,
-.p-data--large > strong {
-  font-size: var(--size-large);
-  line-height: var(--lineheight-large);
-}
-
-.p-data--xlarge > i,
-.p-data--xlarge > strong {
-  font-size: var(--size-xlarge);
-  line-height: var(--lineheight-xlarge);
-}
-
-/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* END OF FILE ############################################################## */
