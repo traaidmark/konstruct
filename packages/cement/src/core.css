@@ -42,7 +42,6 @@
   --color-copy: var(--color-dark);
   --color-sub-copy: var(--color);
   --color-link: var(--color-blue);
-  
 
   /* 1.1. END ............................................................... */
 
@@ -700,8 +699,6 @@ textarea {
   select:hover {
     cursor: pointer;
     border-color: var(--field-border-focus-color);
-
-
   }
 }
 
