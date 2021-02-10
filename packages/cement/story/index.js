@@ -16,14 +16,6 @@ import mdx from './doc.mdx';
 
 import '../src/core.css';
 
-import '../src/part-button.css';
-import '../src/part-flag.css';
-import '../src/part-data.css';
-import '../src/part-sticker.css';
-
-import '../src/bucket-section.css';
-import '../src/bucket-grid.css';
-
 import '../src/utility-list.css';
 
 

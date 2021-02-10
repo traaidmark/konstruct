@@ -13,6 +13,20 @@ export default {
   },
   component: Section,
 };
+
+
+// 3.1. Documentation ..........................................................
+
+export const documentation = (args) => (
+  <>
+    <Section noLeft noRight noTop headerTitle="Documentation">
+      ...
+    </Section>
+  </>
+);
+
+// 3.1. END ....................................................................
+
 export const Demo = (args) => (
   <>
     <Section { ...args }>
