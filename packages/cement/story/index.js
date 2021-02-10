@@ -22,8 +22,6 @@ import '../src/utility-list.css';
 import Section from '../../buckets/section/src';
 import Grid from '../../buckets/grid/src';
 
-import List from '../../../storybook-components/List';
-
 // 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -269,7 +267,7 @@ export const Parts = (args) => (
   <>
     <Section noLeft noRight noTop>
       <h2>Buttons</h2>
-      <List>
+      <ul>
         <li>
           <a href="#" className="p-button">Primary Button</a>
         </li>
@@ -282,7 +280,7 @@ export const Parts = (args) => (
         <li>
           <a href="#" className="p-button p-button--safe">Safe Action</a>
         </li>
-      </List>
+      </ul>
       <h4>Code</h4>
       <Source
         code={dedent`
@@ -295,7 +293,7 @@ export const Parts = (args) => (
     </Section>
     <Section noLeft noRight noTop>
       <h3>Button Sizes</h3>
-      <List>
+      <ul>
         <li>
           <a href="#" className="p-button p-button--small">Small Button</a>
         </li>
@@ -305,7 +303,7 @@ export const Parts = (args) => (
         <li>
           <a href="#" className="p-button p-button--large">Large Button</a>
         </li>
-      </List>
+      </ul>
       
       <h4>Code</h4>
       <Source
@@ -328,7 +326,7 @@ export const Parts = (args) => (
       />
     </Section>
     <Section noLeft noRight noTop headerText="Flags">
-      <List>
+      <ul>
         <li>
           <span className="p-flag">flag</span>
         </li>
@@ -344,7 +342,7 @@ export const Parts = (args) => (
         <li>
           <span className="p-flag p-flag--important">important</span>
         </li>
-      </List>
+      </ul>
       <h4>Code</h4>
       <Source
         code={dedent`
@@ -357,14 +355,14 @@ export const Parts = (args) => (
       />
     </Section>
     <Section noLeft noRight noTop>
-      <List>
+      <ul>
         <li>
           <div className="p-data">
             <i>USD</i>
             <strong>300.00</strong>
           </div>
         </li>
-      </List>
+      </ul>
       <h4>Code</h4>
       <Source
         code={dedent`
@@ -427,7 +425,7 @@ export const Parts = (args) => (
     </Section>
 
     <Section noLeft noRight noTop headerText="Sticker">
-      <List>
+      <ul>
         <li>
           <div className="p-sticker">
             <small>Sticker Label</small>
@@ -437,7 +435,7 @@ export const Parts = (args) => (
             </div>
           </div>
         </li>
-      </List>
+      </ul>
       <h4>Code</h4>
       <Source
         code={dedent`
