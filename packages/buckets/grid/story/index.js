@@ -27,7 +27,7 @@ import '../src/stylesheet.css';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: '02 Buckets/Grid',
+  title: 'Buckets/Grid',
   parameters: {
     docs: {
       page: mdx,

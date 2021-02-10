@@ -5,7 +5,7 @@ import { Source } from '@storybook/addon-docs/blocks';
 import Section from '../../../buckets/section/src';
 import mdx from './doc.mdx';
 export default {
-  title: '02 Buckets/Section',
+  title: 'Buckets/Section',
   parameters: {
     docs: {
       page: mdx,

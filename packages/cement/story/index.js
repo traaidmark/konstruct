@@ -29,7 +29,7 @@ import Grid from '../../buckets/grid/src';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: '01 Cement/Core',
+  title: 'Cement',
   parameters: {
     docs: {
       page: mdx,
