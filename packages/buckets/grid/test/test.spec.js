@@ -12,7 +12,7 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Grid from './src';
+import Grid from '../src';
 
 // 1.2. END ....................................................................
 
