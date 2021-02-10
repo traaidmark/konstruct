@@ -3,22 +3,16 @@
 exports[`Bucket: Grid renders correctly with all props 1`] = `
 <div
   className="b-grid "
-  largeCols="1fr 1fr"
-  largeGutter="var(--gutter-medium)"
-  mediumCols="1fr 1fr"
-  mediumGutter="var(--gutter)"
-  smallCols="1fr"
-  smallGutter="var(--gutter)"
   style={
     Object {
-      "--grid-col-l": undefined,
-      "--grid-col-m": undefined,
-      "--grid-col-s": undefined,
-      "--grid-col-xl": undefined,
-      "--grid-gap-l": undefined,
-      "--grid-gap-m": undefined,
-      "--grid-gap-s": undefined,
-      "--grid-gap-xl": undefined,
+      "--grid-col-l": "1fr 1fr",
+      "--grid-col-m": "1fr 1fr",
+      "--grid-col-s": "1fr 1fr",
+      "--grid-col-xl": "1fr 1fr",
+      "--grid-gap-l": "var(--gutter-medium)",
+      "--grid-gap-m": "var(--gutter-medium)",
+      "--grid-gap-s": "var(--gutter-medium)",
+      "--grid-gap-xl": "var(--gutter-medium)",
     }
   }
 >

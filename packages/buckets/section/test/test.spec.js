@@ -12,26 +12,13 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
+import Props from './props';
+
 import Section from '../src';
 
 // 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// 2. PROPS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-const props = {
-  headerTitle: 'Why we are so great',
-  headerText: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex <strong>consequat ultrices.</strong></>,
-  footerTitle: 'Sign up today!',
-  footerActions: [
-    <a>Link 1</a>,
-    <a>Link 2</a>,
-  ],
-  className: 'b-section--shallow',
-}
-
-// 2. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 3. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -53,13 +40,7 @@ describe('Bucket > Section', () => {
 describe('Bucket > Section', () => {
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Section
-        headerTitle={ props.headerTitle }
-        headerText={ props.headerText }
-        footerTitle={ props.footerTitle }
-        footerActions={ props.footerActions }
-        className={ props.className }
-      >
+      <Section {...Props }>
         { 'Test' }
       </Section>
     ).toJSON();
