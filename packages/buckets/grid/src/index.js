@@ -26,14 +26,14 @@ const Grid  = ({
   // 2.1.1. CLASS NAME
 
   const preparedStyles = {
-    '--grid-gap-xl': gutters[0] ? gutters[0] : undefined,
-    '--grid-gap-l': gutters[1] ? gutters[1] : undefined,
-    '--grid-gap-m': gutters[2] ? gutters[2] : undefined,
-    '--grid-gap-s': gutters[3] ? gutters[3] : undefined,
-    '--grid-col-xl': columns[0] ? columns[0] : undefined,
-    '--grid-col-l': columns[1] ? columns[1] : undefined,
-    '--grid-col-m': columns[2] ? columns[2] : undefined,
-    '--grid-col-s': columns[3] ? columns[3] : undefined,
+    '--grid-gap-screen': gutters[0] ? gutters[0] : undefined,
+    '--grid-gap-laptop': gutters[1] ? gutters[1] : undefined,
+    '--grid-gap-tablet': gutters[2] ? gutters[2] : undefined,
+    '--grid-gap-phone': gutters[3] ? gutters[3] : undefined,
+    '--grid-col-screen': columns[0] ? columns[0] : undefined,
+    '--grid-col-laptop': columns[1] ? columns[1] : undefined,
+    '--grid-col-tablet': columns[2] ? columns[2] : undefined,
+    '--grid-col-phone': columns[3] ? columns[3] : undefined,
   };
 
   // 2.1.1. END
