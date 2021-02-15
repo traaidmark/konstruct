@@ -1,0 +1,167 @@
+/* BUCKET [ SECTION > STYLESHEET ] ########################################## */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --section-horizontal-xl: 15%;
+  --section-horizontal-l: 10%;
+  --section-horizontal-m: var(--gutter);
+  --section-horizontal-s: var(--gutter-small);
+  --section-vertical-xl: var(--gutter-medium);
+  --section-vertical-l: var(--gutter-medium);
+  --section-vertical-m: var(--gutter);
+  --section-vertical-s: var(--gutter-small);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. SECTION CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-section {
+  padding: var(--section-vertical-s) var(--section-horizontal-s);
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .b-section {
+    padding: var(--section-vertical-m) var(--section-horizontal-m);
+  }
+
+  .b-section--wide {
+    --section-horizontal-m: var(--gutter-small);
+  }
+
+  .b-section--narrow {
+    --section-horizontal-m: 15%;
+  }
+
+  .b-section--deep {
+    --section-vertical-m: var(--gutter-medium);
+  }
+
+  .b-section--shallow {
+    --section-vertical-m: var(--gutter-small);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .b-section {
+    padding: var(--section-vertical-l) var(--section-horizontal-l);
+  }
+
+  .b-section--wide {
+    --section-horizontal-l: var(--gutter);
+  }
+
+  .b-section--narrow {
+    --section-horizontal-l: 20%;
+  }
+
+  .b-section--deep {
+    --section-vertical-l: var(--gutter-large);
+  }
+
+  .b-section--shallow {
+    --section-vertical-l: var(--gutter);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .b-section {
+    padding: var(--section-vertical-xl) var(--section-horizontal-xl);
+  }
+
+  .b-section--wide {
+    --section-horizontal-xl: var(--gutter-medium);
+  }
+
+  .b-section--narrow {
+    --section-horizontal-xl: 30%;
+  }
+
+  .b-section--deep {
+    --section-vertical-xl: var(--gutter-large);
+  }
+
+  .b-section--shallow {
+    --section-vertical-xl: var(--gutter);
+  }
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SECTION VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-section--noTop {
+  padding-top: 0;
+}
+
+.b-section--noRight {
+  padding-right: 0;
+}
+
+.b-section--noBottom {
+  padding-bottom: 0;
+}
+
+.b-section--noLeft {
+  padding-left: 0;
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SECTION HEADER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-section__header {
+  margin-bottom: var(--gutter-medium);
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  text-align: center;
+
+}
+
+.b-section__header > h2 {
+  margin: 0 0 var(--gutter-small) 0;
+}
+
+.b-section__header > p {
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+}
+
+@media screen and (max-width: 480px) {
+  .b-section__header {
+    margin-bottom: var(--gutter);
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .b-section__header {
+    margin-bottom: var(--gutter);
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .b-section__header {
+    margin-bottom: var(--gutter);
+    width: 60%;
+  }
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. SECTION FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-section__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--gutter-medium);
+
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

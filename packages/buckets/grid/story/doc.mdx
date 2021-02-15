@@ -3,49 +3,70 @@ import dedent from 'ts-dedent';
 
 # Grid
 
-This is the bread & butter component when it comes to putting content on a page. The `<Section />` component comes with many useful gutter options, headers and a footer with actions.
+The grid component is a component that makes working with grids a lot faster in react projects. The css class is easily extendable so you can easily create a set of grid classes to use alongside it.
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Props](#props)
+- [CSS](#css)
+- [React Props](#react-props)
 
 ## Installation
 
+Using Yarn:
 <Source
   code={dedent`
     yarn add @traaidmark/konstruct-bucket-grid
   `}
 />
 
-## Usage
-
+Using NPM:
 <Source
   code={dedent`
-    import React from 'react';
-    import Grid from '@traaidmark/konstruct-bucket-grid';
-    
-    const DemoComponent = () => (
-      <Grid
-        smallCols="1fr 1fr"
-        smallGutter="var(--gutter-medium)"
-        mediumCols="1fr 1fr"
-        mediumGutter="var(--gutter)"
-        largeCols="1fr"
-        largeGutter="var(--gutter)"
-      >
-        <div>
-          <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
-        </div>
-        <div>
-          <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
-        </div>
-      </Grid>
-    );
-    export default DemoComponent;
+    npm install @traaidmark/konstruct-bucket-grid
   `}
 />
 
-## Props
+## CSS
+
+### Classes
+
+| Class        | Description           |
+| ------------- |:-------------:|
+| .b-grid       | The base class you need, sets `grid-gap` & `grid-template-columns` variables you can extend. |
+
+### Variables
+
+| Variable           | Default Values          | Description           |
+| ------------------ |:-----------------------:|:-------------:|
+| --grid-gap-screen  |  `var(--gutter-medium)` | `grid-gap` on screens viewport.
+| --grid-gap-laptop  |  `var(--gutter-medium)` | `grid-gap` on laptop viewport.
+| --grid-gap-tablet  |  `var(--gutter)`        | `grid-gap` on tablets viewport.
+| --grid-gap-phone   |  `var(--gutter-small)`  | `grid-gap` on phone viewport.
+| --grid-col-screen  | `1fr 1fr`               | `grid-template-columns` on screens viewport.
+| --grid-col-laptop  | `1fr 1fr`               | `grid-template-columns` on laptop viewport.
+| --grid-col-tablet  | `1fr 1fr`               | `grid-template-columns` on tablets viewport.
+| --grid-col-phone   | `1fr`                   | `grid-template-columns` on phone viewport.
+  
+
+### Theme example
+
+<Source
+  code={dedent`
+    .b-grid--listings {
+      --grid-gap-screen: var(--gutter-medium);
+      --grid-gap-laptop: var(--gutter-medium);
+      --grid-gap-tablet: var(--gutter);
+      --grid-gap-phone: var(--gutter-small);
+      --grid-col-screen: 1fr 1fr 1fr 1fr;
+      --grid-col-laptop: 1fr 1fr 1fr;
+      --grid-col-tablet: 1fr 1fr;
+      --grid-col-phone: 1fr;
+    }
+  `}
+/>
+
+**Note** You should read more about our CSS naming conventions.
+
+## React Props
 
 <ArgsTable />
 

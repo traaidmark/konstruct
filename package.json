@@ -16,7 +16,7 @@
     "bootstrap": "lerna bootstrap",
     "start": "start-storybook -p 5555",
     "build:js": "lerna exec --parallel -- babel --root-mode upward src -d lib",
-    "build:css": "postcss packages/cement/src/*.css -d packages/cement/lib",
+    "build:css": "lerna exec --parallel -- postcss src/*.css -d lib",
     "build": "yarn build:css && yarn build:js",
     "storybook:build": "yarn build-storybook",
     "storybook:publish": "./bin/publish-storybook.sh",

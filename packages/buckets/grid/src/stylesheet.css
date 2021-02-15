@@ -1,0 +1,54 @@
+/* BUCKET [ GRID > STYLESHEET ] ############################################# */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --grid-gap-screen: var(--gutter-large);
+  --grid-gap-laptop: var(--gutter-medium);
+  --grid-gap-tablet: var(--gutter);
+  --grid-gap-phone: var(--gutter-small);
+  --grid-col-screen: 1fr 1fr;
+  --grid-col-laptop: 1fr 1fr;
+  --grid-col-tablet: 1fr 1fr;
+  --grid-col-phone: 1fr;
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GRID ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-grid {
+  display: grid;
+}
+
+@media screen and (max-width: 480px) {
+  .b-grid {
+    grid-template-columns: var(--grid-col-phone);
+    grid-gap: var(--grid-gap-phone);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .b-grid {
+    grid-template-columns: var(--grid-col-tablet);
+    grid-gap: var(--grid-gap-tablet);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .b-grid {
+    grid-template-columns: var(--grid-col-laptop);
+    grid-gap: var(--grid-gap-laptop);
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .b-grid {
+    grid-template-columns: var(--grid-col-screen);
+    grid-gap: var(--grid-gap-screen);
+  }
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
