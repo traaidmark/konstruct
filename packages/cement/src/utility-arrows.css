@@ -1,0 +1,77 @@
+/* CEMENT [ UTILITY > ARROW ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --arrow-size: 20px;
+  --arrow-color: rgba(var(--color-white-rgb), 1);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. ARROW +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.u-arrow {
+  position: relative;
+}
+
+.u-arrow::after {
+  content: "";
+
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  
+  position: absolute;
+  
+  background-color: var(--arrow-color);
+}
+
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. ARROW VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.u-arrow--top-left::after  {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  top: -20px;
+  left: 0;
+}
+
+.u-arrow--top-center::after  {
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.u-arrow--top-right::after  {
+  clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+  top: -20px;
+  right: 0;
+}
+
+.u-arrow--bottom-left::after  {
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  bottom: -20px;
+  left: 0;
+}
+
+.u-arrow--bottom-center::after  {
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.u-arrow--bottom-right::after  {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  bottom: -20px;
+  right: 0;
+}
+
+
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* END OF FILE ############################################################## */

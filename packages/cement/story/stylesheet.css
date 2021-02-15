@@ -1,0 +1,15 @@
+/* CEMENT [ STORIES > STYLESHEET ] ########################################## */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.story-arrowbox {
+  --arrow-color: rgba(var(--color-dark-rgb), 1);
+  background-color: rgba(var(--color-dark-rgb), 1);
+  padding: var(--gutter);
+  color: rgba(var(--color-light-rgb), 1);
+
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
