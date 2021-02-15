@@ -123,10 +123,6 @@ Section.propTypes = {
   ]),
   /** An array of html `[<a>Awesome link</a>, <small>text</small>]` */
   footerActions: propTypes.array,
-  /** If you want the section to be scrollable on X-axis */
-  scrollX: propTypes.bool,
-  /** If you want the section to be scrollable on Y-axis */
-  scrollY: propTypes.bool,
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

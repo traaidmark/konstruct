@@ -5,6 +5,7 @@ import React from 'react';
 // 1. MAIN PROPS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
+  headerTitle: 'Section title',
   headerText: <>Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex <strong>consequat ultrices.</strong></>,
   footerTitle: 'Sign up today!',
   footerActions: [
