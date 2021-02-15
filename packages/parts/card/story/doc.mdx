@@ -1,0 +1,73 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Grid
+
+The grid component is a component that makes working with grids a lot faster in react projects. The css class is easily extendable so you can easily create a set of grid classes to use alongside it.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-bucket-grid
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-bucket-grid
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class        | Description           |
+| ------------- |:-------------:|
+| .b-grid       | The base class you need, sets `grid-gap` & `grid-template-columns` variables you can extend. |
+
+### Variables
+
+| Variable           | Default Values          | Description           |
+| ------------------ |:-----------------------:|:-------------:|
+| --grid-gap-screen  |  `var(--gutter-medium)` | `grid-gap` on screens viewport.
+| --grid-gap-laptop  |  `var(--gutter-medium)` | `grid-gap` on laptop viewport.
+| --grid-gap-tablet  |  `var(--gutter)`        | `grid-gap` on tablets viewport.
+| --grid-gap-phone   |  `var(--gutter-small)`  | `grid-gap` on phone viewport.
+| --grid-col-screen  | `1fr 1fr`               | `grid-template-columns` on screens viewport.
+| --grid-col-laptop  | `1fr 1fr`               | `grid-template-columns` on laptop viewport.
+| --grid-col-tablet  | `1fr 1fr`               | `grid-template-columns` on tablets viewport.
+| --grid-col-phone   | `1fr`                   | `grid-template-columns` on phone viewport.
+  
+
+### Theme example
+
+<Source
+  code={dedent`
+    .b-grid--listings {
+      --grid-gap-screen: var(--gutter-medium);
+      --grid-gap-laptop: var(--gutter-medium);
+      --grid-gap-tablet: var(--gutter);
+      --grid-gap-phone: var(--gutter-small);
+      --grid-col-screen: 1fr 1fr 1fr 1fr;
+      --grid-col-laptop: 1fr 1fr 1fr;
+      --grid-col-tablet: 1fr 1fr;
+      --grid-col-phone: 1fr;
+    }
+  `}
+/>
+
+**Note** You should read more about our CSS naming conventions.
+
+## React Props
+
+<ArgsTable />
+
+

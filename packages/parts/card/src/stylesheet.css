@@ -1,0 +1,94 @@
+/* PART [ CARD > STYLESHEET ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --card-text-align:          left;
+  --card-bg-color:            rgba(var(--color-white-rgb), 1);  
+
+  --card-border-radius:       var(--radius-small);
+  --card-border-color:        var(--color);
+  --card-border-width:        2px;
+
+  --card-title-font:          var(--family-secondary);
+  --card-title-weight:        var(--weight-bold);
+  --card-title-color:         rgba(var(--color-dark-rgb), 1);
+  --card-content-color:       rgba(var(--color-rgb), 1);
+  
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CARD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  height: 100%;
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. CARD MEDIA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card__media {
+  overflow: hidden;
+
+  margin-bottom: var(--gutter);
+
+  border-radius: var(--card-border-radius);
+}
+
+.p-card__media > iframe {
+  width: 100%!important;
+  max-height: 250px;
+}
+
+.p-card__media > img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  transition: var(--transition-slow);
+}
+
+.p-card__media > svg {
+  max-width: none;
+  width: 100%;
+  transition: 1s;
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. CARD BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card__body {
+
+  flex: 1;
+
+  background-color: var(--card-bg-color);
+  padding: var(--gutter);
+
+  border-radius: var(--card-border-radius);
+
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+
+  color: var(--card-content-color);
+
+}
+
+.p-card__body > h3 {
+  font-family: var(--card-title-font);
+  font-weight: var(--card-title-weight);
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+
+  color: var(--card-title-color);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
