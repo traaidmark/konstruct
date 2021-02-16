@@ -17,6 +17,7 @@ export const parameters = {
           'Card',
           'Flag',
           'Data',
+          'Sticker',
         ]  
       ]
     }

@@ -1,0 +1,52 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Sticker
+
+A consistent way to display data with labels and orientation options.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-sticker
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-sticker
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class              | Description                                   |
+| ------------------ |:---------------------------------------------:|
+| .p-sticker--top    | Place label on top
+| .p-sticker--bottom | Place label on bottom
+| .p-sticker--left   | Place label to the left
+| .p-sticker--center | Place label in the center
+| .p-sticker--right  | Place label to the right
+
+### Variables
+
+| Variable              | Default Values | Description        |
+| --------------------- |:--------------:|:------------------:|
+| --sticker-label-color | `var(--color)` | Color of the label |
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+
