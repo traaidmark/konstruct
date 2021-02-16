@@ -1,7 +1,7 @@
 import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-# Grid
+# Card
 
 The grid component is a component that makes working with grids a lot faster in react projects. The css class is easily extendable so you can easily create a set of grid classes to use alongside it.
 
@@ -14,14 +14,14 @@ The grid component is a component that makes working with grids a lot faster in 
 Using Yarn:
 <Source
   code={dedent`
-    yarn add @traaidmark/konstruct-bucket-grid
+    yarn add @traaidmark/konstruct-part-card
   `}
 />
 
 Using NPM:
 <Source
   code={dedent`
-    npm install @traaidmark/konstruct-bucket-grid
+    npm install @traaidmark/konstruct-part-card
   `}
 />
 
@@ -29,42 +29,25 @@ Using NPM:
 
 ### Classes
 
-| Class        | Description           |
-| ------------- |:-------------:|
-| .b-grid       | The base class you need, sets `grid-gap` & `grid-template-columns` variables you can extend. |
+| Class                | Description                                   |
+| -------------------- |:---------------------------------------------:|
+| .p-card--interactive | Sets hover effects, especially useful when using the card as a linked item.
+| .p-card--bordered    | Sets border on the card body.
 
 ### Variables
 
-| Variable           | Default Values          | Description           |
-| ------------------ |:-----------------------:|:-------------:|
-| --grid-gap-screen  |  `var(--gutter-medium)` | `grid-gap` on screens viewport.
-| --grid-gap-laptop  |  `var(--gutter-medium)` | `grid-gap` on laptop viewport.
-| --grid-gap-tablet  |  `var(--gutter)`        | `grid-gap` on tablets viewport.
-| --grid-gap-phone   |  `var(--gutter-small)`  | `grid-gap` on phone viewport.
-| --grid-col-screen  | `1fr 1fr`               | `grid-template-columns` on screens viewport.
-| --grid-col-laptop  | `1fr 1fr`               | `grid-template-columns` on laptop viewport.
-| --grid-col-tablet  | `1fr 1fr`               | `grid-template-columns` on tablets viewport.
-| --grid-col-phone   | `1fr`                   | `grid-template-columns` on phone viewport.
-  
+| Variable              | Default Values          | Description           |
+| --------------------- |:-----------------------:|:-------------:|
+| --card-text-align     | `left` | Text alignment
+| --card-bg-color       | `rgba(var(--color-white-rgb), 1)` | Background color of the card body
+| --card-border-radius  | `var(--radius-small)`    | The `border-radius` of the card image and body.
+| --card-border-color   | `var(--color)`          | Border & arrow color when you use the `.p-card--bordered`
+| --card-border-width  | `2px`                    | Border width when you use the `.p-card--bordered`
+| --card-title-font  | `var(--family-secondary)`  | `font-family` for card title.
+| --card-title-weight  | `var(--weight-bold)`     | `font-weight` for the title.
+| --card-title-color   | `rgba(var(--color-dark-rgb), 1)` | color for the h3 title
+| --card-content-color   | `rgba(var(--color-rgb), 1)` | Color for content
 
-### Theme example
-
-<Source
-  code={dedent`
-    .b-grid--listings {
-      --grid-gap-screen: var(--gutter-medium);
-      --grid-gap-laptop: var(--gutter-medium);
-      --grid-gap-tablet: var(--gutter);
-      --grid-gap-phone: var(--gutter-small);
-      --grid-col-screen: 1fr 1fr 1fr 1fr;
-      --grid-col-laptop: 1fr 1fr 1fr;
-      --grid-col-tablet: 1fr 1fr;
-      --grid-col-phone: 1fr;
-    }
-  `}
-/>
-
-**Note** You should read more about our CSS naming conventions.
 
 ## React Props
 

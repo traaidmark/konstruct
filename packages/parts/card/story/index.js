@@ -56,8 +56,17 @@ export const inHtml = (args) => (
         <figure className="p-card__media">
           <img src="https://source.unsplash.com/500x250/?workbench" alt="image alt text" />
         </figure>
-        <div className="p-card__body">
+        <div className="p-card__body u-arrow u-arrow--top-left">
           <h3>This is maybe a very long title and isn't that just great?</h3>
+          <p>In et sollicitudin dolor. Integer ut eleifend libero. Integer nec tellus a turpis porta posuere a non justo. Curabitur consequat sit amet augue ut aliquam. Quisque eu lobortis nibh, vitae fringilla dolor.</p>
+        </div>
+      </article>
+      <article className="p-card p-card--interactive">
+        <figure className="p-card__media">
+          <img src="https://source.unsplash.com/500x250/?workbench" alt="image alt text" />
+        </figure>
+        <div className="p-card__body u-arrow u-arrow--top-left">
+          <h3>This is an interactive card - hover me baby!</h3>
           <p>In et sollicitudin dolor. Integer ut eleifend libero. Integer nec tellus a turpis porta posuere a non justo. Curabitur consequat sit amet augue ut aliquam. Quisque eu lobortis nibh, vitae fringilla dolor.</p>
         </div>
       </article>
@@ -67,10 +76,14 @@ export const inHtml = (args) => (
     >
       <Source
         code={dedent`
-        <div className="b-grid">
-          <aside>...</aside>
-          <aside>...</aside>
-        </div>
+        <article className="p-card p-card--interactive">
+          <figure className="p-card__media">
+            <img src="..." alt="..." />
+          </figure>
+          <div className="p-card__body u-arrow u-arrow--top-left">
+            ...
+          </div>
+        </article>
         `}
       />
     </Section>
