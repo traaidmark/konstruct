@@ -1,0 +1,51 @@
+/* PART [ FLAG > STYLESHEET ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --flag-radius: var(--radius-medium);
+  --flag-bg-color: var(--color-light);
+  --flag-text-color: var(--color-darker);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-flag {
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+  font-weight: var(--weight-bold);
+  background-color: var(--flag-bg-color);
+  color: var(--flag-text-color);
+  padding: 2px var(--gutter-small);
+  border-radius: var(--flag-radius);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-flag--info {
+  --flag-bg-color: var(--color-blue);
+  --flag-text-color: var(--color-darker);
+}
+
+.p-flag--new {
+  --flag-bg-color: var(--color-green);
+  --flag-text-color: var(--color-darker);
+}
+
+.p-flag--aware {
+  --flag-bg-color: var(--color-orange);
+  --flag-text-color: var(--color-darker);
+}
+
+.p-flag--important {
+  --flag-bg-color: var(--color-red);
+  --flag-text-color: var(--color-darker);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

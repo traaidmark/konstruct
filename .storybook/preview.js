@@ -14,7 +14,10 @@ export const parameters = {
         ],
         'Parts',
         [
-          'Card'
+          'Card',
+          'Flag',
+          'Data',
+          'Sticker',
         ]  
       ]
     }

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Part: Flag renders correctly with all props 1`] = `
+<span
+  className="p-flag p-flag--info"
+>
+  hello
+</span>
+`;
+
+exports[`Part: Flag renders correctly without any props 1`] = `null`;

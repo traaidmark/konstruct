@@ -1,4 +1,4 @@
-# Konstruct > Parts > Card
+# Konstruct > Parts > Flag
 
 ## Documentation
 

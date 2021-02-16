@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Part: Sticker renders correctly with all props 1`] = `
+<div
+  className="p-sticker p-data--large"
+>
+  <small>
+    My Label
+  </small>
+  <div
+    className="p-data "
+  >
+    <i>
+      usd
+    </i>
+    <strong>
+      2300.00
+    </strong>
+  </div>
+</div>
+`;
+
+exports[`Part: Sticker renders correctly without any props 1`] = `
+<div
+  className="p-sticker "
+>
+  <div
+    className="p-data "
+  >
+    <strong>
+      N/A
+    </strong>
+  </div>
+</div>
+`;

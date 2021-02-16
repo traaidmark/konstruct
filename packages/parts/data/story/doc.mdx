@@ -1,0 +1,50 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Data
+
+A consistent way to display data.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-data
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-data
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class              | Description                                   |
+| ------------------ |:---------------------------------------------:|
+| .p-data--small     | Smaller version
+| .p-data--large     | Larger version
+
+### Variables
+
+| Variable            | Default Values      | Description           |
+| ------------------- |:-------------------:|:-------------:|
+| --data-prefix-color | `var(--color)`      | Color of the prefix
+| --data-value-color  | `var(--color-dark)` | Color of the value
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+
