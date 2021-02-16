@@ -1,4 +1,4 @@
-// BUCKET [ GRID > TESTS ] #####################################################
+// PART [ CARD > TESTS ] #######################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -14,7 +14,7 @@ import 'jest-styled-components';
 
 import Props from './props';
 
-import Grid from '../src';
+import Card from '../src';
 
 // 1.2. END ....................................................................
 
@@ -22,16 +22,13 @@ import Grid from '../src';
 
 // 2. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Bucket: Grid', () => {
+describe('Part: Card', () => {
 
   // 2.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Grid>
-        <div>col 1</div>  
-        <div>col 2</div>  
-      </Grid>
+      <Card />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -42,10 +39,7 @@ describe('Bucket: Grid', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Grid { ...Props }>
-        <div>col 1</div>  
-        <div>col 2</div>  
-      </Grid>
+      <Card { ...Props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

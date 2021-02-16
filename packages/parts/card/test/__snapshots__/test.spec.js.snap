@@ -1,51 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bucket: Grid renders correctly with all props 1`] = `
-<div
-  className="b-grid "
-  style={
-    Object {
-      "--grid-col-l": "1fr 1fr",
-      "--grid-col-m": "1fr 1fr",
-      "--grid-col-s": "1fr 1fr",
-      "--grid-col-xl": "1fr 1fr",
-      "--grid-gap-l": "var(--gutter-medium)",
-      "--grid-gap-m": "var(--gutter-medium)",
-      "--grid-gap-s": "var(--gutter-medium)",
-      "--grid-gap-xl": "var(--gutter-medium)",
-    }
+exports[`Part: Card renders correctly with all props 1`] = `
+<article
+  className="p-card    "
+  columns={
+    Array [
+      "1fr 1fr",
+      "1fr 1fr",
+      "1fr 1fr",
+      "1fr 1fr",
+    ]
+  }
+  gutters={
+    Array [
+      "var(--gutter-medium)",
+      "var(--gutter-medium)",
+      "var(--gutter-medium)",
+      "var(--gutter-medium)",
+    ]
   }
 >
-  <div>
-    col 1
+  <div
+    className="p-card__body u-arrow u-arrow--top-left"
+  >
+    <h3>
+      This is maybe a very long title and isn't that just great?
+    </h3>
+    <p>
+      In et sollicitudin dolor. Integer ut eleifend libero. Integer nec tellus a turpis porta posuere a non justo. Curabitur consequat sit amet augue ut aliquam. Quisque eu lobortis nibh, vitae fringilla dolor.
+    </p>
   </div>
-  <div>
-    col 2
-  </div>
-</div>
+</article>
 `;
 
-exports[`Bucket: Grid renders correctly without any props 1`] = `
-<div
-  className="b-grid "
-  style={
-    Object {
-      "--grid-col-l": undefined,
-      "--grid-col-m": undefined,
-      "--grid-col-s": undefined,
-      "--grid-col-xl": undefined,
-      "--grid-gap-l": undefined,
-      "--grid-gap-m": undefined,
-      "--grid-gap-s": undefined,
-      "--grid-gap-xl": undefined,
-    }
-  }
+exports[`Part: Card renders correctly without any props 1`] = `
+<article
+  className="p-card    "
 >
-  <div>
-    col 1
-  </div>
-  <div>
-    col 2
-  </div>
-</div>
+  <div
+    className="p-card__body u-arrow u-arrow--top-left"
+  />
+</article>
 `;

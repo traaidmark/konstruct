@@ -7,6 +7,9 @@ exports[`Bucket > Section renders correctly with all props 1`] = `
   <header
     className="b-section__header"
   >
+    <h2>
+      Section title
+    </h2>
     <p>
       Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex 
       <strong>
