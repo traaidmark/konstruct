@@ -13,10 +13,13 @@ import { Source } from '@storybook/addon-docs/blocks';
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
 import mdx from './doc.mdx';
+import Props from '../test/props';
 
 
 import Section from '../../../buckets/section/src';
 import Grid from '../../../buckets/grid/src';
+
+import Card from '../src/';
 
 import '../src/stylesheet.css';
 
@@ -96,40 +99,37 @@ export const inHtml = (args) => (
 
 export const inReact = (args) => (
   <>
-    <Grid { ...args }>
-      <div>
-        <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
-      </div>
-      <div>
-        <p>Sed tristique malesuada arcu dignissim molestie. Maecenas interdum accumsan risus. In finibus lorem massa, eu accumsan tortor imperdiet nec. Proin dictum malesuada elit, varius euismod urna aliquet nec. Ut ornare libero nisl, in imperdiet arcu molestie non. Curabitur vel orci placerat, molestie nisl eget, lacinia felis. Sed malesuada, diam sit amet convallis semper, mi neque ullamcorper enim, a porttitor velit dui eget leo. Ut laoreet nibh vitae bibendum tristique. Vestibulum non tempus purus, nec scelerisque magna. Nulla leo odio, ullamcorper vel enim sed, maximus pretium sapien. Duis a augue pharetra ex consequat ultrices. Vivamus odio ligula, consequat non turpis ac, pretium posuere est.</p>
-      </div>
+    <Grid
+      columns={ [
+        '1fr 1fr 1fr 1fr',
+        '1fr 1fr 1fr',
+        '1fr 1fr',
+        '1fr',
+      ] }
+    >
+      <Card { ...args } />
+      <Card { ...args } />
+      <Card { ...args } />
     </Grid>
     <Section 
       headerTitle="Usage Information"
     >
       <Source
         code={dedent`
-        <Grid
-          columns={
-            ['1fr 1fr', '1fr 1fr', '1fr 1fr', '1fr',]
-          }
-          gutters={
-            ['var(--gutter-large)', 'var(--gutter-medium)', 'var(--gutter)', 'var(--gutter-small)']
-          } 
+        <Card
+          imgSrc=""
+          imgAlt=""
         >
-          <aside>...</aside>
-          <aside>...</aside>
-        </Grid>
+          <h3>...</h3>
+          <p>...</p>
+        </Card>
         `}
       />
     </Section>
   </>
 );
 
-inReact.args = {
-  columns: ['1fr 1fr', '1fr 1fr', '1fr 1fr', '1fr',],
-  gutters: ['var(--gutter-large)', 'var(--gutter-medium)', 'var(--gutter)', 'var(--gutter-small)'],
-};
+inReact.args = Props;
 
 // 3.3. END ....................................................................
 

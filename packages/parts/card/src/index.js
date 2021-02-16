@@ -4,10 +4,16 @@
 
 // 1.1. EXTERNAL DEPENDENCIES ..................................................
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import propTypes from 'prop-types';
 
 // 1.1. END ....................................................................
+
+// 1.2. INTERNAL DEPENDENCIES ..................................................
+
+import './stylesheet.css';
+
+// 1.2. END ....................................................................
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -15,39 +21,55 @@ import propTypes from 'prop-types';
 
 const Card  = ({
   children,
-  className,
-  columns = [],
-  gutters = [],
+  className = '',
+  imgSrc,
+  videoSrc,
+  imgAlt,
+  isInteractive,
+  isBordered,
   ...rest
 }) => {
 
   // 2.1. FUNCTIONS ............................................................
 
-  // 2.1.1. CLASS NAME
+  // 2.1.1. RENDER MEDIA
 
-  const preparedStyles = {
-    '--grid-gap-screen': gutters[0] ? gutters[0] : undefined,
-    '--grid-gap-laptop': gutters[1] ? gutters[1] : undefined,
-    '--grid-gap-tablet': gutters[2] ? gutters[2] : undefined,
-    '--grid-gap-phone': gutters[3] ? gutters[3] : undefined,
-    '--grid-col-screen': columns[0] ? columns[0] : undefined,
-    '--grid-col-laptop': columns[1] ? columns[1] : undefined,
-    '--grid-col-tablet': columns[2] ? columns[2] : undefined,
-    '--grid-col-phone': columns[3] ? columns[3] : undefined,
-  };
+  const Media = useCallback(() => {
+    if (videoSrc) {
+      return (
+        <figure className="p-card__media" dangerouslySetInnerHTML={{ __html: videoSrc }} />
+      );
+    }
+    if (imgSrc) {
+      return (
+        <figure className="p-card__media">
+          <img src={ imgSrc } alt={ imgAlt } />
+        </figure>
+      );
+    }
+    return null;
+  }, [imgSrc, videoSrc]);
 
   // 2.1.1. END
+
+  // 2.1.2. MAKE CLASSES
+
+  const interactiveClass = isInteractive ? 'p-card--interactive' : '';
+  const borderedClass = isBordered ? 'p-card--bordered' : '';
+
+  // 2.1.2. END
 
   // 2.1. END ..................................................................
 
   // 2.2. RENDER COMPONENT .....................................................
 
   return (
-
-    <div>
-      { children }
-    </div>
-
+    <article className={ `p-card ${ className } ${ isInteractive }`} { ...rest }>
+      <Media />
+      <div className="p-card__body u-arrow u-arrow--top-left">
+        { children }
+      </div>
+    </article>
   );
 
   // 2.2. END ..................................................................
@@ -62,10 +84,16 @@ const Card  = ({
 Card.propTypes = {
   children: propTypes.node.isRequired,
   className: propTypes.string,
-  /** Array of columns for viewports [XL, L, M, S] */
-  columns: propTypes.array,
-  /** Array of grid gaps for viewports [XL, L, M, S] */
-  gutters: propTypes.array,
+  /** HTML to display a video, like an iframe or youtube embed code */
+  videoSrc: propTypes.node,
+  /** URL string to an image */
+  imgSrc: propTypes.string,
+  /** Alt text to display with image */
+  imgAlt: propTypes.string,
+  /** Boolean to render an interactive card or not */
+  isInteractive: propTypes.bool,
+  /** Boolean to render an bordered card or not */
+  isBordered: propTypes.bool,
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
