@@ -1,0 +1,53 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Flag
+
+A super basic flag component.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-flag
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-flag
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class              | Description                                   |
+| ------------------ |:---------------------------------------------:|
+| .p-card--info      | If you want to inform users about something.
+| .p-card--new       | New indicator. 
+| .p-card--aware     | If you want to make users aware of something that can become important.
+| .p-card--important | If you want to make users aware of something important
+
+### Variables
+
+| Variable          | Default Values         | Description           |
+| ----------------- |:----------------------:|:-------------:|
+| --flag-radius     | `var(--radius-medium)` | Determines how round your flag is
+| --flag-bg-color   | `var(--color-light)`   | Background color of the flag
+| --flag-text-color | `var(--color-darker)`  | Text color of the flag
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+
