@@ -1,0 +1,56 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Card
+
+The grid component is a component that makes working with grids a lot faster in react projects. The css class is easily extendable so you can easily create a set of grid classes to use alongside it.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-card
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-card
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class                | Description                                   |
+| -------------------- |:---------------------------------------------:|
+| .p-card--interactive | Sets hover effects, especially useful when using the card as a linked item.
+| .p-card--bordered    | Sets border on the card body.
+
+### Variables
+
+| Variable              | Default Values          | Description           |
+| --------------------- |:-----------------------:|:-------------:|
+| --card-text-align     | `left` | Text alignment
+| --card-bg-color       | `rgba(var(--color-white-rgb), 1)` | Background color of the card body
+| --card-border-radius  | `var(--radius-small)`    | The `border-radius` of the card image and body.
+| --card-border-color   | `var(--color)`          | Border & arrow color when you use the `.p-card--bordered`
+| --card-border-width  | `2px`                    | Border width when you use the `.p-card--bordered`
+| --card-title-font  | `var(--family-secondary)`  | `font-family` for card title.
+| --card-title-weight  | `var(--weight-bold)`     | `font-weight` for the title.
+| --card-title-color   | `rgba(var(--color-dark-rgb), 1)` | color for the h3 title
+| --card-content-color   | `rgba(var(--color-rgb), 1)` | Color for content
+
+
+## React Props
+
+<ArgsTable />
+
+

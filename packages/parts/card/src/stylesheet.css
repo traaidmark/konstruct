@@ -1,0 +1,130 @@
+/* PART [ CARD > STYLESHEET ] ############################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --card-text-align:          left;
+  --card-bg-color:            rgba(var(--color-white-rgb), 1);
+  --card-border-radius:       var(--radius-small);
+  --card-border-color:        rgba(var(--color-white-rgb), 1);
+  --card-border-width:        2px;
+
+  --card-title-font:          var(--family-secondary);
+  --card-title-weight:        var(--weight-bold);
+  --card-title-color:         rgba(var(--color-dark-rgb), 1);
+  --card-content-color:       rgba(var(--color-rgb), 1);
+  
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CARD ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  height: 100%;
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. CARD MEDIA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card__media {
+  overflow: hidden;
+
+  margin-bottom: var(--gutter);
+
+  border-radius: var(--card-border-radius);
+}
+
+.p-card__media > iframe {
+  width: 100%!important;
+  max-height: 250px;
+}
+
+.p-card__media > img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  transition: var(--transition-slow);
+}
+
+.p-card__media > svg {
+  max-width: none;
+  width: 100%;
+  transition: 1s;
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. CARD BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-card__body {
+
+  --arrow-color:  var(--card-border-color);
+
+  text-align: var(--card-text-align);
+
+  transition: var(--transition-fast);
+
+  flex: 1;
+
+  background-color: var(--card-bg-color);
+  padding: var(--gutter);
+
+  border-radius: var(--card-border-radius);
+
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+
+  color: var(--card-content-color);
+
+}
+
+.p-card__body > h3 {
+  font-family: var(--card-title-font);
+  font-weight: var(--card-title-weight);
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+
+  color: var(--card-title-color);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 5. CARD VARIATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 5.1. INTERACTIVE --------------------------------------------------------- */
+
+.p-card--interactive:hover {
+  cursor: pointer;
+}
+.p-card--interactive:hover > .p-card__media > img {
+  transform: scale(1.2);
+  transition: 10s;
+}
+.p-card--interactive:hover > .p-card__body {
+  box-shadow: var(--shadow);
+  transform: scale(1.03);
+}
+
+/* 5.1. END ----------------------------------------------------------------- */
+
+/* 5.2. BORDERED ------------------------------------------------------------ */
+
+.p-card--bordered {
+  border: solid var(--card-border-width) var(--card-border-color);
+
+}
+
+/* 5.2. END ----------------------------------------------------------------- */
+
+
+
+/* 5. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

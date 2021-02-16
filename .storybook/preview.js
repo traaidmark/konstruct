@@ -11,7 +11,11 @@ export const parameters = {
         [
           'Section', 
           'Grid'
-        ]
+        ],
+        'Parts',
+        [
+          'Card'
+        ]  
       ]
     }
   },

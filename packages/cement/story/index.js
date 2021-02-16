@@ -14,9 +14,12 @@ import { Source } from '@storybook/addon-docs/blocks';
 
 import mdx from './doc.mdx';
 
+import './stylesheet.css';
+
 import '../src/core.css';
 
 import '../src/utility-list.css';
+import '../src/utility-arrows.css';
 
 
 import Section from '../../buckets/section/src';
@@ -390,6 +393,52 @@ export const Utilities = (args) => (
           />
         </aside>
       </Grid>
+    </Section>
+    <Section noLeft noRight noTop headerTitle="Arrows">
+      
+      <ul className="u-list-horizontal">
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--top-left">
+            <code>.u-arrow--top-left</code>
+          </div>
+        </li>
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--top-center">
+          <code>.u-arrow--top-center</code>
+          </div>
+        </li>
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--top-right">
+          <code>.u-arrow--top-right</code>
+          </div>
+        </li>
+      </ul>
+      
+      <ul className="u-list-horizontal">
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--bottom-left">
+            <code>.u-arrow--bottom-left</code>
+          </div>
+        </li>
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--bottom-center">
+            <code>.u-arrow--bottom-center</code>
+          </div>
+        </li>
+        <li>
+          <div className="story-arrowbox u-arrow u-arrow--bottom-right">
+            <code>.u-arrow--bottom-right</code>
+          </div>
+        </li>
+      </ul>
+
+      <Source
+        code={dedent`
+        <ul class="u-list-horizontal">
+        ...
+        </ul>
+        `}
+      />
     </Section>
   </>
 );
