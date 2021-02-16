@@ -1,4 +1,4 @@
-# Konstruct > Parts > Flag
+# Konstruct > Parts > Data
 
 ## Documentation
 
