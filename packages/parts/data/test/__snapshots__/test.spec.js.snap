@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Part: Data renders correctly with all props 1`] = `
+<div
+  className="p-data p-data--large"
+>
+  <i>
+    usd
+  </i>
+  <strong>
+    2300.00
+  </strong>
+</div>
+`;
+
+exports[`Part: Data renders correctly without any props 1`] = `
+<div
+  className="p-data "
+>
+  <strong>
+    N/A
+  </strong>
+</div>
+`;
