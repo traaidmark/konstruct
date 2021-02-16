@@ -64,7 +64,7 @@ const Card  = ({
   // 2.2. RENDER COMPONENT .....................................................
 
   return (
-    <article className={ `p-card ${ className } ${ isInteractive }`} { ...rest }>
+    <article className={ `p-card ${ className } ${ interactiveClass } ${ borderedClass } `} { ...rest }>
       <Media />
       <div className="p-card__body u-arrow u-arrow--top-left">
         { children }
