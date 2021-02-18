@@ -14,7 +14,7 @@ import 'jest-styled-components';
 
 import Props from './props';
 
-import Card from '../src';
+import Notification from '../src';
 
 // 1.2. END ....................................................................
 
@@ -28,7 +28,7 @@ describe('Part: Card', () => {
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Card />
+      <Notification />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -39,7 +39,7 @@ describe('Part: Card', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Card { ...Props } />
+      <Notification { ...Props } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
