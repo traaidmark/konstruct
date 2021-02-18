@@ -75,16 +75,15 @@
   background-color: var(--notification-tab-color);
   border: solid 2px var(--notification-tab-color);
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
   margin-bottom: var(--gutter-small);
   box-shadow: var(--shadow);
 }
 
-.p-notification__icon > img {
+.p-notification__icon > img,
+.p-notification__icon > svg {
   display: block;
-  width: 100%;
-  
+  width: 24px;
+  height: 24px;
 }
 
 /* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
