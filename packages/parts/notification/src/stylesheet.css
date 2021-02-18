@@ -1,0 +1,115 @@
+/* PART [ NOTIFICATION > STYLESHEET ] ####################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+
+  --notification-bg-color:    rgba(var(--color-light-rgb), 1);
+  --notification-icon-color: rgba(var(--color-white-rgb), 1);
+
+  --notification-link-color: rgba(var(--color-dark-rgb), 1);
+  --notification-link-color-hover: rgba(var(--color-darker-rgb), 1);
+
+  --notification-text-color: rgba(var(--color-dark-rgb), 1);
+  --notification-text-size: var(--size-normal);
+  --notification-text-lineheight: var(--lineheight-normal);
+  --notification-text-weight: var(--weight-regular);
+  
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-notification {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding: var(--gutter-small);
+
+  border-radius: var(--radius-small);
+
+  background-color: var(--notification-bg-color);
+
+  font-size: var(--notification-text-size);
+  line-height: var(--notification-text-lineheight);
+  font-weight: var(--notification-text-weight);
+
+  color: var(--notification-text-color);
+}
+
+.p-notification a {
+  color: var(--notification-link-color)!important;
+  font-weight: var(--weight-bold);
+  text-decoration: underline;
+}
+
+.p-notification a:hover {
+  color: var(--notification-link-color-hover)!important;
+}
+
+.p-notification p,
+.p-notification li {
+  font-size: var(--notification-text-size);
+  line-height: var(--notification-text-lineheight);
+  font-weight: var(--notification-text-weight);
+
+  color: var(--notification-text-color);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. ICON ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-notification__icon {
+
+  position: absolute;
+  top: -15px;
+  left: -15px;
+
+  background-color: var(--notification-icon-color);
+  border: solid 2px var(--color-white);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-bottom: var(--gutter-small);
+}
+
+.p-notification__icon > img {
+  display: block;
+  width: 100%;
+  
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-notification--info {
+
+  --notification-bg-color:    rgba(var(--color-blue-rgb), 1);
+}
+.p-notification--success {
+
+  --notification-bg-color:    rgba(var(--color-green-rgb), 1);
+}
+.p-notification--warning {
+
+  --notification-bg-color:    rgba(var(--color-orange-rgb), 1);
+}
+.p-notification--important {
+
+  --notification-bg-color:    rgba(var(--color-red-rgb), 1);
+}
+.p-notification--shadowed {
+  box-shadow: var(--shadow);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
