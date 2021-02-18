@@ -30,6 +30,8 @@
   align-items: flex-start;
   justify-content: flex-start;
 
+  width: 100%;
+
   padding: var(--gutter-small);
 
   border-radius: var(--radius-small);
