@@ -1,0 +1,57 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Notification
+
+A versatile notification component you can use to inform your users about important information.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-notification
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-notification
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class                      | Description                                   |
+| -------------------------- |:---------------------------------------------:|
+| .p-notification--info      | Info context for notifications
+| .p-notification--success   | Success context for notifications
+| .p-notification--warning   | Warning context for notifications
+| .p-notification--important | Important / Error context for notifications
+
+### Variables
+
+| Variable              | Default Values          | Description           |
+| --------------------- |:-----------------------:|:-------------:|
+| --notification-bg-color     | `rgba(var(--color-light-rgb), 1)` | Background color
+| --notification-icon-color       | `rgba(var(--color-white-rgb), 1)` | Background of icon circle
+| --notification-link-color  | `rgba(var(--color-dark-rgb), 1)`    | Link color.
+| --notification-link-color-hover   | `rgba(var(--color-darker-rgb), 1)`          | Link hover color
+| --notification-text-color | `rgba(var(--color-dark-rgb), 1)` | 
+| --notification-text-size | `var(--size-normal)` | 
+| --notification-text-lineheight | `var(--lineheight-normal)` | 
+| --notification-text-weight | `var(--weight-regular)` | 
+
+
+## React Props
+
+<ArgsTable />
+
+
