@@ -64,6 +64,16 @@
   color: var(--notification-text-color);
 }
 
+.p-notification h4,
+.p-notification h5 {
+  font-family: var(--family-secondary);
+  font-size: var(--size-normal);
+  line-height: var(--lineheight-normal);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--gutter-small);
+  color: var(--notification-text-color);
+}
+
 /* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* 3. ICON ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
