@@ -32,9 +32,12 @@ const Notification  = ({
 
   const Icon = useCallback(() => {
     if(!icon) return null;
+    const isString = typeof icon === 'string' ? true : false;
     return(
       <figure className="p-notification__icon">
-        <img src={ icon } alt="notification icon" />
+        {
+          isString ? <img src={ icon } alt="notification icon" /> : icon
+        }
       </figure>
     );
   }, [icon]);
@@ -64,7 +67,10 @@ const Notification  = ({
 Notification.propTypes = {
   children: propTypes.node.isRequired,
   className: propTypes.string,
-  icon: propTypes.string,
+  icon: propTypes.oneOf[
+    propTypes.string,
+    propTypes.node
+  ],
 };
 
 // 3. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
