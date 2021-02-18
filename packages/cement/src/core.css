@@ -20,14 +20,27 @@
   --color-dark: rgba(var(--color-dark-rgb), 1);
   --color-darker: rgba(var(--color-darker-rgb), 1);
   --color-black: rgba(var(--color-black-rgb), 1);
-  --color-red-rgb: 237, 108, 99;
-  --color-orange-rgb: 246, 139, 57;
-  --color-green-rgb: 93, 226, 165;
-  --color-blue-rgb: 66, 175, 227;
-  --color-red: rgba(var(--color-red-rgb), 1);
-  --color-orange: rgba(var(--color-orange-rgb), 1);
-  --color-green: rgba(var(--color-green-rgb), 1);
+
   --color-blue: rgba(var(--color-blue-rgb), 1);
+  --color-blue-rgb: 66, 175, 227;
+  --color-blue-light: 160, 215, 241;
+  --color-blue-dark: 20,53,69;
+
+  --color-orange: rgba(var(--color-orange-rgb), 1);
+  --color-orange-rgb: 246, 139, 57;
+  --color-orange-light: 250, 197, 156;
+  --color-orange-dark: 74, 42, 18;
+
+  --color-green: rgba(var(--color-green-rgb), 1);
+  --color-green-rgb: 93, 226, 165;
+  --color-green-light: 174, 240, 210 ;
+  --color-green-dark: 28, 68, 50;
+
+  --color-red: rgba(var(--color-red-rgb), 1);
+  --color-red-rgb: 237, 108, 99;
+  --color-red-light: 246, 181, 177;
+  --color-red-dark: 72, 33, 30;
+  
   --color-primary-rgb: 61, 68, 136;
   --color-secondary-rgb: 24, 34, 59;
   --color-primary: rgba(var(--color-primary-rgb), 1);
@@ -41,7 +54,9 @@
   --color-sub-headings: var(--color-dark);
   --color-copy: var(--color-dark);
   --color-sub-copy: var(--color);
+
   --color-link: var(--color-blue);
+  --color-link-hover: rgba(var(--color-blue-link));
 
   /* 1.1. END ............................................................... */
 

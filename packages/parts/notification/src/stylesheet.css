@@ -5,14 +5,14 @@
 :root {
 
   --notification-bg-color:    rgba(var(--color-light-rgb), 1);
-  --notification-icon-color: rgba(var(--color-white-rgb), 1);
+  --notification-tab-color: rgba(var(--color-dark-rgb), 1);
 
   --notification-link-color: rgba(var(--color-dark-rgb), 1);
-  --notification-link-color-hover: rgba(var(--color-darker-rgb), 1);
+  --notification-link-color-hover: rgba(var(--color-blue-text), 1);
 
   --notification-text-color: rgba(var(--color-dark-rgb), 1);
-  --notification-text-size: var(--size-normal);
-  --notification-text-lineheight: var(--lineheight-normal);
+  --notification-text-size: var(--size-small);
+  --notification-text-lineheight: var(--lineheight-small);
   --notification-text-weight: var(--weight-regular);
   
 }
@@ -72,12 +72,13 @@
   top: -15px;
   left: -15px;
 
-  background-color: var(--notification-icon-color);
-  border: solid 2px var(--color-white);
+  background-color: var(--notification-tab-color);
+  border: solid 2px var(--notification-tab-color);
   border-radius: 100%;
   width: 30px;
   height: 30px;
   margin-bottom: var(--gutter-small);
+  box-shadow: var(--shadow);
 }
 
 .p-notification__icon > img {
@@ -91,20 +92,27 @@
 /* 4. VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .p-notification--info {
-
-  --notification-bg-color:    rgba(var(--color-blue-rgb), 1);
+  --notification-bg-color:    rgba(var(--color-blue-light), 1);
+  --notification-text-color: rgba(var(--color-blue-dark), 1);
+  --notification-link-color: rgba(var(--color-darker-rgb), 1);
 }
 .p-notification--success {
 
-  --notification-bg-color:    rgba(var(--color-green-rgb), 1);
+  --notification-bg-color:    rgba(var(--color-green-light), 1);
+  --notification-text-color: rgba(var(--color-green-dark), 1);
+  --notification-link-color: rgba(var(--color-darker-rgb), 1);
 }
 .p-notification--warning {
 
-  --notification-bg-color:    rgba(var(--color-orange-rgb), 1);
+  --notification-bg-color:    rgba(var(--color-orange-light), 1);
+  --notification-text-color: rgba(var(--color-orange-dark), 1);
+  --notification-link-color: rgba(var(--color-darker-rgb), 1);
 }
 .p-notification--important {
-
-  --notification-bg-color:    rgba(var(--color-red-rgb), 1);
+  --notification-bg-color:    rgba(var(--color-red-light), 1);
+  --notification-text-color: rgba(var(--color-red-dark), 1);
+  --notification-link-color: rgba(var(--color-darker-rgb), 1);
+  
 }
 .p-notification--shadowed {
   box-shadow: var(--shadow);
