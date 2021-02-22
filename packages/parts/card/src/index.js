@@ -56,6 +56,7 @@ const Card  = ({
 
   const interactiveClass = isInteractive ? 'p-card--interactive' : '';
   const borderedClass = isBordered ? 'p-card--bordered' : '';
+  const arrowClass = imgSrc ? 'u-arrow u-arrow--top-left' : '';
 
   // 2.1.2. END
 
@@ -66,7 +67,7 @@ const Card  = ({
   return (
     <article className={ `p-card ${ className } ${ interactiveClass } ${ borderedClass } `} { ...rest }>
       <Media />
-      <div className="p-card__body u-arrow u-arrow--top-left">
+      <div className={ `p-card__body ${ arrowClass }` }>
         { children }
       </div>
     </article>
