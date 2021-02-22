@@ -49,7 +49,7 @@
   }
 
   .b-section--wide {
-    --section-horizontal-l: var(--gutter);
+    --section-horizontal-l: var(--gutter-medium);
   }
 
   .b-section--narrow {
@@ -71,7 +71,7 @@
   }
 
   .b-section--wide {
-    --section-horizontal-xl: var(--gutter-medium);
+    --section-horizontal-xl: var(--gutter-large);
   }
 
   .b-section--narrow {
