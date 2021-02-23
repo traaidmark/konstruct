@@ -1,4 +1,4 @@
-// PART [ FLAG > TESTS ] #######################################################
+// PART [ PERSON > TESTS ] #####################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,21 +12,28 @@ import 'jest-styled-components';
 
 // 1.2. INTERNAL DEPENDENCIES ..................................................
 
-import Data from '../src';
+import Person from '../src';
 
 // 1.2. END ....................................................................
+
+const args = {
+  name: 'Aubrey Turner',
+  role: 'Chief Growth Officer',
+  imgSrc: 'https://s3.amazonaws.com/cdn.wealthpoint.app/person_aubrey_f6ce6120a8.jpg',
+  className: '',
+};
 
 // 1. END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // 2. TEST +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-describe('Part: Data', () => {
+describe('Part: Person', () => {
 
   // 2.1. RENDER WITHOUT PROPS .................................................
 
   test('renders correctly without any props', () => {
     const tree = renderer.create(
-      <Data />
+      <Person />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -37,7 +44,7 @@ describe('Part: Data', () => {
 
   test('renders correctly with all props', () => {
     const tree = renderer.create(
-      <Data value="2300.00" prefix="usd" className="p-data--large" />
+      <Person { ...args } />
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
