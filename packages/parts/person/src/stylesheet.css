@@ -1,0 +1,52 @@
+/* PART [ PERSON > STYLESHEET ] ############################################# */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --person-border-width: 4px;
+  --person-border-color: var(--color-white);
+  --person-name-color: var(--color-dark);
+  --person-role-color: var(--color);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. GLOBAL OVERRIDES ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.p-person > figure {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: var(--shadow);
+  margin-bottom: var(--gutter-small);
+  border: solid var(--person-border-width) var(--person-border-color);
+}
+
+.p-person > strong {
+  font-weight: var(--weight-bold);
+  color: var(--person-name-color);
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+
+}
+
+.p-person > small {
+  color: var(--person-role-color);
+  margin-right: 5px;
+  font-style: normal;
+  font-weight: var(--weight-light);
+  text-transform: uppercase;
+
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
