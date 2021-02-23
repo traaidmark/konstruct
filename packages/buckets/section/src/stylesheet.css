@@ -145,7 +145,7 @@
 
 @media screen and (min-width: 1024px) {
   .b-section__header {
-    margin-bottom: var(--gutter);
+    margin-bottom: var(--gutter-medium);
     width: 60%;
   }
 }

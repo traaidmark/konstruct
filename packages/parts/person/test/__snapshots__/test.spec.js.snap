@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Part: Person renders correctly with all props 1`] = `
+<aside
+  className="p-person "
+>
+  <figure>
+    <img
+      alt="Aubrey Turner"
+      src="https://s3.amazonaws.com/cdn.wealthpoint.app/person_aubrey_f6ce6120a8.jpg"
+    />
+  </figure>
+  <strong>
+    Aubrey Turner
+  </strong>
+  <small>
+    Chief Growth Officer
+  </small>
+</aside>
+`;
+
+exports[`Part: Person renders correctly without any props 1`] = `
+<aside
+  className="p-person "
+/>
+`;
