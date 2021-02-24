@@ -1,0 +1,57 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Button
+
+A typical button css library.
+
+- [Installation](#installation)
+- [CSS](#css)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-button
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-button
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class              | Description                                   |
+| ------------------ |:---------------------------------------------:|
+| .p-button--large   | Large version
+| .p-button--small   | Small version 
+| .p-button--full    | Full width version
+| .p-button--danger  | Destructive, dangerous operations for the user
+| .p-button--warning | Operations that can have important impact
+| .p-button--safe    | Operations that are safe for users to do
+
+### Variables
+
+| Variable          | Default Values         | Description           |
+| ----------------- |:----------------------:|:-------------:|
+| --button-font               | var(--family-secondary); |
+| --button-font-weight        | var(--weight-bold);      |
+| --button-radius             | var(--radius-small);     |
+| --button-border-width       | 2px;                     |
+| --button-text-color         | var(--color-blue);       |
+| --button-text-color-hover   | var(--color-darker);     |
+| --button-bg-color           | var(--color-darker);     |
+| --button-bg-color-hover     | var(--color-blue);       |
+| --button-border-color       | var(--color-darker);     |
+| --button-border-color-hover | var(--color-blue);       |
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+

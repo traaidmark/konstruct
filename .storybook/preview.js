@@ -15,9 +15,13 @@ export const parameters = {
         'Parts',
         [
           'Card',
+          'Button',
+          'Notification',
+          'Person',
           'Flag',
           'Data',
           'Sticker',
+
         ]  
       ]
     }
