@@ -63,5 +63,8 @@
     "stylelint-config-standard": "^20.0.0",
     "ts-dedent": "^2.0.0",
     "webpack": "^5.16.0"
+  },
+  "dependencies": {
+    "@wealthmigrate/architect-icons": "^1.11.5"
   }
 }

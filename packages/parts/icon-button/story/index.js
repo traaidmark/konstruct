@@ -1,4 +1,4 @@
-// PART [ BUTTON > STORY ] #####################################################
+// PART [ ICON BUTTON > STORY ] ################################################
 
 // 1. DEPENDENCIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -28,7 +28,7 @@ import '../src/stylesheet.css';
 // 2. COMPONENT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 export default {
-  title: 'Parts/Button',
+  title: 'Parts/Icon Button',
   parameters: {
     docs: {
       page: mdx,
@@ -46,21 +46,31 @@ export const inHtml = (args) => (
   <>
     <Section>
       <ul className="u-list-horizontal">
-        <li>
-          <a href="#" className="p-button">Primary Button</a>
-        </li>
-        <li>
-          <a href="#" className="p-button p-button--danger">Dangerous Action</a>
-        </li>
-        <li>
-          <a href="#" className="p-button p-button--warning">Careful Action</a>
-        </li>
-        <li>
-          <a href="#" className="p-button p-button--safe">Safe Action</a>
-        </li>
-        <li>
-          <button disabled className="p-button">Disabled Action</button>
-        </li>
+      <li>
+        <a href="#" className="p-icon-button">
+          <EditIcon />
+        </a>
+      </li>
+      <li>
+        <a href="#" className="p-icon-button p-icon-button--danger">
+          <EditIcon />
+        </a>
+      </li>
+      <li>
+        <a href="#" className="p-icon-button p-icon-button--warning">
+          <EditIcon />
+        </a>
+      </li>
+      <li>
+        <a href="#" className="p-icon-button p-icon-button--safe">
+          <EditIcon />
+        </a>
+      </li>
+      <li>
+        <button href="#" className="p-icon-button" disabled>
+          <EditIcon />
+        </button>
+      </li>
       </ul>
     </Section>
     <Section 
@@ -68,10 +78,21 @@ export const inHtml = (args) => (
     >
       <Source
         code={dedent`
-        <a href="#" className="p-button">Button</a>
-        <a href="#" className="p-button p-button--danger">Button</a>
-        <a href="#" className="p-button p-button--warning">Button</a>
-        <a href="#" className="p-button p-button--safe">Button</a>
+        <a href="#" className="p-icon-button">
+          <EditIcon />
+        </a>
+        <a href="#" className="p-icon-button p-icon-button--danger">
+          <EditIcon />
+        </a>
+        <a href="#" className="p-icon-button p-icon-button--warning">
+          <EditIcon />
+        </a>
+        <a href="#" className="p-icon-button p-icon-button--safe">
+          <EditIcon />
+        </a>
+        <button href="#" className="p-icon-button" disabled>
+          <EditIcon />
+        </button>
         `}
       />
     </Section>
@@ -87,13 +108,19 @@ export const Variations = (args) => (
     <Section>
       <ul className="u-list-horizontal">
         <li>
-          <a href="#" className="p-button p-button--small">Small Button</a>
+          <a href="#" className="p-icon-button p-icon-button--small">
+            <EditIcon />
+          </a>
         </li>
         <li>
-          <a href="#" className="p-button p-button--primary">Default Button</a>
+          <a href="#" className="p-icon-button">
+            <EditIcon />
+          </a>
         </li>
         <li>
-          <a href="#" className="p-button p-button--large">Large Button</a>
+          <a href="#" className="p-icon-button p-icon-button--large">
+            <EditIcon />
+          </a>
         </li>
       </ul>
     </Section>
@@ -104,19 +131,6 @@ export const Variations = (args) => (
         code={dedent`
         <a href="#" className="p-button p-button--small">Button</a>
         <a href="#" className="p-button p-button--large">Button</a>
-        `}
-      />
-    </Section>
-    <Section>
-      <a href="#" className="p-button p-button--full">Full width Button</a>
-      <br />
-    </Section>
-    <Section 
-      headerTitle="Usage Information"
-    >
-      <Source
-        code={dedent`
-        <a href="#" className="p-button p-button--full">Button</a>
         `}
       />
     </Section>

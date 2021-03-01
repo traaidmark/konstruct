@@ -1,0 +1,141 @@
+/* PART [ ICON BUTTON > STYLESHEET ] ######################################## */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --icon-button-border-width: 2px;
+  --icon-button-disabled-color: var(--color);
+  --icon-button-color: var(--color-blue);
+  --icon-button-color-hover: var(--color-darker);
+  --icon-button-bg-color: var(--color-darker);
+  --icon-button-bg-disabled-color: var(--color-light);
+  --icon-button-bg-color-hover: var(--color-blue);
+  --icon-button-border-color: var(--color-darker);
+  --icon-button-border-disabled-color: var(--color-light);
+  --icon-button-border-color-hover: var(--color-blue);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. BUTTON ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--icon-button-bg-color) !important;
+  border: solid var(--icon-button-border-width) var(--icon-button-border-color) !important;
+  border-radius: 100%!important;
+  box-shadow: none;
+  transform: translateY(0) scale(1);
+  transition: var(--transition-fast);
+  width: 40px;
+  height: 40px;
+  padding: 0!important;
+
+}
+
+.p-icon-button > svg, 
+.p-icon-button > img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.p-icon-button > svg > path,
+.p-icon-button > svg > polygon {
+  fill: var(--icon-button-color);
+  transition: var(--transition-fast);
+}
+
+.p-icon-button:hover {
+  cursor: pointer;
+  background-color: var(--icon-button-bg-color-hover) !important;
+  border-color: var(--icon-button-border-color-hover) !important;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.p-icon-button:hover > svg > path,
+.p-icon-button:hover > svg > polygon {
+  fill: var(--icon-button-color-hover);
+}
+
+.p-icon-button:disabled {
+  background: var(--icon-button-bg-disabled-color)!important;
+  border-color: var(--icon-button-bg-disabled-color)!important;
+  cursor:not-allowed;
+}
+.p-icon-button:disabled > svg > path,
+.p-icon-button:disabled > svg > polygon {
+  fill: var(--icon-button-disabled-color);
+  transition: var(--transition-fast);
+}
+.p-icon-button:disabled:hover {
+  cursor: pointer;
+  background-color: var(--icon-button-bg-disabled-color) !important;
+  border-color: var(--icon-button-border-disabled-color) !important;
+  box-shadow: none;
+  transform: none;
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. SIZE VARIATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-icon-button--large {
+  width: 60px;
+  height: 60px;
+}
+.p-icon-button--large > svg, 
+.p-icon-button--large > img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.p-icon-button--small {
+  width: 30px;
+  height: 30px;
+}
+.p-icon-button--small > svg, 
+.p-icon-button--small > img {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-icon-button--danger {
+  --icon-button-color: rgb(var(--color-red-dark));
+  --icon-button-color-hover: rgb(var(--color-red-light));
+  --icon-button-bg-color: var(--color-red);
+  --icon-button-bg-color-hover: rgb(var(--color-red-dark));
+  --icon-button-border-color: var(--color-red);
+  --icon-button-border-color-hover: rgb(var(--color-red-dark));
+}
+
+.p-icon-button--warning {
+  --icon-button-color: rgb(var(--color-orange-dark));
+  --icon-button-color-hover: rgb(var(--color-orange-light));
+  --icon-button-bg-color: var(--color-orange);
+  --icon-button-bg-color-hover: rgb(var(--color-orange-dark));
+  --icon-button-border-color: var(--color-orange);
+  --icon-button-border-color-hover: rgb(var(--color-orange-dark));
+}
+
+.p-icon-button--safe {
+  --icon-button-color: rgb(var(--color-green-dark));
+  --icon-button-color-hover: rgb(var(--color-green-light));
+  --icon-button-bg-color: var(--color-green);
+  --icon-button-bg-color-hover: rgb(var(--color-green-dark));
+  --icon-button-border-color: var(--color-green);
+  --icon-button-border-color-hover: rgb(var(--color-green-dark));
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
