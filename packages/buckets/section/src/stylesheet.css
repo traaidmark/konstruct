@@ -4,7 +4,7 @@
 
 :root {
   --section-horizontal-xl: 15%;
-  --section-horizontal-l: var(--gutter-medium);
+  --section-horizontal-l: 10%;
   --section-horizontal-m: var(--gutter);
   --section-horizontal-s: var(--gutter-small);
   --section-vertical-xl: var(--gutter-medium);
