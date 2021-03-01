@@ -1,0 +1,108 @@
+/* PART [ TABLE > STYLESHEET ] ############################################## */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --table-radius: var(--radius-small);
+  --table-border-color: var(--color-light);
+  --table-color: var(--color-white);
+
+  --table-button-color: var(--color-light);
+  --table-button-color-hover: var(--color-blue);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. TABLE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-table {
+  
+  background-color: var(--table-color);
+  border: solid 10px var(--table-color);
+  border-radius: var(--table-radius);
+  
+  border-collapse: collapse;
+
+  width: 100%;
+}
+
+.p-table thead {
+  border-bottom: solid 2px var(--table-border-color);
+}
+.p-table thead th {
+  font-weight: var(--weight-bold);
+  color: var(--color-darker);
+}
+
+.p-table tbody tr {
+  border-bottom: solid 1px var(--table-border-color);
+}
+
+.p-table th,
+.p-table td {
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+  padding: var(--gutter-small);
+  text-align: left;
+}
+
+.p-table th:not(:last-child),
+.p-table td:not(:last-child) {
+  border-right: solid 1px var(--table-border-color);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. BUTTONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-table__sort {
+  position: relative;
+
+  width: 100%;
+
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small);
+  text-align: left;
+  font-weight: var(--weight-bold);
+  color: var(--color-darker);
+
+  background: var(--table-color);
+  border: none;
+  cursor: pointer;
+}
+.p-table__sort:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  
+  width: 20px;
+  height: 20px;
+
+  border: solid 1px var(--table-button-color);
+  border-radius: 100%;
+  
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position */
+  background-position: center;
+  /* icon size, then gradient */
+  background-size: 0.65em auto, 100%;
+  transition: var(--transition-fast);
+  
+}
+
+.p-table__sort:hover:after {
+  border-color: var(--table-button-color-hover);
+}
+.p-table__sort--up:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.p-table__sort--down:after {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
