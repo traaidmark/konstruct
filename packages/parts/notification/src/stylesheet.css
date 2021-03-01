@@ -5,7 +5,7 @@
 :root {
 
   --notification-bg-color:    rgba(var(--color-light-rgb), 1);
-  --notification-tab-color: rgba(var(--color-dark-rgb), 1);
+  --notification-tab-color: rgba(var(--color-darker-rgb), 1);
 
   --notification-link-color: rgba(var(--color-dark-rgb), 1);
   --notification-link-color-hover: rgba(var(--color-blue-text), 1);

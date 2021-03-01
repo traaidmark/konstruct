@@ -11,13 +11,5 @@
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/parts/icon-button"
   },
-  "dependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  },
-  "peerDependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  },
   "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
 }
