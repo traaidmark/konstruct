@@ -1,0 +1,51 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Block
+
+A versatile block component.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-feature-block
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-feature-block
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class              | Description                                   |
+| ------------------ |:---------------------------------------------:|
+| .f-block--bordered | Adds a border around the block.
+
+### Variables
+
+| Variable             | Default Values         | Description           |
+| -------------------- |:----------------------:|:-------------:|
+| --block-radius       | var(--radius-small)
+| --block-border-width | 2px
+| --block-border-color | var(--color-light)
+| --block-color        | var(--color-white)
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+
