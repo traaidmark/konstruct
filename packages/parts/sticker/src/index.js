@@ -25,6 +25,7 @@ const Sticker = ({
   value = undefined,
   prefix = undefined,
   className = '',
+  size = 'default',
   ...rest
 }) => {
 
@@ -35,11 +36,11 @@ const Sticker = ({
 
   return (
     <div
-      className={ `p-sticker ${ className ? className : '' }` }
+      className={ `p-sticker p-sticker--${ size } ${ className }` }
       { ...rest }
     >
       { label && <small>{ label }</small> }
-      <Data value={ value } prefix={ prefix } />
+      <Data value={ value } prefix={ prefix } size={ size } />
     </div>
   );
 
@@ -58,6 +59,8 @@ Sticker.propTypes = {
   prefix: propTypes.string,
   /** Display your value. */
   value: propTypes.string,
+  /** The size of the component ('small', 'default', 'large') */
+  size: propTypes.oneOf['small', 'default', 'large'],
   className: propTypes.string,
 };
 

@@ -4,7 +4,7 @@
 
 // 1.1. EXTERNAL DEPENDENCIES ..................................................
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import propTypes from 'prop-types';
 
 // 1.1. END ....................................................................
@@ -22,17 +22,19 @@ import './stylesheet.css';
 const Data = ({
   prefix = undefined,
   value = 'N/A',
-  className = undefined,
+  className = '',
+  size = 'default',
   ...rest
 }) => {
 
-
+  // 2.1. FUNCTIONS ............................................................
+  // 2.1. END ..................................................................
 
   // 2.2. RENDER ...............................................................
 
   return (
     <div
-      className={ `p-data ${ className ? className : '' }` }
+      className={ `p-data p-data--${ size } ${ className }` }
       { ...rest }
     >
       { prefix && <i>{ prefix }</i> }
@@ -53,6 +55,8 @@ Data.propTypes = {
   prefix: propTypes.string,
   /** Display your value. */
   value: propTypes.string,
+  /** The size of the component ('small', 'default', 'large') */
+  size: propTypes.oneOf['small', 'default', 'large'],
   className: propTypes.string,
 };
 

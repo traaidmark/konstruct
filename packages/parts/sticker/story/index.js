@@ -77,7 +77,7 @@ export const inReact = (args) => (
   <>
     <Section>
       <ul className="u-list-horizontal">
-        <li><Sticker { ...args } /></li>
+        <li><Sticker { ...args } size="large" /></li>
       </ul>
     </Section>
     <Section 
@@ -108,6 +108,53 @@ inReact.args = {
 
 export const variations = (args) => (
   <>
+    <Section noLeft noRight noTop>
+      <h3>Size Variations</h3>
+      <Grid>
+        <aside>
+          <h5><code>part-sticker--small</code></h5>
+          <div className="p-sticker p-sticker--top p-sticker--small">
+            <small>Sticker Label</small>
+            <div className="p-data p-data--small">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="p-sticker p-sticker--small">
+              <small>Sticker Label</small>
+              <div className="p-data p-data--small">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+        <aside>
+        <h5><code>part-sticker--large</code></h5>
+          <div className="p-sticker p-sticker--top p-sticker--large">
+            <small>Sticker Label</small>
+            <div className="p-data p-data--large">
+              <i>USD</i>
+              <strong>300.00</strong>
+            </div>
+          </div>
+          <Source
+            code={dedent`
+            <div className="p-sticker p-sticker--large">
+              <small>Sticker Label</small>
+              <div className="p-data p-data--large">
+                <i>USD</i>
+                <strong>300.00</strong>
+              </div>
+            </div>
+            `}
+          />
+        </aside>
+      </Grid>
+    </Section>
     <Section noLeft noRight noTop>
       <h3>Vertical Orientation</h3>
       <Grid>

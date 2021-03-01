@@ -52,6 +52,20 @@
   align-items: flex-end;
 }
 
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. SIZE VARIATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-sticker--small > small {
+  font-size: var(--size-small);
+  line-height: var(--lineheight-small)
+}
+
+.p-sticker--large > small {
+  font-size: var(--size-normal);
+  line-height: var(--lineheight-normal)
+}
+
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* END OF FILE ############################################################## */
