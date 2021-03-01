@@ -1,0 +1,64 @@
+/* FEATURE [ TOOLBAR > STYLESHEET ] ######################################### */
+
+/* 2. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .f-toolbar {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. CONTENT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-toolbar__content {
+  flex: 1;
+}
+
+.f-toolbar__content h1 {
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .f-toolbar__content {
+    text-align: center;
+  }
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. ACTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-toolbar__actions {
+  flex: none;
+  width: fit-content;
+  margin-left: var(--gutter-medium);
+}
+
+@media screen and (max-width: 480px) {
+  .f-toolbar__actions {
+    margin-top: var(--gutter);
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-toolbar__actions {
+    margin-left: var(--gutter);
+  }
+}
+
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

@@ -6,7 +6,11 @@ export const parameters = {
         'Cement', 
         [
           'Core'
-        ], 
+        ],
+        'Features',
+        [
+          'Toolbar'
+        ],
         'Buckets', 
         [
           'Section', 
