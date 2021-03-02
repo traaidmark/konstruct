@@ -1,0 +1,50 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Gallery
+
+The simplest implementation of an image gallery.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-feature-gallery
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-feature-gallery
+  `}
+/>
+
+## CSS
+
+### Classes
+
+There are no classes available.
+
+### Variables
+
+| Variable                     | Default Values        | Description   |
+| ---------------------------- |:---------------------:|:-------------:|
+| --gallery-thumb-radius       | var(--radius-small);
+| --gallery-img-radius         | var(--radius-small);
+| --gallery-img-color          | var(--color-white);
+| --gallery-thumb-hover-color  | var(--color-accent);
+| --gallery-thumb-active-color | var(--color-dark);
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+

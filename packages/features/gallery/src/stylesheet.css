@@ -1,0 +1,168 @@
+/* FEATURE [ GALLERY > STYLESHEET ] ######################################### */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --gallery-thumb-radius:       var(--radius-small);
+  --gallery-img-radius:         var(--radius-small);
+  --gallery-img-color:          var(--color-white);
+  --gallery-thumb-hover-color:  var(--color-accent);
+  --gallery-thumb-active-color: var(--color-dark);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin: 0;
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .f-gallery {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-gallery {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .f-gallery {
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .f-gallery {
+  }
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-gallery__thumbnails {
+  flex: none;
+  width: 100px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: center;
+  margin: 0 0 0 var(--gutter-small);
+}
+.f-gallery__thumbnails li {
+  margin-bottom: var(--gutter-small);
+}
+.f-gallery__thumbnails li button {
+  background: none;
+  width: 80px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  background: var(--color);
+  
+  border: solid 2px var(--color-white);
+  border-radius: var(--gallery-thumb-radius);
+
+  transition: var(--transition-fast);
+}
+.f-gallery__thumbnails li button:hover {
+  cursor: pointer;
+  border-color: var(--gallery-thumb-hover-color);
+  box-shadow: var(--shadow);
+}
+.f-gallery__thumbnails li img {
+  border-radius: var(--gallery-thumb-radius);
+  display: block;
+  width: 100px;
+  transition: var(--transition-slow);
+}
+.f-gallery__thumbnails li img:hover {
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 480px) {
+  .f-gallery__thumbnails {
+    width: 100%;
+    margin-left: 0!important;
+    flex-direction: row!important;
+    overflow-x: auto;
+  }
+  .f-gallery__thumbnails li {
+    flex: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-gallery__image {
+    width: 100%;
+    margin-left: 0!important;
+    flex-direction: row!important;
+    overflow-x: auto;
+  }
+  .f-gallery__image li {
+      flex: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .f-gallery {
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .f-gallery {
+  }
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-gallery__image {
+  background-color: var(--gallery-img-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--gallery-img-radius);
+  padding: 5px;
+}
+.f-gallery__image img {
+  display: block;
+  border-radius: var(--gallery-img-radius);
+}
+
+
+@media screen and (max-width: 480px) {
+  .f-gallery__image {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .f-gallery__image {
+    margin-bottom: var(--gutter-small);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .f-gallery {
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .f-gallery {
+  }
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

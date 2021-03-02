@@ -1,0 +1,15 @@
+{
+  "name": "@traaidmark/konstruct-feature-gallery",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:traaidmark/konstruct.git",
+    "directory": "packages/features/gallery"
+  },
+  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
+}
