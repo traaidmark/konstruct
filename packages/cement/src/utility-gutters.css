@@ -2,20 +2,56 @@
 
 /* 1. GUTTERS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+.u-gutter-top-small {
+  margin-top: var(--gutter-small);
+}
 .u-gutter-top {
   margin-top: var(--gutter);
 }
+.u-gutter-top-medium {
+  margin-top: var(--gutter-medium);
+}
+.u-gutter-top-large {
+  margin-top: var(--gutter-large);
+}
 
+.u-gutter-right-small {
+  margin-right: var(--gutter-small);
+}
 .u-gutter-right {
   margin-right: var(--gutter);
 }
+.u-gutter-right-medium {
+  margin-right: var(--gutter-medium);
+}
+.u-gutter-right-large {
+  margin-right: var(--gutter-large);
+}
 
+.u-gutter-bottom-small {
+  margin-bottom: var(--gutter-small);
+}
 .u-gutter-bottom {
   margin-bottom: var(--gutter);
 }
+.u-gutter-bottom-medium {
+  margin-bottom: var(--gutter-medium);
+}
+.u-gutter-bottom-large {
+  margin-bottom: var(--gutter-large);
+}
 
+.u-gutter-left-small {
+  margin-left: var(--gutter-small);
+}
 .u-gutter-left {
   margin-left: var(--gutter);
+}
+.u-gutter-left-medium {
+  margin-left: var(--gutter-medium);
+}
+.u-gutter-left-large {
+  margin-left: var(--gutter-large);
 }
 
 /* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

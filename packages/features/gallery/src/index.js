@@ -21,6 +21,7 @@ import './stylesheet.css';
 
 const Gallery  = ({
   images = [],
+  className = '',
   ...rest
 }) => {
 
@@ -59,7 +60,7 @@ const Gallery  = ({
               <button
                 type="button"
                 onClick={ () => setIndex(k) }
-                isActive={ k === activeIndex }
+                className={ k === activeIndex ? 'f-gallery__thumbnails--active' : '' }
               >
                 <img src={ i } alt={ `gallery-thumbnails-${ k }` } alt="" />
               </button>
@@ -78,7 +79,7 @@ const Gallery  = ({
 
   return (
 
-    <figure className="f-gallery" { ...rest }>
+    <figure className={ `f-gallery ${ className }` } { ...rest }>
       <MainImage />
       <Thumbnails />
     </figure>
