@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-bucket-section",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "publishConfig": {
