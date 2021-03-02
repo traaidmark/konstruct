@@ -60,7 +60,7 @@ Sticker.propTypes = {
   /** Display your value. */
   value: propTypes.string,
   /** The size of the component ('small', 'default', 'large') */
-  size: propTypes.oneOf['small', 'default', 'large'],
+  size: propTypes.oneOf['small', 'default', 'large', 'xlarge'],
   className: propTypes.string,
 };
 

@@ -65,6 +65,10 @@
   font-size: var(--size-normal);
   line-height: var(--lineheight-normal)
 }
+.p-sticker--xlarge > small {
+  font-size: var(--size-normal);
+  line-height: var(--lineheight-normal)
+}
 
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 

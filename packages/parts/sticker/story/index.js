@@ -77,7 +77,7 @@ export const inReact = (args) => (
   <>
     <Section>
       <ul className="u-list-horizontal">
-        <li><Sticker { ...args } size="large" /></li>
+        <li><Sticker { ...args } size="xlarge" /></li>
       </ul>
     </Section>
     <Section 
