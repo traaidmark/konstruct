@@ -1,0 +1,50 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Loader
+
+A super basic loader component.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-loader
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-loader
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class             | Description                                   |
+| ----------------- |:---------------------------------------------:|
+| .p-loader--inline | Inline loader
+| .p-loader--small  | Small icon
+| .p-loader--large  | Large icon
+
+### Variables
+
+| Variable       | Default Values  | Description           |
+| -------------- |:---------------:|:-------------:|
+| --loader-color | `var(--color);` | 
+
+Visit our theming guide if you want to learn how creating your own variants work.
+
+## React Props
+
+<ArgsTable />
+
+

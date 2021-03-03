@@ -1,0 +1,65 @@
+/* PART [ LOADER > STYLESHEET ] ############################################# */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --loader-color: var(--color);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-loader {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.p-loader svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  margin-bottom: var(--gutter-small);
+}
+.p-loader svg path {
+  fill: var(--loader-color);
+}
+
+.p-loader small {
+  display: block;
+  font-family: var(--family-secondary);
+  font-weight: var(--weight-bold);
+
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.p-loader--inline {
+  flex-direction: row;
+}
+
+.p-loader--inline svg {
+  margin-right: var(--gutter-small);
+  margin-bottom: 0;
+}
+
+.p-loader--small svg {
+  width: 20px;
+  height: 20px;
+}
+
+.p-loader--large svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
