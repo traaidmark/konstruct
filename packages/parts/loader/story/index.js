@@ -48,7 +48,7 @@ export default {
 export const inReact = (args) => (
   <>
     <Section>
-      <Loader { ...args } />
+      <Loader />
     </Section>
     <Section 
       headerTitle="Usage Information"
@@ -100,74 +100,6 @@ export const Variations = (args) => (
           <Source
             code={dedent`
             <Loader className="p-loader--large" />
-            `}
-          />
-        </aside>
-      </Grid>
-    </Section>
-    <Section noLeft noRight noTop>
-      <h3>Horizontal Orientation</h3>
-      <Grid>
-        <aside>
-          <h5><code>part-sticker--left</code></h5>
-          <div className="p-sticker p-sticker--left">
-            <small>Sticker Label</small>
-            <div className="p-data">
-              <i>USD</i>
-              <strong>300.00</strong>
-            </div>
-          </div>
-          <Source
-            code={dedent`
-            <div className="p-sticker p-sticker--left">
-              <small>Sticker Label</small>
-              <div className="p-data">
-                <i>USD</i>
-                <strong>300.00</strong>
-              </div>
-            </div>
-            `}
-          />
-        </aside>
-        <aside>
-          <h5><code>part-sticker--center</code></h5>
-          <div className="p-sticker p-sticker--center">
-            <small>Sticker Label</small>
-            <div className="p-data">
-              <i>USD</i>
-              <strong>300.00</strong>
-            </div>
-          </div>
-          <Source
-            code={dedent`
-            <div className="p-sticker p-data--center">
-              <small>Sticker Label</small>
-              <div className="p-data">
-                <i>USD</i>
-                <strong>300.00</strong>
-              </div>
-            </div>
-            `}
-          />
-        </aside>
-        <aside>
-          <h5><code>part-sticker--right</code></h5>
-          <div className="p-sticker p-sticker--right">
-            <small>Sticker Label</small>
-            <div className="p-data">
-              <i>USD</i>
-              <strong>300.00</strong>
-            </div>
-          </div>
-          <Source
-            code={dedent`
-            <div className="p-sticker p-data--right">
-              <small>Sticker Label</small>
-              <div className="p-data">
-                <i>USD</i>
-                <strong>300.00</strong>
-              </div>
-            </div>
             `}
           />
         </aside>
