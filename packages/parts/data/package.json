@@ -1,6 +1,6 @@
 {
   "name": "@traaidmark/konstruct-part-data",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "publishConfig": {
@@ -11,7 +11,6 @@
     "url": "ssh://git@github.com:traaidmark/konstruct.git",
     "directory": "packages/parts/data"
   },
-  
   "peerDependencies": {
     "react": "*.*.*",
     "react-dom": "*.*.*"
