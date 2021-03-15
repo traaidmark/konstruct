@@ -12,13 +12,11 @@
     "directory": "packages/parts/sticker"
   },
   "dependencies": {
-    "@traaidmark/konstruct-part-data": "^2.1.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "@traaidmark/konstruct-part-data": "latest"
   },
   "peerDependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react": "*.*.*",
+    "react-dom": "*.*.*"
   },
   "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
 }
