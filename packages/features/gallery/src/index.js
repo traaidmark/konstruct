@@ -69,7 +69,7 @@ const Gallery  = ({
         }
       </ul>
     );
-  }, [images]);
+  }, [images, activeIndex]);
 
   // 2.1.3. END
 
