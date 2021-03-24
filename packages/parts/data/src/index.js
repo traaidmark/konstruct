@@ -54,7 +54,11 @@ Data.propTypes = {
   /** Display a prefix to your value with a slightly different style. */
   prefix: propTypes.string,
   /** Display your value. */
-  value: propTypes.string,
+  value: propTypes.oneOfType([
+    propTypes.string,
+    propTypes.number,
+    propTypes.object
+  ]),
   /** The size of the component ('small', 'default', 'large') */
   size: propTypes.oneOf['small', 'default', 'large', 'xlarge'],
   className: propTypes.string,
