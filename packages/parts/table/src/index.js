@@ -38,30 +38,28 @@ const Table = ({
 
   // 2.1.1. RENDER HEADER
   const renderHeader = headerData => (
-    <thead>
-      <tr>
-        {
-          headerData.map(
-            (label, index) => {
-              const k = sortBy && label.replace(/\s/g, '').toLowerCase();
-            return (
-              <th key={ index }>
-                {
-                  sortBy ? (
-                    <button
-                      onClick={ () => sortBy(k) }
-                      className={ `p-table__sort p-table__sort--${ headersAsc[k] }` }
-                    >
-                      { label }
-                    </button>
-                  ) : label
-                }
-              </th>
-            ) }
-          )
-        }
-      </tr>
-    </thead>
+    <tr className="p-table__header">
+      {
+        headerData.map(
+          (label, index) => {
+            const k = sortBy && label.replace(/\s/g, '').toLowerCase();
+          return (
+            <th key={ index }>
+              {
+                sortBy ? (
+                  <button
+                    onClick={ () => sortBy(k) }
+                    className={ `p-table__sort p-table__sort--${ headersAsc[k] }` }
+                  >
+                    { label }
+                  </button>
+                ) : label
+              }
+            </th>
+          ) }
+        )
+      }
+    </tr>
   );
 
   // 2.1.1. END
@@ -88,8 +86,10 @@ const Table = ({
 
   return (
     <table className="p-table">
-      { renderHeader(header) }
-      { renderRows(data.map(e => normaliseKeys(e))) }
+      <tbody>
+        { renderHeader(header) }
+        { renderRows(data.map(e => normaliseKeys(e))) }
+      </tbody>
     </table>
   );
 

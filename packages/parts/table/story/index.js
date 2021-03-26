@@ -100,7 +100,7 @@ export const inHtml = (args) => (
       <Source
         code={dedent`
         <table className="p-table">
-          <thead>
+          <tbody>
             <tr>
               <th>Date</th>
               <th>Product</th>
@@ -108,8 +108,6 @@ export const inHtml = (args) => (
               <th><button className="p-table__sort">Status</button></th>
               <th><button className="p-table__sort p-table__sort--up">Amount</button></th>
             </tr>
-          </thead>
-          <tbody>
             <tr>
               <td>2020-07-09</td>
               <td>this is a product name</td>
