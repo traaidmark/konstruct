@@ -8,7 +8,8 @@ export default {
   footerTopText: "By submitting you agree with our terms.",
   footerBottomText: <a>Forgot password?</a>,
   loader: <small>Loading...</small>,
-  isLoading: true,
+  hasError: true,
+  isLoading: false,
   actions: [
     <a>Register first</a>,
     <button className="p-button">Submit</button>

@@ -24,7 +24,7 @@
 .b-form__footer {
   margin-top: var(--gutter-medium);
   background: var(--form-footer-bg);
-  padding: var(--gutter-small) var(--gutter);
+  padding-top: var(--gutter-small);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -57,7 +57,7 @@
 }
 
 .b-form--hasError .b-form__footer {
-  background: rgba(var(--color-red-light));
+  --form-footer-border-color: var(--color-red);
 }
 
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

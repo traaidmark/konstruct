@@ -54,14 +54,14 @@ const Form  = ({
 
   return (
 
-    <form className={ `b-form ${ isLoading ? 'b-form--loading' : '' } ${ className }` } { ...rest }>
+    <form className={ `b-form ${ isLoading ? 'b-form--loading' : '' }  ${ hasError ? 'b-form--hasError' : '' } ${ className }` } { ...rest }>
       <div className={ `b-form__body ${ isLoading ? 'b-form__body--loading' : '' }` }>
       { children }
       </div>
       <footer className="b-form__footer">
-        { isLoading && loader ? loader : null }
+        { isLoading && loader ? loader : 'Loading...' }
         {
-          !isLoading && !loader && (
+          !isLoading && (
             <>
               { footerTopText && <small className="b-form__footer-top-text">{ footerTopText }</small> }
               <Actions />
