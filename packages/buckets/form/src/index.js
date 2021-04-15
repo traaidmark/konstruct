@@ -59,7 +59,7 @@ const Form  = ({
       { children }
       </div>
       <footer className="b-form__footer">
-        { isLoading && loader ? loader : 'Loading...' }
+        { isLoading ? loader ? loader : 'Loading...' : null }
         {
           !isLoading && (
             <>
