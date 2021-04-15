@@ -1,0 +1,65 @@
+/* BUCKET [ FORM > STYLESHEET ] ############################################# */
+
+/* 1. VARIABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --form-footer-border-width: 2px;
+  --form-footer-border-color: var(--color-light);
+  --form-footer-bg: transparent;
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. BODY ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-form__body {
+  opacity: 1;
+  transition: var(--transition-fast);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-form__footer {
+  margin-top: var(--gutter-medium);
+  background: var(--form-footer-bg);
+  padding: var(--gutter-small) var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-top: solid var(--form-footer-border-width) var(--form-footer-border-color);
+}
+
+.b-form__footer > ul {
+  margin: 0!important;
+  justify-content: flex-end;
+}
+.b-form__footer > ul > li {
+  margin-left: auto;
+}
+
+.b-form__footer-top-text {
+  max-width: 50%;
+  margin-bottom: var(--gutter-small);
+}
+.b-form__footer-bottom-text {
+  max-width: 50%;
+  margin-top: var(--gutter-small);
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.b-form--loading .b-form__body {
+  opacity: 0.3;
+}
+
+.b-form--hasError .b-form__footer {
+  background: rgba(var(--color-red-light));
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */
