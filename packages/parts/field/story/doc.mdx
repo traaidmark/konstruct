@@ -1,0 +1,60 @@
+import { Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+# Field
+
+This is a fairly simple container part to wrap your input fields within.
+
+- [Installation](#installation)
+- [CSS](#css)
+- [React Props](#react-props)
+
+## Installation
+
+Using Yarn:
+<Source
+  code={dedent`
+    yarn add @traaidmark/konstruct-part-field
+  `}
+/>
+
+Using NPM:
+<Source
+  code={dedent`
+    npm install @traaidmark/konstruct-part-field
+  `}
+/>
+
+## CSS
+
+### Classes
+
+| Class                | Description                                   |
+| -------------------- |:---------------------------------------------:|
+| .p-field--hasError | Modifier to set color variation when there is an error.
+
+### Variables
+
+| Variable              | Default Values          | Description           |
+| --------------------- |:-----------------------:|:-------------:|    
+| --field-message-color  | var(--color-dark);
+| --field-prepend-color  | var(--color);
+| --field-postpend-color | var(--color);
+| --label-color          | var(--color);
+| --field-color          | var(--color-darker);
+| --field-color-focus    | var(--color-darker);
+| --field-color-disabled | var(--color);
+| --field-color-placeholder | var(--color);
+| --field-border-width | 1px;
+| --field-border-color | var(--color-light);
+| --field-border-error-color | var(--color-red);
+| --field-border-focus-color | var(--color);
+| --field-border-disabled-color | var(--color-light);
+| --field-disc-selected-color | var(--color-blue);
+
+
+## React Props
+
+<ArgsTable />
+
+

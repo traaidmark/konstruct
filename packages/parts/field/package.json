@@ -1,0 +1,19 @@
+{
+  "name": "@traaidmark/konstruct-part-field",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:traaidmark/konstruct.git",
+    "directory": "packages/parts/field"
+  },
+  "peerDependencies": {
+    "react": "*.*.*",
+    "react-dom": "*.*.*"
+  },
+  "gitHead": "cc8b980fca470a9f6afbce673d539187c5f7abaf"
+}

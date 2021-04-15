@@ -1,0 +1,63 @@
+/* PART [ FIELD > STYLESHEET ] ############################################## */
+
+/* 1. ROOT LEVEL VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --field-message-color: var(--color-dark);
+  --field-prepend-color: var(--color);
+  --field-postpend-color: var(--color);
+}
+
+/* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 2. CONTAINER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-input > small {
+  color: var(--field-message-color);
+}
+
+/* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 3. FIELD CONTENT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-input__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 3. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. PRE/POSTPEND ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.f-input__prepend,
+.f-input__postpend {
+  font-size: var(--size-medium);
+  line-height: var(--lineheight-medium);
+}
+
+.f-input__prepend {
+  color: var(--field-prepend-color);
+  margin-right: var(--gutter-small);
+}
+.f-input__postpend {
+  color: var(--field-postpend-color);
+  margin-left: var(--gutter-small);
+}
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4. VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* 4.1. ERROR STATE */
+
+.f-input--hasError {
+  --label-color: rgb(var(--color-red-rgb));
+  --field-message-color: rgb(var(--color-red-dark));
+}
+
+/* 4.1. END */
+
+/* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* END OF FILE ############################################################## */

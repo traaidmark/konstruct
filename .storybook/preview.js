@@ -9,12 +9,17 @@ export const parameters = {
         ],
         'Features',
         [
-          'Toolbar'
+          'Toolbar',
+          'Block',
+          'Gallery'
         ],
         'Buckets', 
         [
           'Section', 
           'Grid'
+        ],
+        'Forms', [
+          'Input'
         ],
         'Parts',
         [
