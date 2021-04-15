@@ -147,7 +147,7 @@ export const inReact = (args) => (
         '1fr',
       ] }
     >
-      <Field { ...args } >
+      <Field hasError { ...args }>
         <input type="text" name="amount" placeholder="0.00" />
       </Field>
     </Grid>

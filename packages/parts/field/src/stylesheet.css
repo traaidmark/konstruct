@@ -53,7 +53,8 @@
 
 .f-input--hasError {
   --label-color: rgb(var(--color-red-rgb));
-  --field-message-color: rgb(var(--color-red-dark));
+  --field-message-color: rgb(var(--color-red-rgb));
+  --field-border-color: rgb(var(--color-red-rgb));
 }
 
 /* 4.1. END */

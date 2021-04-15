@@ -43,14 +43,14 @@ const Field  = ({
   // 2.2. RENDER COMPONENT .....................................................
 
   return (
-    <div className={ `f-input ${ className }` } { ...rest }>
+    <div className={ `f-input ${ hasError ? 'f-input--hasError' : '' } ${ className }` } { ...rest }>
       { label && <label for={ labelFor }>{ label }</label>}
       <div className="f-input__content">
         { prepend && <span className="f-input__prepend">{ prepend }</span> }
         { children }
         { postpend && <span className="f-input__postpend">{ postpend }</span> }
       </div>
-      { message && <small>{ message }</small> }
+      { message && <small className="f-input__message">{ message }</small> }
     </div>
   );
 
