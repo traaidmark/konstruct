@@ -158,9 +158,9 @@
   --field-color-disabled: var(--color);
   --field-color-placeholder: var(--color);
   --field-border-width: 1px;
-  --field-border-color: var(--color-light);
+  --field-border-color: var(--color);
   --field-border-error-color: var(--color-red);
-  --field-border-focus-color: var(--color);
+  --field-border-focus-color: var(--color-dark);
   --field-border-disabled-color: var(--color-light);
   --field-disc-selected-color: var(--color-blue);
 
