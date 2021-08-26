@@ -59,9 +59,12 @@ export const inHtml = (args) => (
     >
       <Source
         code={dedent`
-        <div className="p-data">
-          <i>USD</i>
-          <strong>300.00</strong>
+        <div className="p-sticker">
+          <small>Sticker Label</small>
+          <div className="p-data">
+            <i>USD</i>
+            <strong>300.00</strong>
+          </div>
         </div>
         `}
       />
