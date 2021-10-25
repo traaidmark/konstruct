@@ -27,23 +27,23 @@
 /* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .p-flag--info {
-  --flag-bg-color: var(--color-blue-light);
-  --flag-text-color: var(--color-blue-dark);
+  --flag-bg-color: rgb(var(--color-blue-light));
+  --flag-text-color: rgb(var(--color-blue-dark));
 }
 
 .p-flag--new {
-  --flag-bg-color: var(--color-green-light);
-  --flag-text-color: var(--color-green-dark);
+  --flag-bg-color: rgb(var(--color-green-light));
+  --flag-text-color: rgb(var(--color-green-dark));
 }
 
 .p-flag--aware {
-  --flag-bg-color: var(--color-orange-light);
-  --flag-text-color: var(--color-orange-dark);
+  --flag-bg-color: rgb(var(--color-orange-light));
+  --flag-text-color: rgb(var(--color-orange-dark));
 }
 
 .p-flag--important {
-  --flag-bg-color: var(--color-red-light);
-  --flag-text-color: var(--color-red-dark);
+  --flag-bg-color: rgb(var(--color-red-light));
+  --flag-text-color: rgb(var(--color-red-dark));
 }
 
 /* 4. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
