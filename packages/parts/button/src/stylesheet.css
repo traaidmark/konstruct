@@ -16,6 +16,7 @@
   --button-border-color: var(--color-darker);
   --button-border-disabled-color: var(--color-light);
   --button-border-color-hover: var(--color-blue);
+  --button-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 1. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -45,7 +46,7 @@
   background-color: var(--button-bg-color-hover) !important;
   border-color: var(--button-border-color-hover) !important;
   color: var(--button-text-color-hover) !important;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--button-shaddow);
   transform: translateY(-2px) scale(1.02);
 }
 
