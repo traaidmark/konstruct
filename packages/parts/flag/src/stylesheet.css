@@ -18,30 +18,32 @@
   font-weight: var(--weight-bold);
   background-color: var(--flag-bg-color);
   color: var(--flag-text-color);
-  padding: 2px var(--gutter-small);
+  padding: 2px 5px!important;
   border-radius: var(--flag-radius);
+  display: inline-block!important;
+  text-transform: capitalize;
 }
 
 /* 2. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* 3. COLOR VARIATIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.p-flag--info {
+.p-flag.p-flag--info {
   --flag-bg-color: rgb(var(--color-blue-light));
   --flag-text-color: rgb(var(--color-blue-dark));
 }
 
-.p-flag--new {
+.p-flag.p-flag--new {
   --flag-bg-color: rgb(var(--color-green-light));
   --flag-text-color: rgb(var(--color-green-dark));
 }
 
-.p-flag--aware {
+.p-flag.p-flag--aware {
   --flag-bg-color: rgb(var(--color-orange-light));
   --flag-text-color: rgb(var(--color-orange-dark));
 }
 
-.p-flag--important {
+.p-flag.p-flag--important {
   --flag-bg-color: rgb(var(--color-red-light));
   --flag-text-color: rgb(var(--color-red-dark));
 }
