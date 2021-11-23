@@ -81,6 +81,7 @@
   background: var(--table-color);
   border: none;
   cursor: pointer;
+  padding-right: 25px;
 }
 .p-table__sort:after {
   content: '';
